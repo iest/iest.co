@@ -2,7 +2,8 @@
 title: iest.co
 email: hello@iest.co
 description: >
-  Iestyn Williams is a designer and developer at Bizzby, working out of London.
+  <strong>Iestyn Williams</strong> is an engineer and designer, living and
+  working in Foggy London Town.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://iest.co" # the base hostname & protocol for your site
 twitter_username: _iest
@@ -15,3 +16,8 @@ kramdown:
 
 # Code highlighting
 highlighting: pygments
+
+# Stylus processor
+stylus:
+  compress: true
+  path: css/main.styl

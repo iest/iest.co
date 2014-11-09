@@ -1,0 +1,99 @@
+---
+---
+@import 'node_modules/nib/index.styl'
+@import 'node_modules/jeet/stylus/jeet/index.styl'
+@import 'node_modules/rupture/rupture/index.styl'
+
+global-reset()
+
+*
+  box-sizing border-box
+
+// @import '_stylus/base'
+// @import '_stylus/type'
+// @import '_stylus/base'
+
+color-dark =  #444444
+color-light = #AAAAAA
+color-bright = #50E3C2
+color-white = #FFFFFF
+
+font-body = "jaf-facitweb"
+// font-body = "'p22-underground'"
+
+font-heavy = 600
+font-light = 300
+
+
+html
+  // 
+body
+  font 1em/1.5 font-body
+  font-weight font-light
+  padding 2em
+  background color-dark
+  color color-light
+
+.container
+  max-width 55em
+  margin 0 auto
+
+a
+  color color-light
+  text-decoration underline
+  transition 200ms ease-out
+a:hover
+  color color-white
+
+strong
+  font-weight font-heavy
+  color color-white
+
+svg
+  width 100%
+  height 100%
+
+.header
+  cf()
+  border-bottom 1px solid color-bright
+  padding-bottom 2em
+  margin-bottom 2em
+.headerLogo
+  col(1/4)
+.headerLogo-logo
+  fill color-bright
+  height 3em
+  width @height * 1.270833333
+  padding 0.4em
+  display block
+.headerNav
+  col(1/4)
+.headerNav-link
+  display block
+  text-decoration none
+.headerNav-link.is-active
+  font-weight font-heavy
+  color color-white
+.headerDesc
+  col(1/2)
+
+
+.postList
+  padding-top 1em
+.postList li
+  cf()
+  margin-bottom 3em
+.postLink
+  text-decoration none
+  display block
+  col(1/2)
+  text-align right
+.postTitle
+  font-weight font-heavy
+  color color-white
+.postExcerpt
+  col(1/2)
+.postMeta
+  font-size 70%
+  text-transform uppercase
+  font-weight font-heavy
