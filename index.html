@@ -8,7 +8,7 @@ layout: default
       <a class="postLink" href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="postTitle">{{ post.title }}</h2>
         <span class="postMeta">
-          {{ post.date | date: "%B %-d, %Y" }}
+          — {{ post.date | date: "%B %-d, %Y" }}
         </span>
       </a>
       <p class="postExcerpt">{{post.excerpt | strip_html}}</p>

@@ -2,7 +2,7 @@
 layout: post
 title:  "Icons for the web in 2014"
 date:   2014-11-09 16:46:29
-categories: jekyll update
+categories: webdev svg
 ---
 
 ## Going for vector-based icons on the web is a no-brainer these days, but there are a few different ways you can implement them.

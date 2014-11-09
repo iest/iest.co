@@ -18,9 +18,14 @@ color-light = #AAAAAA
 color-bright = #50E3C2
 color-white = #FFFFFF
 
+color-twitter = #55ACEE
+color-github = #F6CBB5
+color-dribbble = #E9508A
+
 font-body = "jaf-facitweb"
 // font-body = "'p22-underground'"
 
+font-xheavy = 700
 font-heavy = 600
 font-light = 300
 
@@ -60,12 +65,14 @@ svg
   margin-bottom 2em
 .headerLogo
   col(1/4)
-.headerLogo-logo
+.headerLogo-link
   fill color-bright
   height 3em
   width @height * 1.270833333
   padding 0.4em
   display block
+.headerLogo-link:hover
+  fill color-white
 .headerNav
   col(1/4)
 .headerNav-link
@@ -76,7 +83,18 @@ svg
   color color-white
 .headerDesc
   col(1/2)
-
++below(50em)
+  .headerLogo
+    col(1/1)
+    margin-bottom 1em
+  .headerNav
+    col(1/1)
+    margin-bottom 1em
+  .headerNav-link
+    display inline-block
+    margin-right 0.5em
+  .headerDesc
+    col(1/1)
 
 .postList
   padding-top 1em
@@ -86,14 +104,53 @@ svg
 .postLink
   text-decoration none
   display block
-  col(1/2)
-  text-align right
+.postLink:hover
+  text-decoration underline
 .postTitle
   font-weight font-heavy
   color color-white
+  font-size 1.4em
+  display inline
+.postMeta
+  display inline-block
 .postExcerpt
-  col(1/2)
+  // 
 .postMeta
   font-size 70%
   text-transform uppercase
-  font-weight font-heavy
+  font-weight font-xheavy
++above(40em)
+  .postTitle
+    display block
+  .postLink
+    col(1/2)
+    text-align right
+  .postExcerpt
+    col(1/2)
+
+.footer
+  border-top 1px solid color-bright
+  padding-top 2em
+.footer-links
+  margin-bottom 1em
+  list-style square
+.footer-links li
+.footer-links li.is-twitter
+  color color-twitter
+.footer-links li.is-github
+  color color-github
+.footer-links li.is-dribbble
+  color color-dribbble
+.footer-links li.is-email
+  color color-white
+.footer-links a
+  text-decoration none
+.footer-updated
+  margin-bottom 1em
+.footer-copy
+  // 
++above(30em)
+  .footer-links
+    col(1/2)
+  .footer-updated
+    // col(1/2)

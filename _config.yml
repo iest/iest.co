@@ -10,6 +10,7 @@ twitter_username: _iest
 github_username:  iest
 
 # Build settings
+exclude: ['gulpfile.js', 'node_modules', 'package.json', '*.sketch']
 markdown: kramdown
 kramdown:
   input: GFM
