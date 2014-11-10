@@ -2,21 +2,25 @@
 title: iest.co
 email: hello@iest.co
 description: >
-  <strong>Iestyn Williams</strong> is an engineer and designer, living and
-  working in Foggy London Town.
+  <strong>Iestyn Williams</strong> is an engineer, designer, and coffee drinker living in Foggy London Town.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://iest.co" # the base hostname & protocol for your site
 twitter_username: _iest
 github_username:  iest
 
+# Pagination
+paginate: 2
+paginate_path: "/page:num"
+
 # Build settings
-exclude: ['gulpfile.js', 'node_modules', 'package.json', '*.sketch']
+exclude: ['gulpfile.js', 'node_modules', 'package.json', '*.sketch', '*.sublime*']
 markdown: kramdown
 kramdown:
   input: GFM
 
 # Code highlighting
 highlighting: pygments
+
 
 # Stylus processor
 stylus:

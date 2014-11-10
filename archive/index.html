@@ -7,13 +7,16 @@ layout: default
     <li>
       <a class="postLink" href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="postTitle">{{ post.title }}</h2>
-        <span class="postMeta">
-          — {{ post.date | date: "%B %-d, %Y" }}
-        </span>
       </a>
-      <p class="postExcerpt">{{post.excerpt | strip_html}}</p>
+      <div class="postMeta">
+        <span class="postMeta-date">{{ post.date | date: "%B %-d, %Y" }}</span>  
+      <p class="postMeta-exceprt">{{post.excerpt | strip_html}}</p>
+
+      </div>
+      
     </li>
   {% endfor %}
+
 </ul>
 
 <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->

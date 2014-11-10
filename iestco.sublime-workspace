@@ -1,0 +1,2549 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ili",
+				"inline-block"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"sta",
+				"stateChange"
+			],
+			[
+				"trans",
+				"transformSrc"
+			],
+			[
+				"categ",
+				"categories"
+			],
+			[
+				"templ",
+				"templateEnd"
+			],
+			[
+				"render",
+				"renderEnv"
+			],
+			[
+				"h1",
+				"h1TypeHash"
+			],
+			[
+				"h1TY",
+				"h1TypeEquals"
+			],
+			[
+				"prev",
+				"previousLine"
+			],
+			[
+				"psts",
+				"postsArr"
+			],
+			[
+				"eas",
+				"easeOutCirc"
+			],
+			[
+				"ifra",
+				"iframeSrc"
+			],
+			[
+				"is",
+				"isIframe"
+			],
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"lin",
+				"line-height"
+			],
+			[
+				"background-",
+				"background-size"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"z-",
+				"z-index-5"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"color-black",
+				"color-blackLight"
+			],
+			[
+				"z-in",
+				"z-index--nav-inner"
+			],
+			[
+				"docu",
+				"documentElement"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"medi",
+				"mediaObject--dark"
+			],
+			[
+				"media",
+				"mediaObject-inner"
+			],
+			[
+				"r",
+				"rgba	rgba"
+			],
+			[
+				"col",
+				"color-white"
+			],
+			[
+				"backgron",
+				"background-position"
+			],
+			[
+				"js-",
+				"js-setHeight"
+			],
+			[
+				"heri",
+				"heroChevron-icon"
+			],
+			[
+				"colr",
+				"color-highlight"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"random",
+				"randomKey"
+			],
+			[
+				"hands",
+				"handsLength"
+			],
+			[
+				"number",
+				"number1"
+			],
+			[
+				"tota",
+				"totalCount"
+			],
+			[
+				"comple",
+				"completedCount"
+			],
+			[
+				"frien",
+				"friendCount"
+			],
+			[
+				"callb",
+				"callbackEvents"
+			],
+			[
+				"tra",
+				"trackingAlias"
+			],
+			[
+				"Trac",
+				"TrackingAlias"
+			],
+			[
+				"real",
+				"realEventName"
+			],
+			[
+				"event",
+				"eventTypeHZ"
+			],
+			[
+				"even",
+				"eventTypeGA"
+			],
+			[
+				"diff",
+				"differentKeys"
+			],
+			[
+				"optio",
+				"optionsKeys"
+			],
+			[
+				"exer",
+				"exercise"
+			],
+			[
+				"stat",
+				"statsService"
+			],
+			[
+				"gener",
+				"generateHorizonTags"
+			],
+			[
+				"Eve",
+				"EventTypeHZ"
+			],
+			[
+				"EV",
+				"EventTypeKM"
+			],
+			[
+				"fri",
+				"friendCount"
+			],
+			[
+				"eventTep",
+				"eventTemplates"
+			],
+			[
+				"tracki",
+				"trackingEvent"
+			],
+			[
+				"trac",
+				"trackingEvent"
+			],
+			[
+				"act",
+				"activityType"
+			],
+			[
+				"ex",
+				"exerciseFinished"
+			],
+			[
+				"defa",
+				"defaultGAOptions"
+			],
+			[
+				"getCr",
+				"getCriteoId"
+			],
+			[
+				"complet",
+				"completedTestsCount"
+			],
+			[
+				"sent",
+				"sentanceEnd"
+			],
+			[
+				"sen",
+				"sentanceEnd"
+			],
+			[
+				"senta",
+				"sentanceStart"
+			],
+			[
+				"spli",
+				"splitSentance"
+			],
+			[
+				"conti",
+				"continueDisabled"
+			],
+			[
+				"req",
+				"requirementsResults"
+			],
+			[
+				"re",
+				"requirements"
+			],
+			[
+				"stylus",
+				"stylusLibs"
+			],
+			[
+				"stylu",
+				"stylusLibs"
+			],
+			[
+				"vid",
+				"videoUrls"
+			],
+			[
+				"corre",
+				"correctAnswer"
+			],
+			[
+				"split",
+				"splittingIndex"
+			],
+			[
+				"core",
+				"correctAnswer"
+			],
+			[
+				"other",
+				"otherPossibleAnswers"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"ans",
+				"answerCorrect"
+			],
+			[
+				"curre",
+				"currentSequenceIndex"
+			],
+			[
+				"goto",
+				"gotoNextActivity"
+			],
+			[
+				"succ",
+				"successfulTestCount"
+			],
+			[
+				"suc",
+				"successfulTestCount"
+			],
+			[
+				"set",
+				"setupEvents"
+			],
+			[
+				"play",
+				"playlist"
+			],
+			[
+				"read",
+				"readyState"
+			],
+			[
+				"mod",
+				"modalTestInProgress"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"font",
+				"fontSizer"
+			],
+			[
+				"PL",
+				"PlayStates"
+			],
+			[
+				"Play",
+				"PlayStates"
+			],
+			[
+				"translate",
+				"translateY"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"pr",
+				"primary"
+			],
+			[
+				"ease",
+				"ease-in-out"
+			],
+			[
+				"get",
+				"getActiveShot"
+			],
+			[
+				"Ac",
+				"ShotActionCreators"
+			],
+			[
+				"Shot",
+				"ShotActionCreators"
+			],
+			[
+				"ac",
+				"activeShotId"
+			],
+			[
+				"active",
+				"activeShotId"
+			],
+			[
+				"anim",
+				"AnimGroup"
+			],
+			[
+				"ext",
+				"extraClasses"
+			],
+			[
+				"fak",
+				"fakeObj"
+			],
+			[
+				"fae",
+				"fakeId"
+			],
+			[
+				"shot",
+				"shotCategory"
+			],
+			[
+				"fetch",
+				"fetchShotsByCurrentCategory"
+			],
+			[
+				"pop",
+				"populateShotCategory"
+			],
+			[
+				"acti",
+				"activeCategory"
+			],
+			[
+				"total",
+				"totalSockets"
+			],
+			[
+				"clien",
+				"clientIp"
+			],
+			[
+				"Sht",
+				"ShotActionCreators"
+			],
+			[
+				"scrol",
+				"scrollableArea"
+			],
+			[
+				"obe",
+				"objective"
+			],
+			[
+				"objec",
+				"objectiveToAddGoalTo"
+			],
+			[
+				"object",
+				"objective1"
+			],
+			[
+				"ob",
+				"objectiveCounter"
+			],
+			[
+				"obj",
+				"objective1"
+			],
+			[
+				"chosen",
+				"chosenCharacter"
+			],
+			[
+				"recrd",
+				"recorderService"
+			],
+			[
+				"current",
+				"currentlyPlayingToken"
+			],
+			[
+				"curen",
+				"currentlyPlayingToken"
+			],
+			[
+				"chos",
+				"chosenCharacterIndex"
+			],
+			[
+				"chara",
+				"characters"
+			],
+			[
+				"begin",
+				"beginExercise"
+			],
+			[
+				"cl",
+				"cl	console.log"
+			],
+			[
+				"curren",
+				"currentAnim"
+			],
+			[
+				"currn",
+				"currentActiveBuffer"
+			],
+			[
+				"percen",
+				"percentageGetter"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"js",
+				"Set Syntax: JSX"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"sty",
+				"Set Syntax: Stylus"
+			],
+			[
+				"open",
+				"Finder: Open here"
+			],
+			[
+				"jsx",
+				"Set Syntax: JavaScript (JSX)"
+			],
+			[
+				"previw",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"prev",
+				"Camaleón: Previous Preset"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"hist",
+				"GitHub: History"
+			],
+			[
+				"istal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"enc",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"prevew",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"reove",
+				"Package Control: Remove Package"
+			],
+			[
+				"jshin",
+				"JSHint"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jshint",
+				"JSHint"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"intsall",
+				"Package Control: Install Package"
+			],
+			[
+				"subl",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"jsh",
+				"JSHint"
+			],
+			[
+				"linter",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"sublime",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"enabl",
+				"Package Control: Enable Package"
+			],
+			[
+				"jshi",
+				"JSHint"
+			],
+			[
+				"jav	",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"blame",
+				"GitHub: Blame"
+			],
+			[
+				"javsac",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javsc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"view",
+				"GitHub: View"
+			],
+			[
+				"blane",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"hint",
+				"JSHint"
+			],
+			[
+				"format",
+				"Format: CSS"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"histor",
+				"GitHub: History"
+			],
+			[
+				"histo",
+				"GitHub: History"
+			],
+			[
+				"listp",
+				"Package Control: List Packages"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"j",
+				"Set Syntax: JSX"
+			],
+			[
+				"jaa",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"js	",
+				"Set Syntax: JavaScript (JSX)"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"jsc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"git hist",
+				"GitHub: History"
+			],
+			[
+				"histr",
+				"GitHub: History"
+			],
+			[
+				"blamer",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"todo",
+				"TodoReview: Project Files"
+			],
+			[
+				"show",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"aciotn",
+				"Set Syntax: ActionScript"
+			],
+			[
+				"view ",
+				"GitHub: View"
+			],
+			[
+				"gith",
+				"GitHub: View"
+			],
+			[
+				"jso",
+				"Set Syntax: JSON"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"conver ta",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"tabs",
+				"View: Toggle Tabs"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"github vi",
+				"GitHub: View"
+			],
+			[
+				"histy",
+				"GitHub: History"
+			],
+			[
+				"bl",
+				"GitHub: Blame"
+			],
+			[
+				"history",
+				"GitHub: History"
+			],
+			[
+				"git his",
+				"GitHub: History"
+			],
+			[
+				"istall",
+				"Package Control: Install Package"
+			],
+			[
+				"styu",
+				"Set Syntax: Stylus"
+			],
+			[
+				"onstal",
+				"Package Control: Install Package"
+			],
+			[
+				"jav		",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"githu",
+				"GitHub: View"
+			],
+			[
+				"git blame",
+				"GitHub: Blame"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"scs",
+				"Set Syntax: CSS"
+			],
+			[
+				"gihub",
+				"GitHub: View"
+			],
+			[
+				"git ",
+				"GitHub: View"
+			],
+			[
+				"diff",
+				"FileDiffs: Menu"
+			],
+			[
+				"onstall",
+				"Package Control: Install Package"
+			],
+			[
+				"hmtl",
+				"Set Syntax: HTML"
+			],
+			[
+				"blae",
+				"GitHub: Blame"
+			],
+			[
+				"blam",
+				"GitHub: Blame"
+			],
+			[
+				"git bl",
+				"GitHub: Blame"
+			],
+			[
+				"g",
+				"GitHub: Blame"
+			],
+			[
+				"git bla",
+				"GitHub: Blame"
+			],
+			[
+				"git blam",
+				"GitHub: Blame"
+			],
+			[
+				"enco",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"pyth",
+				"Set Syntax: Jade (Python)"
+			],
+			[
+				"borw",
+				"Preferences: Browse Packages"
+			],
+			[
+				"jo",
+				"Set Syntax: JSON"
+			],
+			[
+				"chan",
+				"ChangeQuotes"
+			],
+			[
+				"change",
+				"ChangeQuotes"
+			],
+			[
+				"browe",
+				"Preferences: Browse Packages"
+			],
+			[
+				"rmeove",
+				"Package Control: Remove Package"
+			],
+			[
+				"preview",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"list pa",
+				"Package Control: List Packages"
+			],
+			[
+				"beat",
+				"SassBeautify"
+			],
+			[
+				"i stall",
+				"Package Control: Install Package"
+			],
+			[
+				"encp",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"handl",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"hand",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"remve",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 475.0
+	},
+	"console":
+	{
+		"height": 469.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/Users/iest/Code/iest.co/_layouts/default.html",
+		"/Users/iest/Code/iest.co/_includes/header.html",
+		"/Users/iest/Code/iest.co/_includes/head.html",
+		"/Users/iest/Code/iest.co/index.html",
+		"/Users/iest/Code/iest.co/package.json",
+		"/Users/iest/Code/iest.co/gulpfile.js",
+		"/Users/iest/Code/iest.co/.gitignore",
+		"/Users/iest/Code/iest.co/_posts/2014-07-13-creating-an-icon-set-in-2014.md",
+		"/Users/iest/Code/iest.co/_site/package.json",
+		"/Users/iest/Code/iest.co/_config.yml",
+		"/Users/iest/Code/iest.co/_site/index.html",
+		"/Users/iest/Dropbox/iW logos/iw_logo.svg",
+		"/Users/iest/Code/iest.co/_includes/footer.html",
+		"/Users/iest/Code/iest.co/_site/css/main.css",
+		"/Users/iest/Code/iest.co/_stylus/type.styl",
+		"/Users/iest/Code/iest.co/_stylus/base.styl",
+		"/Users/iest/Code/iest.co/feed.xml",
+		"/Users/iest/Code/iest.co/_plugins/stylus_converter.rb",
+		"/Users/iest/Code/iest.co/css/main.scss",
+		"/Users/iest/Code/iest.co/_posts/2013-8-12-Progressive-Enhancement-Raising-the-bar.md",
+		"/Users/iest/Code/iest.co/_posts/2013-8-4-why-stylus-is-awesome.md",
+		"/Users/iest/Code/iest.co/_posts/2014-11-09-welcome-to-jekyll.markdown",
+		"/Users/iest/Code/iest.co/_posts/2014-7-13-creating-an-icon-set-in-2014.md",
+		"/Users/iest/Code/iest.co/about.md",
+		"/Users/iest/Code/iest.co/_posts/2014-11-09-about.md",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/__tests__/services/Cloudinary.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/services/Cloudinary.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/components/Cloudinary.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/Config/index.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/.editorconfig",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/components/Subcategory.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/routes/Categories.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/components/Category.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/stores/AuthStore.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/components/Loader.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/app.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/routes/Login.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/package.json",
+		"/Users/iest/Bizzby Projects/Web-Seeker/server.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/stores/TaskStore.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/mixins/AuthenticatedRoute.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/__tests__/stores/TaskStore.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/router.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/locales/it.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/README.md",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/actions/ServerActions.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/__tests__/util/envContext.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/routes/NotFound.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/routes/Sentence.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/gulpfile.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/routes/Subcategories.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/routes/Register.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/routes/ResetPassword.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/index.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/components/Categories.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/styles/index.styl",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/routes.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/components/Subcategories.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/components/Login.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/styles/zIndex.styl",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/constants/AppConstants.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/dispatchers/AppDispatcher.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/services/Api.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/components/Sentence.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/styles/colours.styl",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/components/Choice.jsx",
+		"/Users/iest/Bizzby Projects/Web-Seeker/.gitignore",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/__mocks__/superagent.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/services/Geocoding.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/node_modules/react/lib/Object.assign.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/repositories/TaskRepository.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/styles/typography.styl",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/__tests__/stores/AuthStore.js",
+		"/Users/iest/Bizzby Projects/Frontend-Challenge/client/dispatcher/AppDispatcher.js",
+		"/Users/iest/Bizzby Projects/Frontend-Challenge/client/components/bzInput.react.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/build/bundle.js",
+		"/Users/iest/Bizzby Projects/Frontend-Challenge/client/routes/ironingRoute.react.js",
+		"/Users/iest/Bizzby Projects/Frontend-Challenge/__tests__/IroningJobStore-test.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/.jshintrc",
+		"/Users/iest/Bizzby Projects/Frontend-Challenge/client/constants/JobTypes.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/src/util/envContext.js",
+		"/Users/iest/Bizzby Projects/Web-Seeker/locales/en.js",
+		"/Users/iest/Bizzby Projects/webapp/index.html",
+		"/Users/iest/Bizzby Projects/webapp/src/app.jsx",
+		"/Users/iest/Bizzby Projects/webapp/src/stores/CategoriesStore.js",
+		"/Users/iest/Bizzby Projects/webapp/src/helpers/Geocoding.js",
+		"/Users/iest/Bizzby Projects/webapp/src/components/Categories.jsx",
+		"/Users/iest/Bizzby Projects/webapp/src/components/Category.jsx",
+		"/Users/iest/Bizzby Projects/webapp/src/components/Sentence.jsx",
+		"/Users/iest/Bizzby Projects/webapp/src/stores/AuthStore.js",
+		"/Users/iest/Bizzby Projects/webapp/README.md",
+		"/Users/iest/Bizzby Projects/webapp/gulpfile.js",
+		"/Users/iest/Dropbox/App data/Sublime Text 3/Packages/ApplySyntax/ApplySyntax.sublime-settings",
+		"/Users/iest/Dropbox/App data/Sublime Text 3/Packages/User/ApplySyntax.sublime-settings",
+		"/Users/iest/Dropbox/App data/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/iest/Dropbox/App data/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/iest/Dropbox/App data/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/Users/iest/Bizzby Projects/webapp/src/components/Login.jsx",
+		"/Users/iest/Bizzby Projects/webapp/src/actions/AppActions.js",
+		"/Users/iest/Bizzby Projects/webapp/src/stores/__tests__/AuthStore.js",
+		"/Users/iest/Bizzby Projects/webapp/src/constants/AppConstants.js",
+		"/Users/iest/Bizzby Projects/webapp/src/dispatchers/AppDispatcher.js",
+		"/Users/iest/Bizzby Projects/webapp/src/components/Loader.jsx",
+		"/Users/iest/Bizzby Projects/webapp/src/components/Subcategory.jsx",
+		"/Users/iest/Bizzby Projects/webapp/src/components/Subcategories.jsx",
+		"/Users/iest/Bizzby Projects/webapp/src/components/Choice.jsx",
+		"/Users/iest/Bizzby Projects/webapp/.jshintrc",
+		"/Users/iest/Bizzby Projects/webapp/src/helpers/__tests__/Geocoding.js",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/jade/index.jade",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/js/initLoad/initLoad.js",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/stylus/slider.styl",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/stylus/sky-styles.styl",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/svg-raw/skyLogo.svg",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/js/app.js",
+		"/Users/iest/Dropbox/Bizzby/project-sky/gulpfile.js",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/js/initLoad/modernizr-build.js",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/stylus/modifiers.styl",
+		"/Users/iest/Dropbox/Bizzby/project-sky/dist/initLoad.js",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/stylus/prose.styl",
+		"/Users/iest/Dropbox/Bizzby/project-sky/dist/images/app_store.svg",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/svg-raw/icon--facebook.svg",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/jade/svg.jade",
+		"/Users/iest/Dropbox/Bizzby/project-sky/dist/index.html",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/stylus/hero.styl",
+		"/Users/iest/Downloads/faviconit/faviconit-instructions.txt",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/js/lib/slider.js",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/svg-raw/icon--play.svg",
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/svg-raw/icon--twitter.svg"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 106.0,
+		"where_history":
+		[
+			"*.js, -bundle.js",
+			"*.js, -/build",
+			"*.js",
+			"",
+			"*.js",
+			"*.styl, *.jade, *.js",
+			"*.styl, *.jade",
+			"*.styl",
+			"-*_test.js, *.html",
+			"-*_test.js, app/",
+			"-*_test.js, app/scripts",
+			"-*_test.js",
+			"-*_test",
+			"",
+			"-*_test.js",
+			"",
+			"app",
+			"app/scripts",
+			"",
+			"app/",
+			"app/scripts",
+			"",
+			"app/scripts",
+			"",
+			"app/scripts",
+			"app/, -app/lib",
+			"app/, -lib",
+			"app/",
+			"",
+			"app/scripts",
+			"",
+			"*.styl",
+			"",
+			"*.js",
+			"*.styl",
+			"",
+			"*.styl",
+			"",
+			"*.jade, *.html",
+			"*.jade",
+			"",
+			"*.jade",
+			"",
+			"app/scripts/**/*.js, *.jade",
+			"*.jade",
+			"*.styl",
+			"*.jade",
+			"*.js",
+			"",
+			"*.jade",
+			"*.js",
+			"*.jade,",
+			"*.jade, *.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.jade, *.html, *.js",
+			"",
+			"-bundle.js",
+			"",
+			"app/scripts, *.html",
+			"",
+			"app/scripts, *.html",
+			"/app/scripts, *.html",
+			"/app/scripts",
+			"-*lib",
+			"-/app/lib",
+			"-/lib",
+			"-lib",
+			"-li",
+			"",
+			"*.js, *.html",
+			"*.js",
+			"*.styl, *.scss",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.styl",
+			"*.jade",
+			"*.html",
+			"*.jade",
+			"",
+			"*.jade",
+			"*.style",
+			"*.js",
+			"*.styl",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"",
+			"*.js",
+			"",
+			"*.jade",
+			"app/scripts/**/*.js",
+			"/app/scripts/**/*.js",
+			"*.js",
+			"*.jade",
+			"",
+			"*.jade",
+			"",
+			"*.styl",
+			"*.jade",
+			"_test.js",
+			"",
+			"*.styl",
+			"*.jade",
+			"*.html, *.jade",
+			"",
+			"*.js",
+			"*.styl"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"border-bottom",
+			"color",
+			"a",
+			"is-",
+			"is",
+			"siteNav",
+			"sketch",
+			"classset",
+			"cx",
+			"nerp",
+			"div",
+			"setCategories",
+			"is here",
+			"h1",
+			"routes",
+			"CurrentRoute",
+			"Navigation",
+			";\n",
+			"index.js",
+			"components",
+			"merge",
+			"copyProperties",
+			"simple",
+			"react-simple",
+			"translate",
+			"AppConstants.AUTH_LOGIN",
+			"authStore",
+			" 5em",
+			"5em",
+			"timeout",
+			"toto",
+			"&",
+			">",
+			"meta",
+			"http://www.fodors.com/ee/files/slideshows",
+			">",
+			"/>",
+			" />",
+			"meta",
+			"/>",
+			"meta",
+			"a(href=\"\")",
+			"svg(",
+			"svg",
+			"pressLogo",
+			"href",
+			"link",
+			"Derp.md",
+			"url",
+			"promise",
+			"console",
+			"allowedExtensions",
+			"setup",
+			"postsMapByPath",
+			"opts",
+			"checkValidUrl",
+			"_this.",
+			" = ",
+			"jshint",
+			"moment",
+			"20x60",
+			"10x25",
+			"heading",
+			"-3",
+			"0.35em",
+			"0.4em",
+			"emailForm",
+			"background",
+			"bacj",
+			"landed",
+			"ease-in",
+			"1500ms",
+			"800ms",
+			"1.8s",
+			"1.8",
+			"2s",
+			"1.5",
+			"easeOutCirc",
+			"2s",
+			"all",
+			"opacity",
+			"1000ms",
+			"200ms",
+			"html",
+			"italic",
+			"400;",
+			"400 ",
+			"400",
+			"700",
+			"prose",
+			"mediaImage",
+			"nav-icon",
+			"hero-background",
+			"heading--",
+			"-color",
+			"iframe",
+			"media",
+			"max",
+			"retina",
+			"type",
+			"480",
+			"visibility",
+			"20",
+			"50",
+			"figure",
+			".mediaUnit",
+			"//- figure",
+			"figure",
+			".mediaUnit",
+			"background-position",
+			"js-setHeight",
+			".js-setHeight",
+			"fly.js-setHeight",
+			"$bg--bottom, ",
+			".scroll",
+			"intro\").scroll",
+			"blackLight",
+			"$nav",
+			"5",
+			"html",
+			"300ms",
+			"infinite",
+			"Open",
+			"1s",
+			"50",
+			"300ms",
+			"Close",
+			"figure"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"#364658",
+			"#FFFFFF",
+			"#1B2D3D",
+			"rgb(27,45,61)",
+			"#818994",
+			"#1B2D3D",
+			"util.openPopupWindow",
+			"dependantUtils",
+			"var merge = require('xtend');",
+			"RECIEVE_SHOTS",
+			"\"",
+			"xlite",
+			"bs-lblue-xlite",
+			"bs-blue-xlite",
+			"panel__inner",
+			"panel",
+			"currentlyPlayingToken",
+			"isDoneRecording",
+			"isMicReady",
+			"isMicAllowed",
+			"isAudioPaused",
+			"isAudioPlaying",
+			"text-ellipsis",
+			"font-weight: 400",
+			"font-weight: 700;",
+			"font-weight: 500;",
+			"$museo_sans500",
+			"$museo_sans500;\\nfont-weight:500;",
+			"$museo_sans300;\\nfont-weight:500;",
+			"$museo_sans500",
+			"$museo_sans300"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 98.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "iestco.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"head",
+				"_includes/header.html"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"conf",
+				"_config.yml"
+			],
+			[
+				"git",
+				".gitignore"
+			],
+			[
+				"foot",
+				"_includes/footer.html"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"defa",
+				"_layouts/default.html"
+			],
+			[
+				"mainc",
+				"_site/css/main.css"
+			],
+			[
+				"header",
+				"_includes/header.html"
+			],
+			[
+				"confi",
+				"_config.yml"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"abo",
+				"about.md"
+			],
+			[
+				"con",
+				"_config.yml"
+			],
+			[
+				"cloud",
+				"src/__tests__/services/Cloudinary.js"
+			],
+			[
+				"congi",
+				"src/Config/index.js"
+			],
+			[
+				"serv",
+				"server.js"
+			],
+			[
+				"app",
+				"src/app.js"
+			],
+			[
+				"cate",
+				"src/routes/Categories.jsx"
+			],
+			[
+				"config",
+				"src/Config/index.js"
+			],
+			[
+				"cloudin",
+				"src/services/Cloudinary.js"
+			],
+			[
+				"clou",
+				"src/components/Cloudinary.jsx"
+			],
+			[
+				"authst",
+				"src/stores/AuthStore.js"
+			],
+			[
+				"log",
+				"src/routes/Login.jsx"
+			],
+			[
+				"ogi",
+				"src/routes/Login.jsx"
+			],
+			[
+				"auth",
+				"src/stores/AuthStore.js"
+			],
+			[
+				"logi",
+				"src/routes/Login.jsx"
+			],
+			[
+				"sub",
+				"src/components/Subcategory.jsx"
+			],
+			[
+				"",
+				"src/components/Category.jsx"
+			],
+			[
+				"cl",
+				"src/components/Cloudinary.jsx"
+			],
+			[
+				"cat",
+				"src/components/Category.jsx"
+			],
+			[
+				"task",
+				"src/stores/TaskStore.js"
+			],
+			[
+				"lo",
+				"src/routes/Login.jsx"
+			],
+			[
+				"rout",
+				"src/router.js"
+			],
+			[
+				"catego",
+				"src/routes/Categories.jsx"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"categors",
+				"src/routes/Categories.jsx"
+			],
+			[
+				"ser",
+				"server.js"
+			],
+			[
+				"rou",
+				"src/router.js"
+			],
+			[
+				"categrs",
+				"src/routes/Categories.jsx"
+			],
+			[
+				"subca",
+				"src/components/Subcategory.jsx"
+			],
+			[
+				"router",
+				"src/router.js"
+			],
+			[
+				"categ",
+				"src/components/Category.jsx"
+			],
+			[
+				"caterg",
+				"src/components/Categories.jsx"
+			],
+			[
+				"idnex",
+				"src/Config/index.js"
+			],
+			[
+				"api",
+				"src/services/Api.js"
+			],
+			[
+				"cater",
+				"src/components/Category.jsx"
+			],
+			[
+				"subcat",
+				"src/components/Subcategory.jsx"
+			],
+			[
+				"catg",
+				"src/components/Category.jsx"
+			],
+			[
+				"pak",
+				"Web-Seeker/package.json"
+			],
+			[
+				"pack",
+				"Web-Seeker/package.json"
+			],
+			[
+				"route",
+				"Web-Seeker/src/routes.js"
+			],
+			[
+				"jshi",
+				"Web-Seeker/.jshintrc"
+			],
+			[
+				"geoco",
+				"src/helpers/Geocoding.js"
+			],
+			[
+				"sent",
+				"src/components/Sentence.jsx"
+			],
+			[
+				"rea",
+				"README.md"
+			],
+			[
+				"appa",
+				"src/actions/AppActions.js"
+			],
+			[
+				"appac",
+				"src/actions/AppActions.js"
+			],
+			[
+				"appact",
+				"src/dispatchers/AppDispatcher.js"
+			],
+			[
+				"login",
+				"src/components/Login.jsx"
+			],
+			[
+				"authr",
+				"src/stores/AuthStore.js"
+			],
+			[
+				"slide",
+				"src/stylus/slider.styl"
+			],
+			[
+				"init",
+				"src/js/initLoad/initLoad.js"
+			],
+			[
+				"mod",
+				"src/js/initLoad/modernizr-build.js"
+			],
+			[
+				"sky",
+				"src/stylus/sky-styles.styl"
+			],
+			[
+				"pro",
+				"src/stylus/prose.styl"
+			],
+			[
+				"sli",
+				"src/stylus/slider.styl"
+			],
+			[
+				"svg",
+				"src/jade/svg.jade"
+			],
+			[
+				"hmtl",
+				"dist/index.html"
+			],
+			[
+				"slider",
+				"src/stylus/slider.styl"
+			],
+			[
+				"modi",
+				"src/stylus/modifiers.styl"
+			],
+			[
+				"idne",
+				"src/jade/index.jade"
+			],
+			[
+				"derp",
+				"lib/derp.js"
+			],
+			[
+				"derp_",
+				"test/fixtures/Derp_meta_title.md"
+			],
+			[
+				"parse",
+				"lib/derp/parse-post.js"
+			],
+			[
+				"defau",
+				"lib/derp/defaults.js"
+			],
+			[
+				"pat",
+				"lib/derp/parse-post.js"
+			],
+			[
+				"pasr",
+				"test/parse-post.js"
+			],
+			[
+				"typ",
+				"src/stylus/type.styl"
+			],
+			[
+				"quote",
+				"src/stylus/quoteBlock.styl"
+			],
+			[
+				"butt",
+				"src/stylus/buttons.styl"
+			],
+			[
+				"nav",
+				"src/stylus/nav.styl"
+			],
+			[
+				"medi",
+				"src/stylus/media.styl"
+			],
+			[
+				"hero",
+				"src/stylus/hero.styl"
+			],
+			[
+				"modal",
+				"src/stylus/modal.styl"
+			],
+			[
+				"mo",
+				"src/stylus/modifiers.styl"
+			],
+			[
+				"butto",
+				"src/stylus/buttons.styl"
+			],
+			[
+				"ini",
+				"src/js/initLoad/initLoad.js"
+			],
+			[
+				"var",
+				"src/stylus/variables.styl"
+			],
+			[
+				"ide",
+				"src/jade/index.jade"
+			],
+			[
+				"ni",
+				"dist/initLoad.js"
+			],
+			[
+				"base",
+				"src/stylus/base.styl"
+			],
+			[
+				"css",
+				"dist/sky-styles.css"
+			],
+			[
+				"sty",
+				"src/stylus/sky-styles.styl"
+			],
+			[
+				"st",
+				"src/stylus/sky-styles.styl"
+			],
+			[
+				"secio",
+				"src/stylus/sections.styl"
+			],
+			[
+				"prose",
+				"src/stylus/prose.styl"
+			],
+			[
+				"media",
+				"src/stylus/media.styl"
+			],
+			[
+				"icon",
+				"src/stylus/icon.styl"
+			],
+			[
+				"ine",
+				"dist/index.html"
+			],
+			[
+				"mdal",
+				"src/stylus/modal.styl"
+			],
+			[
+				"embe",
+				"src/stylus/embedContainer.styl"
+			],
+			[
+				"ype",
+				"src/stylus/type.styl"
+			],
+			[
+				"med",
+				"src/stylus/media.styl"
+			],
+			[
+				"scrol",
+				"src/js/lib/scroll.js"
+			],
+			[
+				"vari",
+				"src/stylus/variables.styl"
+			],
+			[
+				"iit",
+				"dist/initLoad.js"
+			],
+			[
+				"bse",
+				"src/stylus/base.styl"
+			],
+			[
+				"styles",
+				"src/stylus/sky-styles.styl"
+			],
+			[
+				"type",
+				"src/stylus/type.styl"
+			],
+			[
+				"appdo",
+				"src/stylus/appDownload.styl"
+			],
+			[
+				"gul",
+				"gulpfile.js"
+			],
+			[
+				"modifier",
+				"src/stylus/modifiers.styl"
+			],
+			[
+				"util",
+				"app/scripts/services/util.js"
+			],
+			[
+				"depen",
+				"app/scripts/services/dependantUtils.js"
+			],
+			[
+				"bscorre",
+				"app/template/bsCorrectionsList.jade"
+			],
+			[
+				"bscorrect",
+				"app/scripts/directives/bsCorrectionsList.js"
+			],
+			[
+				"practise",
+				"app/template/views/practise.jade"
+			],
+			[
+				"thanks",
+				"app/scripts/controllers/modal/Modal_ThanksForCorrection.js"
+			],
+			[
+				"bsexercisec",
+				"app/scripts/directives/widgets/bsExerciseCorrection.js"
+			],
+			[
+				"exercises.jade",
+				"app/template/widgets/exercises.jade"
+			],
+			[
+				"exercisejad",
+				"app/template/learn/exercise.jade"
+			],
+			[
+				"corrections.ja",
+				"app/template/widgets/corrections.jade"
+			],
+			[
+				"bscorrecitonli",
+				"app/template/bsCorrectionsList.jade"
+			],
+			[
+				"practi",
+				"app/template/views/practise.jade"
+			],
+			[
+				"correc",
+				"app/template/views/correction.jade"
+			],
+			[
+				"exercise.jade",
+				"app/template/views/exercise.jade"
+			],
+			[
+				"exer",
+				"app/template/learn/exercise.jade"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Desktop/Bizzby web app.sublime-project"
+			],
+			[
+				"nu",
+				"~/Documents/busuu/nucleo.sublime-workspace"
+			],
+			[
+				"home",
+				"~/Documents/busuu/Homepage.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"nav-ic",
+				"nav-icon"
+			],
+			[
+				"getCurrentTe",
+				"getCurrentTemplate"
+			],
+			[
+				"inittestlist",
+				"initTestList"
+			],
+			[
+				"format",
+				"format"
+			],
+			[
+				"starttest",
+				"startTest"
+			],
+			[
+				"gsetstart",
+				"gsetStartTest"
+			],
+			[
+				"openy",
+				"openYoutube"
+			],
+			[
+				"getabo",
+				"getAboutGsetVideoId"
+			],
+			[
+				"mapTran",
+				"mapTranslation"
+			],
+			[
+				"gotonext",
+				"gotoNextActivity"
+			],
+			[
+				"initPror",
+				"initProgress"
+			],
+			[
+				"gotoNext",
+				"gotoNextActivity"
+			],
+			[
+				"pla",
+				"playAudio"
+			],
+			[
+				"linkedin",
+				"linkedInShare"
+			],
+			[
+				"nextReview",
+				"nextReview"
+			],
+			[
+				"markact",
+				"markCurrentActivityDone"
+			],
+			[
+				"initProgre",
+				"initProgress"
+			],
+			[
+				"lu-nav-item",
+				"lu-nav-item"
+			],
+			[
+				"tilte-wrapper",
+				"title-wrapper"
+			],
+			[
+				"gotot",
+				"gotoTimeline"
+			],
+			[
+				"lu-nav",
+				"lu-nav"
+			],
+			[
+				"hint",
+				"hint"
+			],
+			[
+				"maptra",
+				"mapTranslation"
+			],
+			[
+				"endswith",
+				"endsWith"
+			],
+			[
+				"toggleaudio",
+				"toggleAudio"
+			],
+			[
+				"emphasis",
+				"emphasis"
+			],
+			[
+				"header-secion",
+				"header-section-berries"
+			],
+			[
+				"reci",
+				"recieveAll"
+			],
+			[
+				"merge",
+				"merge"
+			],
+			[
+				"recieveAl",
+				"recieveAll"
+			],
+			[
+				"getexer",
+				"getExerciseWithComments"
+			],
+			[
+				"getfromser",
+				"getFromService"
+			],
+			[
+				"getFroim",
+				"getFromService"
+			],
+			[
+				"gotounit",
+				"gotoUnit"
+			],
+			[
+				"dontshpw",
+				"dontShowAgainPopup"
+			],
+			[
+				"timeline",
+				"timeline"
+			],
+			[
+				"texts",
+				"texts"
+			],
+			[
+				"timeline-ob",
+				"timeline-objective"
+			],
+			[
+				"loaded",
+				"courseDashboardLoaded"
+			],
+			[
+				"gettitle",
+				"getTitle"
+			],
+			[
+				"getti",
+				"getTimeline"
+			],
+			[
+				"title",
+				"title"
+			],
+			[
+				"main-wra",
+				"main-wrapper__inner"
+			],
+			[
+				"items-list",
+				"items-list"
+			],
+			[
+				"logo",
+				"logo"
+			],
+			[
+				"maptrans",
+				"mapTranslation"
+			],
+			[
+				"bs-a-4",
+				"bs-a-4record.ng-hide"
+			],
+			[
+				"review-wrapp",
+				"review-wrapper"
+			],
+			[
+				"main",
+				"main"
+			],
+			[
+				"bg-whi",
+				"bg-white"
+			],
+			[
+				"triangle-u",
+				"triangle-up"
+			],
+			[
+				"tria",
+				"triangle"
+			],
+			[
+				"text-med",
+				"text-medium"
+			],
+			[
+				"promo-b",
+				"promo-bar__action"
+			],
+			[
+				"promo-bar",
+				"promo-bar"
+			],
+			[
+				"header-section-u",
+				"header-section-upgrade"
+			],
+			[
+				"learninga",
+				"learningLang"
+			],
+			[
+				"section-h",
+				"section-header-menu"
+			],
+			[
+				"subheader-p",
+				"subheader-part"
+			],
+			[
+				"dashboard-tab-",
+				"dashboard-tab-link"
+			],
+			[
+				"sprite-crown",
+				"sprite-crown"
+			],
+			[
+				"user-pro",
+				"user-profile-name"
+			],
+			[
+				"top-part",
+				"top-part"
+			],
+			[
+				"header-secio",
+				"header-section-body"
+			],
+			[
+				"subehader",
+				"subheader"
+			],
+			[
+				"timeline-o",
+				"timeline-objective"
+			],
+			[
+				"is-curren",
+				"is-current"
+			],
+			[
+				"gift",
+				"gift"
+			],
+			[
+				"icon",
+				"icon"
+			],
+			[
+				"unit",
+				"unit"
+			],
+			[
+				"timeline-object",
+				"timeline-objective"
+			],
+			[
+				"review-choo",
+				"review-choose"
+			],
+			[
+				"mapTrans",
+				"mapTranslation"
+			],
+			[
+				"play-wrapper",
+				"play-wrapper"
+			],
+			[
+				"checkAnswers",
+				"checkAnswers"
+			],
+			[
+				"nextAfterReviewCompleted",
+				"nextAfterReviewCompleted"
+			],
+			[
+				"dropdown",
+				"dropdown"
+			],
+			[
+				"badges",
+				"tooltip--user-badges"
+			],
+			[
+				"tooltp",
+				"tooltip--user"
+			],
+			[
+				"tooltip-",
+				"tooltip--user-badges"
+			],
+			[
+				"google-ad",
+				"google-ad"
+			],
+			[
+				"content-bock-hea",
+				"content-block-header"
+			],
+			[
+				"langsel",
+				"content-block-langsel"
+			],
+			[
+				"content-block-header",
+				"content-block-header"
+			],
+			[
+				"content-bock-ti",
+				"content-block-title"
+			],
+			[
+				"langesl",
+				"content-block-langsel"
+			],
+			[
+				"content-list",
+				"content-list"
+			],
+			[
+				"content-block-title",
+				"content-block-title"
+			],
+			[
+				"contn",
+				"content-block-header"
+			],
+			[
+				"contnet-bock",
+				"content-block-header"
+			],
+			[
+				"tertia",
+				"btn-tertiary"
+			],
+			[
+				"bold",
+				"bold"
+			],
+			[
+				"profile-pi",
+				"profile-pic"
+			],
+			[
+				"btn--nav",
+				"btn--nav"
+			],
+			[
+				"getGree",
+				"getGreeting"
+			],
+			[
+				"fb-share",
+				"fb-share"
+			],
+			[
+				"isCurrent",
+				"isCurrent"
+			],
+			[
+				"pulli",
+				"pullUserList"
+			],
+			[
+				"bs-close",
+				"bs-close"
+			],
+			[
+				"crown",
+				"sprite-crown"
+			],
+			[
+				"bs-cl",
+				"bs-close"
+			],
+			[
+				"promobar",
+				"promobar"
+			],
+			[
+				"pullis",
+				"pullUserList"
+			],
+			[
+				"outline",
+				"btn-outlined"
+			],
+			[
+				"btn-ou",
+				"btn-outline"
+			],
+			[
+				"inviteF",
+				"inviteFriends"
+			],
+			[
+				"pane-",
+				"panel--muted"
+			],
+			[
+				"pullUser",
+				"pullUserList"
+			],
+			[
+				"text-ell",
+				"text-ellipsis"
+			],
+			[
+				"leaderboar",
+				"leaderboard"
+			],
+			[
+				"iscurrent",
+				"isCurrent"
+			],
+			[
+				"timeline-objecti",
+				"timeline-objective"
+			],
+			[
+				"tab-fo",
+				"tab-focus"
+			],
+			[
+				"promoboa",
+				"promobar-sprite-crown"
+			],
+			[
+				"promob",
+				"promobar"
+			],
+			[
+				"media",
+				"media"
+			],
+			[
+				"bscirl",
+				"bs-circle"
+			],
+			[
+				"bs-cirl",
+				"bs-circle"
+			],
+			[
+				"list",
+				"list"
+			],
+			[
+				"gplus",
+				"gplus"
+			],
+			[
+				"learinglang",
+				"learningLang"
+			],
+			[
+				"getTItle",
+				"getTitle"
+			],
+			[
+				"like",
+				"likeplus1"
+			],
+			[
+				"content-",
+				"content-block"
+			],
+			[
+				"timei",
+				"timeline-inner"
+			],
+			[
+				"transfom",
+				"transform"
+			],
+			[
+				"messagewra",
+				"message-wrapper"
+			],
+			[
+				"sprite-reor",
+				"sprite-record"
+			]
+		],
+		"width": 400.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 253.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

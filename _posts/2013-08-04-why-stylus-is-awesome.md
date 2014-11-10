@@ -2,7 +2,8 @@
 layout: post
 title:  "Why Stylus is my favourite CSS preprocessor"
 date:   2013-8-4 15:00:00
-categories: webdev css
+category: webdev
+tags: css stylus
 ---
 
 ## The first CSS preprocessor I used was [Less](http://lesscss.org). It was drier than [sass](http://sass-lang.com), and once they had in-line `@media` query support, I didn't think  it could get much better.

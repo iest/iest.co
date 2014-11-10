@@ -13,46 +13,62 @@ global-reset()
 // @import '_stylus/type'
 // @import '_stylus/base'
 
+color-1 = #FE4A43
+color-2 = #50E3C2
+color-3 = #FDB386
+color-4 = #13FD86
+color-5 = #0039FF
+color-6 = #9139FF
+
 color-dark =  #444444
-color-light = #AAAAAA
-color-bright = #50E3C2
+color-light = #6E6E6E
+color-xlight = #AAAAAA
 color-white = #FFFFFF
+
+color-bright = color-1
 
 color-twitter = #55ACEE
 color-github = #F6CBB5
 color-dribbble = #E9508A
 
-font-body = "jaf-facitweb"
-// font-body = "'p22-underground'"
+font-body = "jaf-facitweb", "Facit", "Helvetica Neue", "Helvetica", sans-serif
+font-mono = "Input Mono", "Fira Mono", "Menlo", "Inconsolata", monospace
 
 font-xheavy = 700
 font-heavy = 600
 font-light = 300
+font-xlight = 200
 
 
 html
   // 
 body
   font 1em/1.5 font-body
-  font-weight font-light
   padding 2em
-  background color-dark
+  background color-white
   color color-light
+  +retina()
+    font-weight font-light
 
 .container
   max-width 55em
   margin 0 auto
 
+pre
+  font-family font-mono
+
 a
-  color color-light
-  text-decoration underline
-  transition 200ms ease-out
+  color color-bright
+  fill @color
+  text-decoration none
+  transition color 200ms ease-out
 a:hover
-  color color-white
+  color color-dark
+  fill @color
 
 strong
   font-weight font-heavy
-  color color-white
+  color color-dark
 
 svg
   width 100%
@@ -60,30 +76,27 @@ svg
 
 .header
   cf()
-  border-bottom 1px solid color-bright
+  border-bottom 1px solid color-xlight
   padding-bottom 2em
   margin-bottom 2em
 .headerLogo
   col(1/4)
 .headerLogo-link
-  fill color-bright
   height 3em
   width @height * 1.270833333
   padding 0.4em
   display block
-.headerLogo-link:hover
-  fill color-white
+
 .headerNav
   col(1/4)
 .headerNav-link
   display block
-  text-decoration none
+  color color-bright
 .headerNav-link.is-active
   font-weight font-heavy
-  color color-white
 .headerDesc
   col(1/2)
-+below(50em)
++below(40em)
   .headerLogo
     col(1/1)
     margin-bottom 1em
@@ -98,43 +111,108 @@ svg
 
 .postList
   padding-top 1em
-.postList li
+.postList > li
   cf()
   margin-bottom 3em
 .postLink
-  text-decoration none
-  display block
-.postLink:hover
-  text-decoration underline
+  display inline
 .postTitle
   font-weight font-heavy
-  color color-white
-  font-size 1.4em
   display inline
 .postMeta
-  display inline-block
-.postExcerpt
   // 
-.postMeta
-  font-size 70%
-  text-transform uppercase
-  font-weight font-xheavy
+.postMeta-date
+  display inline-block
+  font-weight font-xlight
+  color color-xlight
+.postMeta-excerpt
+  font-weight light
 +above(40em)
-  .postTitle
-    display block
   .postLink
     col(1/2)
     text-align right
-  .postExcerpt
+  .postTitle
+    display block
+  .postMeta
     col(1/2)
 
+.post
+  padding-bottom 2em
+  margin-bottom 2em
+  cf()
+.post-header
+  // col(1/4)
+.post-title
+  font-weight font-xheavy
+  color color-dark
+.post-meta
+  color color-xlight
+.post-permalink
+  display inline-block
+  margin-bottom 1em
+.post-content
+  color color-dark
+.post-content p
+  margin-bottom 1em
+.post-content h1
+  // 
+.post-content h2
+  margin-bottom 1em
+  font-weight font-heavy
+.post-content h2:before
+  content "—"
+  margin-left -1em
+.post-content h3
+  margin-bottom 1em
+  color color-xlight
+  font-weight font-heavy
+.post-content h3:before
+  content "—"
+  margin-left -1em
+  color color-xlight
+.post-content img
+  span(1/1)
+.post-content aside
+  // 
+.post-content pre
+  max-width 100%
+  overflow auto
++above(38em)
+  .post
+    cf()
+  .post-header
+    col(1/4)
+  .post-content
+    col(3/4)
+  .post-content img
+    span(1.33333)
+    shift(-0.33333)
+
+.pagination
+  margin 2em 0
+  color color-xlight
+  text-align center
+.pagination a
+  // 
+.pagination-number
+  display inline-block
+  margin 0 2em
+.pagination-prev
+  // float left
+.pagination-next
+  // float right
+
 .footer
-  border-top 1px solid color-bright
+  border-top 1px solid color-xlight
   padding-top 2em
 .footer-links
+  cf()
   margin-bottom 1em
   list-style square
 .footer-links li
+  col(1/2, cycle: 2)
+.footer-links li:before
+  content none 
 .footer-links li.is-twitter
   color color-twitter
 .footer-links li.is-github
@@ -142,14 +220,16 @@ svg
 .footer-links li.is-dribbble
   color color-dribbble
 .footer-links li.is-email
-  color color-white
+  color color-dark
 .footer-links a
   text-decoration none
 .footer-updated
   margin-bottom 1em
+  color color-xlight
 .footer-copy
-  // 
-+above(30em)
+  col(1/1)
+  text-align center
++above(40em)
   .footer-links
     col(1/2)
   .footer-updated

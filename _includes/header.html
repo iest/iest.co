@@ -11,9 +11,15 @@
   <nav class="headerNav">
     {% if page.url == "/about/" %}
       <a class="headerNav-link" href="/">Journal</a>
+      <a class="headerNav-link" href="/archive">Archive</a>
       <a class="headerNav-link is-active" href="/about">About</a>
+    {% elsif page.url == "/archive/index.html" %}
+      <a class="headerNav-link" href="/">Journal</a>
+      <a class="headerNav-link is-active" href="/archive">Archive</a>
+      <a class="headerNav-link" href="/about">About</a>
     {% else %}
       <a class="headerNav-link is-active" href="/">Journal</a>
+      <a class="headerNav-link" href="/archive">Archive</a>
       <a class="headerNav-link" href="/about">About</a>
     {% endif %}
   </nav>
