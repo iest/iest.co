@@ -1,29 +1,31 @@
 <header class="header">
 
-  <div class="headerLogo">
-    <a class="headerLogo-link" href="{{ site.baseurl }}/">
-      <svg viewBox="0 0 312 249">
-        <path d="M94.6434059,160.444121 L155.422214,0 L213.596216,160.444121 L275.388004,10.8701979 L312,10.8701979 L212.149101,248.855064 L154.698657,90.2951106 L94.7881173,249 L24.6640316,73.0965992 L60.6712081,73.0965992 L94.6434059,160.444121 Z M36.882373,11.0940594 L0,11.0940594 L12.7567166,43.1435644 L49.3280632,43.1435644 L36.882373,11.0940594 Z" ></path>
-      </svg>
-    </a>
+  <div class="wrapH wrapV">
+    <div class="headerLogo">
+      <a class="headerLogo-link" href="{{ site.baseurl }}/">
+        <svg viewBox="0 0 312 249">
+          <path d="M94.6434059,160.444121 L155.422214,0 L213.596216,160.444121 L275.388004,10.8701979 L312,10.8701979 L212.149101,248.855064 L154.698657,90.2951106 L94.7881173,249 L24.6640316,73.0965992 L60.6712081,73.0965992 L94.6434059,160.444121 Z M36.882373,11.0940594 L0,11.0940594 L12.7567166,43.1435644 L49.3280632,43.1435644 L36.882373,11.0940594 Z" ></path>
+        </svg>
+      </a>
+    </div>
+
+    <nav class="headerNav">
+      {% if page.url == "/about/" %}
+        <a class="headerNav-link" href="/">Journal</a>
+        <a class="headerNav-link" href="/archive">Archive</a>
+        <a class="headerNav-link is-active" href="/about">About</a>
+      {% elsif page.url == "/archive/index.html" %}
+        <a class="headerNav-link" href="/">Journal</a>
+        <a class="headerNav-link is-active" href="/archive">Archive</a>
+        <a class="headerNav-link" href="/about">About</a>
+      {% else %}
+        <a class="headerNav-link is-active" href="/">Journal</a>
+        <a class="headerNav-link" href="/archive">Archive</a>
+        <a class="headerNav-link" href="/about">About</a>
+      {% endif %}
+    </nav>
+
+    <h1 class="headerDesc">{{site.description}}</h1>
   </div>
-
-  <nav class="headerNav">
-    {% if page.url == "/about/" %}
-      <a class="headerNav-link" href="/">Journal</a>
-      <a class="headerNav-link" href="/archive">Archive</a>
-      <a class="headerNav-link is-active" href="/about">About</a>
-    {% elsif page.url == "/archive/index.html" %}
-      <a class="headerNav-link" href="/">Journal</a>
-      <a class="headerNav-link is-active" href="/archive">Archive</a>
-      <a class="headerNav-link" href="/about">About</a>
-    {% else %}
-      <a class="headerNav-link is-active" href="/">Journal</a>
-      <a class="headerNav-link" href="/archive">Archive</a>
-      <a class="headerNav-link" href="/about">About</a>
-    {% endif %}
-  </nav>
-
-  <h1 class="headerDesc">{{site.description}}</h1>
 
 </header>

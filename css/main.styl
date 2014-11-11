@@ -44,7 +44,6 @@ html
   // 
 body
   font 1em/1.5 font-body
-  padding 2em
   background color-white
   color color-light
   +retina()
@@ -53,6 +52,13 @@ body
 .container
   max-width 55em
   margin 0 auto
+
+.wrapH
+  padding-left 2em
+  padding-right @padding-left
+.wrapV
+  padding-top 2em
+  padding-bottom @padding-top
 
 pre
   font-family font-mono
@@ -160,16 +166,16 @@ svg
   margin-bottom 1em
   font-weight font-heavy
 .post-content h2:before
-  content "—"
-  margin-left -1em
-.post-content h3
-  margin-bottom 1em
-  color color-xlight
-  font-weight font-heavy
 .post-content h3:before
+  position relative
   content "—"
-  margin-left -1em
+  display block
   color color-xlight
+.post-content h2
+  font-weight font-heavy
+  color color-xlight
+.post-content h3
+  // 
 .post-content img
   span(1/1)
 .post-content aside

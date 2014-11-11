@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"font-x",
+				"font-xheavy"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
 				"ili",
 				"inline-block"
 			],
@@ -506,19 +514,43 @@
 			[
 				"curren",
 				"currentAnim"
-			],
-			[
-				"currn",
-				"currentActiveBuffer"
-			],
-			[
-				"percen",
-				"percentageGetter"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "css/main.styl",
+			"settings":
+			{
+				"buffer_size": 3958,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/post.html",
+			"settings":
+			{
+				"buffer_size": 774,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_layouts/page.html",
+			"settings":
+			{
+				"buffer_size": 215,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/footer.html",
+			"settings":
+			{
+				"buffer_size": 655,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -526,6 +558,18 @@
 		"height": 400.0,
 		"selected_items":
 		[
+			[
+				"git",
+				"GitHub: View"
+			],
+			[
+				"open",
+				"Finder: Open here"
+			],
+			[
+				"twi",
+				"Set Syntax: HTML (Twig)"
+			],
 			[
 				"js",
 				"Set Syntax: JSX"
@@ -537,10 +581,6 @@
 			[
 				"sty",
 				"Set Syntax: Stylus"
-			],
-			[
-				"open",
-				"Finder: Open here"
 			],
 			[
 				"jsx",
@@ -951,7 +991,7 @@
 				"Package Control: Remove Package"
 			]
 		],
-		"width": 475.0
+		"width": 583.0
 	},
 	"console":
 	{
@@ -971,33 +1011,50 @@
 	},
 	"expanded_folders":
 	[
+		"/Users/iest/Code/iest.co",
+		"/Users/iest/Code/iest.co/_includes",
+		"/Users/iest/Code/iest.co/_layouts",
+		"/Users/iest/Code/iest.co/_posts",
+		"/Users/iest/Code/iest.co/_stylus",
+		"/Users/iest/Code/iest.co/css"
 	],
 	"file_history":
 	[
-		"/Users/iest/Code/iest.co/_layouts/default.html",
 		"/Users/iest/Code/iest.co/_includes/header.html",
-		"/Users/iest/Code/iest.co/_includes/head.html",
+		"/Users/iest/Code/iest.co/_layouts/default.html",
 		"/Users/iest/Code/iest.co/index.html",
+		"/Users/iest/Code/iest.co/archive/index.html",
+		"/Users/iest/Code/iest.co/about.md",
+		"/Users/iest/Code/iest.co/_site/webdev/2014/11/09/creating-an-icon-set-in-2014.html",
+		"/Users/iest/Code/iest.co/_posts/2014-07-13-creating-an-icon-set-in-2014.md",
+		"/Users/iest/Code/iest.co/_config.yml",
+		"/Users/iest/Code/iest.co/iest_co.sketch",
+		"/Users/iest/Code/iest.co/_site/webdev/2013/08/12/Progressive-Enhancement-Raising-the-bar.html",
+		"/Users/iest/Code/iest.co/_plugins/stylus_converter.rb",
+		"/Users/iest/Code/iest.co/_layouts/post.html",
+		"/Users/iest/Code/iest.co/_includes/footer.html",
+		"/Users/iest/Code/iest.co/_includes/linkGroup.html",
+		"/Users/iest/Code/iest.co/archive.html",
 		"/Users/iest/Code/iest.co/package.json",
+		"/Users/iest/Code/iest.co/_posts/2013-08-04-why-stylus-is-awesome.md",
+		"/Users/iest/Code/iest.co/_posts/2013-08-12-Progressive-Enhancement-Raising-the-bar.md",
+		"/Users/iest/Dropbox/App data/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/iest/Code/iest.co/_site/progressive-enhancement/webdev/2013/08/12/Progressive-Enhancement-Raising-the-bar.html",
+		"/Users/iest/Code/iest.co/_stylus/base.styl",
+		"/Users/iest/Code/iest.co/_includes/head.html",
 		"/Users/iest/Code/iest.co/gulpfile.js",
 		"/Users/iest/Code/iest.co/.gitignore",
-		"/Users/iest/Code/iest.co/_posts/2014-07-13-creating-an-icon-set-in-2014.md",
 		"/Users/iest/Code/iest.co/_site/package.json",
-		"/Users/iest/Code/iest.co/_config.yml",
 		"/Users/iest/Code/iest.co/_site/index.html",
 		"/Users/iest/Dropbox/iW logos/iw_logo.svg",
-		"/Users/iest/Code/iest.co/_includes/footer.html",
 		"/Users/iest/Code/iest.co/_site/css/main.css",
 		"/Users/iest/Code/iest.co/_stylus/type.styl",
-		"/Users/iest/Code/iest.co/_stylus/base.styl",
 		"/Users/iest/Code/iest.co/feed.xml",
-		"/Users/iest/Code/iest.co/_plugins/stylus_converter.rb",
 		"/Users/iest/Code/iest.co/css/main.scss",
 		"/Users/iest/Code/iest.co/_posts/2013-8-12-Progressive-Enhancement-Raising-the-bar.md",
 		"/Users/iest/Code/iest.co/_posts/2013-8-4-why-stylus-is-awesome.md",
 		"/Users/iest/Code/iest.co/_posts/2014-11-09-welcome-to-jekyll.markdown",
 		"/Users/iest/Code/iest.co/_posts/2014-7-13-creating-an-icon-set-in-2014.md",
-		"/Users/iest/Code/iest.co/about.md",
 		"/Users/iest/Code/iest.co/_posts/2014-11-09-about.md",
 		"/Users/iest/Bizzby Projects/Web-Seeker/src/__tests__/services/Cloudinary.js",
 		"/Users/iest/Bizzby Projects/Web-Seeker/src/services/Cloudinary.js",
@@ -1068,7 +1125,6 @@
 		"/Users/iest/Bizzby Projects/webapp/gulpfile.js",
 		"/Users/iest/Dropbox/App data/Sublime Text 3/Packages/ApplySyntax/ApplySyntax.sublime-settings",
 		"/Users/iest/Dropbox/App data/Sublime Text 3/Packages/User/ApplySyntax.sublime-settings",
-		"/Users/iest/Dropbox/App data/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/iest/Dropbox/App data/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/Users/iest/Dropbox/App data/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
 		"/Users/iest/Bizzby Projects/webapp/src/components/Login.jsx",
@@ -1091,17 +1147,7 @@
 		"/Users/iest/Dropbox/Bizzby/project-sky/gulpfile.js",
 		"/Users/iest/Dropbox/Bizzby/project-sky/src/js/initLoad/modernizr-build.js",
 		"/Users/iest/Dropbox/Bizzby/project-sky/src/stylus/modifiers.styl",
-		"/Users/iest/Dropbox/Bizzby/project-sky/dist/initLoad.js",
-		"/Users/iest/Dropbox/Bizzby/project-sky/src/stylus/prose.styl",
-		"/Users/iest/Dropbox/Bizzby/project-sky/dist/images/app_store.svg",
-		"/Users/iest/Dropbox/Bizzby/project-sky/src/svg-raw/icon--facebook.svg",
-		"/Users/iest/Dropbox/Bizzby/project-sky/src/jade/svg.jade",
-		"/Users/iest/Dropbox/Bizzby/project-sky/dist/index.html",
-		"/Users/iest/Dropbox/Bizzby/project-sky/src/stylus/hero.styl",
-		"/Users/iest/Downloads/faviconit/faviconit-instructions.txt",
-		"/Users/iest/Dropbox/Bizzby/project-sky/src/js/lib/slider.js",
-		"/Users/iest/Dropbox/Bizzby/project-sky/src/svg-raw/icon--play.svg",
-		"/Users/iest/Dropbox/Bizzby/project-sky/src/svg-raw/icon--twitter.svg"
+		"/Users/iest/Dropbox/Bizzby/project-sky/dist/initLoad.js"
 	],
 	"find":
 	{
@@ -1247,6 +1293,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"left",
+			"page",
+			"text-decoration",
+			"!==",
+			"1px solid color-light",
 			"border-bottom",
 			"color",
 			"a",
@@ -1369,12 +1420,7 @@
 			"html",
 			"300ms",
 			"infinite",
-			"Open",
-			"1s",
-			"50",
-			"300ms",
-			"Close",
-			"figure"
+			"Open"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1423,8 +1469,135 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "css/main.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3958,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1042,
+								1042
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"color_scheme": "Packages/User/Color Highlighter/themes/Panic Palette (SL).tmTheme",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1640.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_includes/post.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 774,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22,
+								22
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"color_scheme": "Packages/User/Color Highlighter/themes/Panic Palette (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_layouts/page.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 215,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								46,
+								46
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"color_scheme": "Packages/User/Color Highlighter/themes/Panic Palette (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "_includes/footer.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								46,
+								46
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"color_scheme": "Packages/User/Color Highlighter/themes/Panic Palette (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1479,8 +1652,56 @@
 		"selected_items":
 		[
 			[
+				"foot",
+				"_includes/footer.html"
+			],
+			[
+				"header",
+				"_includes/header.html"
+			],
+			[
+				"defa",
+				"_layouts/default.html"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"abo",
+				"about.md"
+			],
+			[
+				"crea",
+				"_posts/2014-07-13-creating-an-icon-set-in-2014.md"
+			],
+			[
+				"ico",
+				"_site/webdev/2014/11/09/creating-an-icon-set-in-2014.html"
+			],
+			[
+				"arch",
+				"archive/index.html"
+			],
+			[
 				"inde",
 				"index.html"
+			],
+			[
+				"post",
+				"_layouts/post.html"
+			],
+			[
+				"conf",
+				"_config.yml"
+			],
+			[
+				"hea",
+				"_includes/header.html"
+			],
+			[
+				"confi",
+				"_config.yml"
 			],
 			[
 				"head",
@@ -1491,44 +1712,16 @@
 				"gulpfile.js"
 			],
 			[
-				"conf",
-				"_config.yml"
-			],
-			[
 				"git",
 				".gitignore"
-			],
-			[
-				"foot",
-				"_includes/footer.html"
-			],
-			[
-				"index",
-				"index.html"
-			],
-			[
-				"defa",
-				"_layouts/default.html"
 			],
 			[
 				"mainc",
 				"_site/css/main.css"
 			],
 			[
-				"header",
-				"_includes/header.html"
-			],
-			[
-				"confi",
-				"_config.yml"
-			],
-			[
 				"giti",
 				".gitignore"
-			],
-			[
-				"abo",
-				"about.md"
 			],
 			[
 				"con",
@@ -1969,26 +2162,6 @@
 			[
 				"corrections.ja",
 				"app/template/widgets/corrections.jade"
-			],
-			[
-				"bscorrecitonli",
-				"app/template/bsCorrectionsList.jade"
-			],
-			[
-				"practi",
-				"app/template/views/practise.jade"
-			],
-			[
-				"correc",
-				"app/template/views/correction.jade"
-			],
-			[
-				"exercise.jade",
-				"app/template/views/exercise.jade"
-			],
-			[
-				"exer",
-				"app/template/learn/exercise.jade"
 			]
 		],
 		"width": 0.0
