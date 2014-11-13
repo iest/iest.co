@@ -87,7 +87,7 @@ This allows for way more flexibility than pasting long SVG code everywhere. All 
 
 If you look at the stylus tab on the second example above, you'll see that I've tried to make one of the icons fill with blue, but because of the `fill="red"` attribute on the `path` element of the SVG definition itself, I can't override it. So, we need to remove those `fill`s if we want to be able to style our icons using just CSS.
 
-<aside>If you have fancy gradients on your SVGs, you have to insert these inside a `defs` tag alongside the `use` tag, otherwise they won't render.</aside>
+<aside>If you have fancy gradients on your SVGs, you have to insert these inside a <code>defs</code> tag alongside the <code>use</code> tag, otherwise they won't render.</aside>
 
 But stripping these out manually from possibly hundreds of icons is no way to spend your day. Combining a bunch of individual icons into a single SVG symbol sheet is pretty tedious too.
 
@@ -100,7 +100,7 @@ Both sketch and illustrator allow for the mass-export of artboards, so we’ll u
 The next step is to optimise your SVGs, not only stripping out `fill` tags, but also any extra crap your graphics package has left in there. 
 
 The best tool for this job is [SVGO](https://github.com/svg/svgo), an SVG Optimiser. It's a really great tool, and has multiple interfaces. We use [gulp](http://gulpjs.com) as our build system at busuu, so we use a combination of [gulp-svg-symbols](https://github.com/Hiswe/gulp-svg-symbols) and [gulp-svgmin](https://github.com/ben-eb/gulp-svgmin), a gulp wrapper for SVGO. There seems to be a slick [GUI version](https://github.com/svg/svgo-gui) of SVGO as well — worth checking out if you don't want to get your hands dirty with javascript.
-<aside>SVGO is smart enough to rip out `fill="#000000"` from our SVG icons, so is perfect if we make sure all our icons are filled `#000000` in our graphics package.</aside>
+<aside>SVGO is smart enough to rip out <code>fill="#000000"</code> from our SVG icons, so is perfect if we make sure all our icons are filled <code>#000000</code> in our graphics package.</aside>
 
 #### Using with gulp
 

@@ -1,22 +1,26 @@
 ---
 layout: page
-title: Hi, I'm Iestyn
+title: I grew up on a mountain.
 permalink: /about/
+image:
+  src: "/images/mynydd-bach/home.jpg"
+  alt: "Home Sweet Home"
 ---
 
-## I’m a designer and engineer working at [Bizzby](http://bizzby.com) in London.
+**Now though, I’m a designer and engineer working and living in London.**
 
-<small>It’s pronononced “yes-tin”, and is the Welsh form of "Justin", in case you were wondering :)</small>
+(It’s pronounced `yes` `tin`, and is the Welsh form of *Justin*)
 
-### This site
-The code for this site is all up on [github](https://github.com/iest/iestynwilliams.net).
+I learnt how to build websites in the spring of 2012, and learnt all about JavaScript over the next year or so. I've always had an eye for design, but never thought I was good enough to call myself a designer. Now, I think the term is a bit too restrictive for what I do each day: *build stuff*.
 
-Fonts are served by [Typekit](http://typekit.com/), with headings in Freight Sans Pro, and body text in Merriweather.
+I'm currently on my 3rd job in the industry, building products and tools with the awesome team at [Bizzby](http://bizzby.com).
 
-I made the initial designs in [Sketch](http://bohemiancoding.com/sketch/) over a weekend, then finalised and built the site with a few evenings (and weekends!) work.
+In my spare time I play video games and faff over making coffee. Honestly though, this whole tech thing is my hobby too.
 
-It's hosted on [derpjs](https://github.com/iest/derp), a simple, markdown-based blog engine I built to scratch my own itch. It's all being served from a [Linode](https://www.linode.com) in London somewhere.
+## This site
 
-Every line of code was written with [Sublime Text 3](http://www.sublimetext.com/3). On the site, I use [prettify](https://code.google.com/p/google-code-prettify/) for syntax highlighting,  [some dumb code](http://codepen.io/iest/pen/mKpzA) I wrote to get the fancy sliding nav, and [molten leading](https://github.com/viljamis/Molten-Leading/) to optimise line-height at different viewport widths.
+The code for this site is all up on [github](https://github.com/iest/iest.co). It's typeset in [JAF Facit](http://justanotherfoundry.com/facit), served from [Typekit](https://typekit.com/fonts/jaf-facitweb). I like working within well-defined constraints; there is only one font size on the whole site.
 
-<small>If you have any questions, comments, or wordly advice, either hit me up on [twitter](http://twitter.com/_iest) or drop me an email at iest {at} mac.com.</small>
+After playing around with building [my own blogging engine](https://github.com/iest/derp) (and having crazy ideas for Dropbox integration...), I caved and now use [Jekyll](http://jekyllrb.com). Because I keep the whole thing in my Dropbox, I can edit my posts from any device (but can only deploy from my Mac). It's all being served from a [Linode](https://www.linode.com) in London somewhere. I used a combination of [Sketch](http://bohemiancoding.com/sketch/) and [Sublime Text 3](http://www.sublimetext.com/3) to design and build the site, over a few evening's work.
+
+If you have any questions, comments, or other wordly advice, either hit me up on [twitter](http://twitter.com/_iest) or [drop me an email](mailto:hello@iest.co).

@@ -24,7 +24,8 @@ color-darkest = #333333
 color-darker = #444444
 color-dark = #555555
 color-light = #6E6E6E
-color-xlight = #AAAAAA
+color-lighter = #AAAAAA
+color-lightest = #D8D8D8
 color-white = #FFFFFF
 
 color-bright = color-1
@@ -38,8 +39,8 @@ font-mono = "Input Mono", "Fira Mono", "Menlo", "Inconsolata", monospace
 
 font-xheavy = 700
 font-heavy = 600
+font-normal = 400
 font-light = 300
-font-xlight = 200
 
 
 html
@@ -63,6 +64,9 @@ body
   padding-top 2em
   padding-bottom @padding-top
 
+img
+  max-width 100%
+
 pre
   font-family font-mono
 
@@ -72,12 +76,13 @@ a
   text-decoration none
   transition-property color, fill, border-color
   transition-duration 200ms
-  transition-timing-function ease-out
+  transition-timing-function ease
   border-bottom 1px solid transparent
 a:hover
-  // color color-dark
-  // fill @color
   border-color color-bright
+
+em
+  font-style italic
 
 strong
   font-weight font-heavy
@@ -89,7 +94,7 @@ svg
 
 .header
   cf()
-  border-bottom 1px solid color-xlight
+  border-bottom 1px solid color-lighter
   padding-bottom 2em
   margin-bottom 2em
 .headerLogo
@@ -102,19 +107,21 @@ svg
 
 .headerNav
   col(1/4)
-.headerNav-link
+.headerNav li
   display block
+.headerNav-link
   color color-bright
 .headerNav-link.is-active
   font-weight font-heavy
 .headerDesc
   col(1/2)
+  font-weight font-normal
 +below(40em)
   .headerLogo
-    col(1/1)
+    span(1/2)
     margin-bottom 1em
   .headerNav
-    col(1/1)
+    span(1/2)
     margin-bottom 1em
   .headerNav-link
     display inline-block
@@ -130,6 +137,8 @@ svg
   margin-bottom 3em
 .postLink
   display inline
+.postLink a:hover
+  border-color color-white
 .postTitle
   font-weight font-heavy
   display inline
@@ -137,16 +146,14 @@ svg
   // 
 .postMeta-date
   display inline-block
-  font-weight font-xlight
-  color color-xlight
+  font-weight font-light
+  color color-lighter
 .postMeta-excerpt
-  font-weight light
+  font-weight font-normal
 +above(40em)
   .postLink
     col(1/2)
     text-align right
-  .postTitle
-    display block
   .postMeta
     col(1/2)
 
@@ -160,8 +167,9 @@ svg
 .post-title
   font-weight font-xheavy
   color color-dark
+  margin-bottom 1em
 .post-meta
-  color color-xlight
+  color color-lighter
 .post-permalink
   display inline-block
   margin-bottom 1em
@@ -174,38 +182,52 @@ svg
   margin 3em auto 1em
   display block
   text-align center
-.post-content strong
+.post-content small
   font-weight font-light
-  color color-xdark
+.post-content strong
+  font-weight font-normal
+  color color-darker
 .post-content p
   margin-bottom 1em
+.post-content code
+  font-family 'Input Mono', 'Cousine', 'Fira Mono', 'Andale Mono', 'Monaco' monospace
+  font-size 0.875em
+  padding 0.125em 0.2em
+  background rgba(color-lighter, 0.2)
+  border 1px solid rgba(color-lighter, 0.3)
+  border-radius 4px
 .post-content h1
   margin-bottom 1em
+  padding-bottom 0.25em
   font-weight font-heavy
   color color-darkest
   border-bottom 2px solid color-darkest
 .post-content h2
   font-weight font-heavy
+  padding-bottom 0.25em
   color color-darker
   border-bottom 1px solid color-darker
   margin-bottom 1em
 .post-content h3
   font-weight font-heavy
+  padding-bottom 0.25em
   color color-dark
   border-bottom 1px dashed color-dark
-  margin-bottom 0.5em
+  margin-bottom 1em
 .post-content h4
   font-weight font-heavy
+  padding-bottom 0.25em
   color color-light
   border-bottom 1px dashed color-light
-  margin-bottom 0.5em
+  margin-bottom 1em
 .post-content img
   span(1/1)
   margin-bottom 1em
-  box-shadow
+  max-width initial
 .post-content aside
   margin-bottom 1em
   font-style italic
+  opacity 0.6
 .post-content pre
   max-width 100%
   overflow auto
@@ -223,7 +245,7 @@ svg
 
 .pagination
   margin 2em 0
-  color color-xlight
+  color color-lighter
   text-align center
 .pagination a
   // 
@@ -236,7 +258,7 @@ svg
   // float right
 
 .footer
-  border-top 1px solid color-xlight
+  border-top 1px solid color-lighter
   padding-top 2em
   font-size 1em
 .footer-links
@@ -259,7 +281,7 @@ svg
   text-decoration none
 .footer-updated
   margin-bottom 1em
-  color color-xlight
+  color color-lighter
 .footer-copy
   col(1/1)
   text-align center
@@ -273,25 +295,33 @@ svg
 html.is-night
   body
     background color-dark
-    color color-xlight
+    color color-lighter
   a:hover
     color color-white
     fill @color
+    border-color @color
   strong
     color color-white
   .post-title
     color color-white
   .post-content
-    color color-xlight
+    color color-lighter
+  .post-content h1
+  .post-content h2
+  .post-content h3
+  .post-content h4
+    color color-lightest
+    border-color color-lightest
 
 // Syntax
 .CodeRay
   background-color: #152638
-  border: 1px solid darken(#152638, 10%);
   border-radius 5px
   font-family 'Input Mono', 'Cousine', 'Fira Mono', 'Andale Mono', 'Monaco' monospace
   color #F6F7EE
-  padding 0.25em
+  padding 0.5em
+  margin-bottom 1em
+  font-size 0.875em
 
 .CodeRay pre
   margin: 0px;
@@ -500,3 +530,6 @@ ol.CodeRay li
     color: #66f;
   .head .head
     color: #f4f;
+
+.u-mtm
+  margin-bottom 1em
