@@ -18,13 +18,14 @@ Chris Coyer over at CSS-tricks has written a bunch of [awesome](http://css-trick
 
 So, now we know SVG is better, what next?
 
-## Step 1: Creating SVGs
+### Step 1: Creating SVGs
 
 Any reasonable vector-based graphics package can export as SVG. I'll show you how to do it with Sketch and Illustrator, just in case.
 
 #### Sketch
 
 Exporting from sketch into usable SVG couldn't be easier. Draw your shapes, wrap them in an art board, then hit export.  Select SVG, and you're good to go.
+
 ![Sketch export](/images/svg-2014/sketchExport.gif)
 
 #### Illustrator
@@ -35,11 +36,11 @@ Pretty much the same deal as Sketch, except with a little more complication. Dra
 
 ![Illustrator export](/images/svg-2014/aiExport.gif)
 
-## Step 2: Getting your icons rendering
+### Step 2: Getting your icons rendering
 
 There's a few different ways to get your icons to render in a browser:
 
-### `img` tags
+#### `img` tags
 
 ```html
 <img src="path/to/svg.svg">
@@ -47,7 +48,7 @@ There's a few different ways to get your icons to render in a browser:
 
 You can add your SVG to your page via an `img` tag, setting the `src` attribute to be your icon's path. Nice and simple. You get the power of vector (so high-res screen-ready), but you don't get the real power of SVG yet.
 
-### Copy and Paste
+#### Copy and Paste
 
 ```html
 <svg>
@@ -60,7 +61,7 @@ SVG is just XML — so open an icon with your text editor of choice, and copy-pa
 <p data-height="268" data-theme-id="0" data-slug-hash="IzBGq" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/iest/pen/IzBGq/'>IzBGq</a> by Iestyn Williams (<a href='http://codepen.io/iest'>@iest</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
-### Symbols
+#### Symbols
 
 ```html
 <svg style="display: none;">
@@ -92,7 +93,7 @@ But stripping these out manually from possibly hundreds of icons is no way to sp
 
 For just a handful of icons this manual editing is manageable, but for larger sets where you're continually iterating, you really need the power of automation.
 
-## Step 3: automating your workflow
+### Step 3: automating your workflow
 
 Both sketch and illustrator allow for the mass-export of artboards, so we’ll use that feature to get all our icons into a folder to get us started.
 

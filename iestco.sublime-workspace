@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"marin",
+				"margin-bottom"
+			],
+			[
 				"font-x",
 				"font-xheavy"
 			],
@@ -360,10 +368,6 @@
 				"modalTestInProgress"
 			],
 			[
-				"marg",
-				"margin-right"
-			],
-			[
 				"font",
 				"fontSizer"
 			],
@@ -510,44 +514,27 @@
 			[
 				"cl",
 				"cl	console.log"
-			],
-			[
-				"curren",
-				"currentAnim"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"contents": "---\n---\n@import 'node_modules/nib/index.styl'\n@import 'node_modules/jeet/stylus/jeet/index.styl'\n@import 'node_modules/rupture/rupture/index.styl'\n\nglobal-reset()\n\n*\n  box-sizing border-box\n\n// @import '_stylus/base'\n// @import '_stylus/type'\n// @import '_stylus/base'\n\ncolor-1 = #FE4A43\ncolor-2 = #50E3C2\ncolor-3 = #FDB386\ncolor-4 = #13FD86\ncolor-5 = #0039FF\ncolor-6 = #9139FF\n\ncolor-darkest = #333333\ncolor-darker = #444444\ncolor-dark = #555555\ncolor-light = #6E6E6E\ncolor-xlight = #AAAAAA\ncolor-white = #FFFFFF\n\ncolor-bright = color-1\n\ncolor-twitter = #55ACEE\ncolor-github = #F6CBB5\ncolor-dribbble = #E9508A\n\nfont-body = \"jaf-facitweb\", \"Facit\", \"Helvetica Neue\", \"Helvetica\", sans-serif\nfont-mono = \"Input Mono\", \"Fira Mono\", \"Menlo\", \"Inconsolata\", monospace\n\nfont-xheavy = 700\nfont-heavy = 600\nfont-light = 300\nfont-xlight = 200\n\n\nhtml\n  -webkit-text-size-adjust 100%\n\nbody\n  font 1em/1.5 font-body\n  background color-white\n  color color-light\n  +retina()\n    font-weight font-light\n\n.container\n  max-width 55em\n  margin 0 auto\n\n.wrapH\n  padding-left 2em\n  padding-right @padding-left\n.wrapV\n  padding-top 2em\n  padding-bottom @padding-top\n\npre\n  font-family font-mono\n\na\n  color color-bright\n  fill @color\n  text-decoration none\n  transition-property color, fill, border-color\n  transition-duration \n  border-bottom 1px solid transparent\na:hover\n  // color color-dark\n  // fill @color\n  border-color color-bright\n\nstrong\n  font-weight font-heavy\n  color color-dark\n\nsvg\n  width 100%\n  height 100%\n\n.header\n  cf()\n  border-bottom 1px solid color-xlight\n  padding-bottom 2em\n  margin-bottom 2em\n.headerLogo\n  col(1/4)\n.headerLogo-link\n  height 3em\n  width @height * 1.270833333\n  padding 0.4em\n  display block\n\n.headerNav\n  col(1/4)\n.headerNav-link\n  display block\n  color color-bright\n.headerNav-link.is-active\n  font-weight font-heavy\n.headerDesc\n  col(1/2)\n+below(40em)\n  .headerLogo\n    col(1/1)\n    margin-bottom 1em\n  .headerNav\n    col(1/1)\n    margin-bottom 1em\n  .headerNav-link\n    display inline-block\n    margin-right 0.5em\n  .headerDesc\n    col(1/1)\n\n// Used on archive\n.postList\n  padding-top 1em\n.postList > li\n  cf()\n  margin-bottom 3em\n.postLink\n  display inline\n.postTitle\n  font-weight font-heavy\n  display inline\n.postMeta\n  // \n.postMeta-date\n  display inline-block\n  font-weight font-xlight\n  color color-xlight\n.postMeta-excerpt\n  font-weight light\n+above(40em)\n  .postLink\n    col(1/2)\n    text-align right\n  .postTitle\n    display block\n  .postMeta\n    col(1/2)\n\n// Default index view\n.post\n  padding-bottom 2em\n  margin-bottom 2em\n  cf()\n.post-header\n  // \n.post-title\n  font-weight font-xheavy\n  color color-dark\n.post-meta\n  color color-xlight\n.post-permalink\n  display inline-block\n  margin-bottom 1em\n.post-content\n  color color-dark\n  clear both\n.post-content:after\n  content \"* * *\"\n  position relative\n  margin 3em auto 1em\n  display block\n  text-align center\n.post-content strong\n  font-weight font-light\n  color color-xdark\n.post-content p\n  margin-bottom 1em\n.post-content h1\n  margin-bottom 1em\n  font-weight font-heavy\n  color color-darkest\n  border-bottom 2px solid color-darkest\n.post-content h2\n  font-weight font-heavy\n  color color-darker\n  border-bottom 1px solid color-darker\n  margin-bottom 1em\n.post-content h3\n  font-weight font-heavy\n  color color-dark\n  border-bottom 1px dashed color-dark\n  margin-bottom 0.5em\n.post-content h4\n  font-weight font-heavy\n  color color-light\n  border-bottom 1px dashed color-light\n  margin-bottom 0.5em\n.post-content img\n  span(1/1)\n  margin-bottom 1em\n  box-shadow\n.post-content aside\n  margin-bottom 1em\n  font-style italic\n.post-content pre\n  max-width 100%\n  overflow auto\n+above(38em)\n  .post\n    cf()\n  .post-header\n    col(1/4)\n  .post-content\n    col(3/4)\n    // margin-top 6em\n  .post-content img\n    span(1.33333)\n    shift(-0.33333)\n\n.pagination\n  margin 2em 0\n  color color-xlight\n  text-align center\n.pagination a\n  // \n.pagination-number\n  display inline-block\n  margin 0 2em\n.pagination-prev\n  // float left\n.pagination-next\n  // float right\n\n.footer\n  border-top 1px solid color-xlight\n  padding-top 2em\n  font-size 1em\n.footer-links\n  cf()\n  margin-bottom 1em\n  list-style disc\n.footer-links li\n  col(1/2, cycle: 2)\n.footer-links li:before\n  content none \n.footer-links li.is-twitter\n  color color-twitter\n.footer-links li.is-github\n  color color-github\n.footer-links li.is-dribbble\n  color color-dribbble\n.footer-links li.is-email\n  color #333\n.footer-links a\n  text-decoration none\n.footer-updated\n  margin-bottom 1em\n  color color-xlight\n.footer-copy\n  col(1/1)\n  text-align center\n+above(40em)\n  .footer-links\n    col(1/2)\n  .footer-updated\n    // col(1/2)\n\n// Night mode\nhtml.is-night\n  body\n    background color-dark\n    color color-xlight\n  a:hover\n    color color-white\n    fill @color\n  strong\n    color color-white\n  .post-title\n    color color-white\n  .post-content\n    color color-xlight\n\n// Syntax\n.CodeRay\n  background-color: #FFF;\n  border: 1px solid #CCC;\n  font-family: Monaco, \"Courier New\", \"DejaVu Sans Mono\", \"Bitstream Vera Sans Mono\", monospace;\n  color: #000;\n  padding: 1em 0px 1em 1em;\n\n.CodeRay pre\n  margin: 0px;\n\ndiv.CodeRay\nspan.CodeRay\n  white-space: pre;\n  border: 0px;\n  padding: 2px\n\ntable.CodeRay\n  border-collapse: collapse;\n  width: 100%;\n  padding: 2px\ntable.CodeRay td\n  padding: 1em 0.5em;\n  vertical-align: top;\n\n.CodeRay .line-numbers, .CodeRay .no\n  // \n\n.CodeRay .line-numbers a\n  color: #AAA;\n\n.CodeRay .line-numbers tt\n  font-weight bold\n.CodeRay .line-numbers .highlighted\n  color red\n.CodeRay .line\n  display block\n  float left\n  width 100%\n.CodeRay span.line-numbers\n  padding 0px 4px\n.CodeRay .code\n  width 100%\n\nol.CodeRay\n  font-size: 10pt\nol.CodeRay li\n  white-space: pre\n\n.CodeRay\n  .code pre\n    overflow: auto\n  .debug\n    color:white ! important; background:blue ! important;\n\n  .annotation\n    color:#007\n  .attribute-name\n    color:#f08\n  .attribute-value\n    color:#700\n  .binary\n    color:#509; font-weight:bold\n  .comment \n    color:#998; font-style: italic;\n  .char\n    color:#04D\n  .char .content\n    color:#04D\n  .char .delimiter\n    color:#039\n  .class\n    color:#458; font-weight:bold\n  .complex\n    color:#A08; font-weight:bold\n  .constant\n    color:teal;\n  .color\n    color:#0A0\n  .class-variable\n    color:#369\n  .decorator\n    color:#B0B;\n  .definition\n    color:#099; font-weight:bold\n  .directive\n    color:#088; font-weight:bold\n  .delimiter\n    color:black\n  .doc\n    color:#970\n  .doctype\n    color:#34b\n  .doc-string\n    color:#D42; font-weight:bold\n  .escape \n    color:#666; font-weight:bold\n  .entity\n    color:#800; font-weight:bold\n  .error\n    color:#F00; background-color:#FAA\n  .exception\n    color:#C00; font-weight:bold\n  .filename\n    color:#099;\n  .function\n    color:#900; font-weight:bold\n  .global-variable\n    color:teal; font-weight:bold\n  .hex\n    color:#058; font-weight:bold\n  .integer \n    color:#099;\n  .include\n    color:#B44; font-weight:bold\n  .inline\n    color: black\n  .inline .inline\n    background: #ccc\n  .inline .inline .inline\n    background: #bbb\n  .inline .inline-delimiter\n    color: #D14;\n  .inline-delimiter\n    color: #D14;\n  .important\n    color:#f00;\n  .interpreted\n    color:#B2B; font-weight:bold\n  .instance-variable\n    color:teal\n  .label\n    color:#970; font-weight:bold\n  .local-variable\n    color:#963\n  .octal\n    color:#40E; font-weight:bold\n  .operator\n\n  .predefined-constant\n     font-weight:bold\n  .predefined\n    color:#369; font-weight:bold\n  .preprocessor\n    color:#579;\n  .pseudo-class\n    color:#00C; font-weight:bold\n  .predefined-type\n    color:#074; font-weight:bold\n  .reserved, .keyword \n    color:#000; font-weight:bold\n\n  .key\n    color: #808;\n  .key .delimiter\n    color: #606;\n  .key .char\n    color: #80f;\n  .value\n    color: #088;\n\n  .regexp\n    background-color:#fff0ff\n  .regexp .content\n    color:#808\n  .regexp .delimiter\n    color:#404\n  .regexp .modifier\n    color:#C2C\n  .regexp .function \n    color:#404; font-weight: bold\n\n  .string\n    color: #D20;\n  .string .string\n\n  .string .string .string\n    background-color:#ffd0d0\n  .string .content\n    color: #D14;\n  .string .char\n    color: #D14;\n  .string .delimiter\n    color: #D14;\n\n  .shell\n    color:#D14\n  .shell .content\n\n  .shell .delimiter\n    color:#D14\n\n  .symbol\n    color:#990073\n  .symbol .content\n    color:#A60\n  .symbol .delimiter\n    color:#630\n\n  .tag\n    color:#070\n  .tag-special\n    color:#D70; font-weight:bold\n  .type\n    color:#339; font-weight:bold\n  .variable \n    color:#036\n\n  .insert\n    background: #afa;\n  .delete\n    background: #faa;\n  .change\n    color: #aaf; background: #007;\n  .head\n    color: #f8f; background: #505\n\n  .insert .insert\n    color: #080; font-weight:bold\n  .delete .delete\n    color: #800; font-weight:bold\n  .change .change\n    color: #66f;\n  .head .head\n    color: #f4f;",
 			"file": "css/main.styl",
+			"file_size": 8816,
+			"file_write_time": 130603808730000000,
 			"settings":
 			{
-				"buffer_size": 3958,
+				"buffer_size": 8832,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_includes/post.html",
+			"file": "_includes/head.html",
 			"settings":
 			{
-				"buffer_size": 774,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_layouts/page.html",
-			"settings":
-			{
-				"buffer_size": 215,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_includes/footer.html",
-			"settings":
-			{
-				"buffer_size": 655,
+				"buffer_size": 1133,
 				"line_ending": "Unix"
 			}
 		}
@@ -1020,34 +1007,40 @@
 	],
 	"file_history":
 	[
+		"/Users/iest/Code/iest.co/_posts/2014-07-13-creating-an-icon-set-in-2014.md",
+		"/Users/iest/Code/iest.co/_site/webdev/2014/11/09/creating-an-icon-set-in-2014.html",
 		"/Users/iest/Code/iest.co/_includes/header.html",
-		"/Users/iest/Code/iest.co/_layouts/default.html",
 		"/Users/iest/Code/iest.co/index.html",
 		"/Users/iest/Code/iest.co/archive/index.html",
-		"/Users/iest/Code/iest.co/about.md",
-		"/Users/iest/Code/iest.co/_site/webdev/2014/11/09/creating-an-icon-set-in-2014.html",
-		"/Users/iest/Code/iest.co/_posts/2014-07-13-creating-an-icon-set-in-2014.md",
+		"/Users/iest/Code/iest.co/_includes/post.html",
+		"/Users/iest/Code/iest.co/css/main.styl",
 		"/Users/iest/Code/iest.co/_config.yml",
+		"/Users/iest/Code/iest.co/_posts/2013-08-04-why-stylus-is-awesome.md",
+		"/Users/iest/Code/iest.co/_layouts/post.html",
+		"/Users/iest/Code/iest.co/_site/webdev/2013/08/04/why-stylus-is-awesome.html",
+		"/Users/iest/Code/iest.co/_includes/head.html",
+		"/Users/iest/Code/iest.co/css/syntax.css",
+		"/Users/iest/Code/iest.co/_posts/2014-11-11-style-guide.md",
+		"/Users/iest/Code/iest.co/about.md",
+		"/Users/iest/Code/iest.co/_includes/footer.html",
+		"/Users/iest/Code/iest.co/_layouts/page.html",
+		"/Users/iest/Code/iest.co/_site/css/main.css",
+		"/Users/iest/Code/iest.co/_layouts/default.html",
 		"/Users/iest/Code/iest.co/iest_co.sketch",
 		"/Users/iest/Code/iest.co/_site/webdev/2013/08/12/Progressive-Enhancement-Raising-the-bar.html",
 		"/Users/iest/Code/iest.co/_plugins/stylus_converter.rb",
-		"/Users/iest/Code/iest.co/_layouts/post.html",
-		"/Users/iest/Code/iest.co/_includes/footer.html",
 		"/Users/iest/Code/iest.co/_includes/linkGroup.html",
 		"/Users/iest/Code/iest.co/archive.html",
 		"/Users/iest/Code/iest.co/package.json",
-		"/Users/iest/Code/iest.co/_posts/2013-08-04-why-stylus-is-awesome.md",
 		"/Users/iest/Code/iest.co/_posts/2013-08-12-Progressive-Enhancement-Raising-the-bar.md",
 		"/Users/iest/Dropbox/App data/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/iest/Code/iest.co/_site/progressive-enhancement/webdev/2013/08/12/Progressive-Enhancement-Raising-the-bar.html",
 		"/Users/iest/Code/iest.co/_stylus/base.styl",
-		"/Users/iest/Code/iest.co/_includes/head.html",
 		"/Users/iest/Code/iest.co/gulpfile.js",
 		"/Users/iest/Code/iest.co/.gitignore",
 		"/Users/iest/Code/iest.co/_site/package.json",
 		"/Users/iest/Code/iest.co/_site/index.html",
 		"/Users/iest/Dropbox/iW logos/iw_logo.svg",
-		"/Users/iest/Code/iest.co/_site/css/main.css",
 		"/Users/iest/Code/iest.co/_stylus/type.styl",
 		"/Users/iest/Code/iest.co/feed.xml",
 		"/Users/iest/Code/iest.co/css/main.scss",
@@ -1141,17 +1134,11 @@
 		"/Users/iest/Dropbox/Bizzby/project-sky/src/jade/index.jade",
 		"/Users/iest/Dropbox/Bizzby/project-sky/src/js/initLoad/initLoad.js",
 		"/Users/iest/Dropbox/Bizzby/project-sky/src/stylus/slider.styl",
-		"/Users/iest/Dropbox/Bizzby/project-sky/src/stylus/sky-styles.styl",
-		"/Users/iest/Dropbox/Bizzby/project-sky/src/svg-raw/skyLogo.svg",
-		"/Users/iest/Dropbox/Bizzby/project-sky/src/js/app.js",
-		"/Users/iest/Dropbox/Bizzby/project-sky/gulpfile.js",
-		"/Users/iest/Dropbox/Bizzby/project-sky/src/js/initLoad/modernizr-build.js",
-		"/Users/iest/Dropbox/Bizzby/project-sky/src/stylus/modifiers.styl",
-		"/Users/iest/Dropbox/Bizzby/project-sky/dist/initLoad.js"
+		"/Users/iest/Dropbox/Bizzby/project-sky/src/stylus/sky-styles.styl"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -1293,6 +1280,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			":",
+			"}",
+			" {",
+			" }",
+			" { ",
+			"CodeRay",
+			"before",
 			"left",
 			"page",
 			"text-decoration",
@@ -1413,14 +1407,7 @@
 			"fly.js-setHeight",
 			"$bg--bottom, ",
 			".scroll",
-			"intro\").scroll",
-			"blackLight",
-			"$nav",
-			"5",
-			"html",
-			"300ms",
-			"infinite",
-			"Open"
+			"intro\").scroll"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1428,6 +1415,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			" { ",
 			"#364658",
 			"#FFFFFF",
 			"#1B2D3D",
@@ -1469,7 +1457,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1478,15 +1466,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3958,
+						"buffer_size": 8832,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1042,
-								1042
+								1306,
+								1306
 							]
 						],
 						"settings":
@@ -1498,27 +1486,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1640.0,
+						"translation.y": 895.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "_includes/post.html",
+					"file": "_includes/head.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 774,
+						"buffer_size": 1133,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								22,
-								22
+								1058,
+								1058
 							]
 						],
 						"settings":
@@ -1534,68 +1522,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "_layouts/page.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 215,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								46,
-								46
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"color_scheme": "Packages/User/Color Highlighter/themes/Panic Palette (SL).tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "_includes/footer.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 655,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								46,
-								46
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"color_scheme": "Packages/User/Color Highlighter/themes/Panic Palette (SL).tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1643,7 +1569,7 @@
 	"project": "iestco.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1651,6 +1577,54 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"icons",
+				"_posts/2014-07-13-creating-an-icon-set-in-2014.md"
+			],
+			[
+				"head",
+				"_includes/head.html"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"post",
+				"_includes/post.html"
+			],
+			[
+				"whyst",
+				"_posts/2013-08-04-why-stylus-is-awesome.md"
+			],
+			[
+				"cnf",
+				"_config.yml"
+			],
+			[
+				"confi",
+				"_config.yml"
+			],
+			[
+				"icon",
+				"_posts/2014-07-13-creating-an-icon-set-in-2014.md"
+			],
+			[
+				"ico",
+				"_site/webdev/2014/11/09/creating-an-icon-set-in-2014.html"
+			],
+			[
+				"about",
+				"about.md"
+			],
+			[
+				"main",
+				"css/main.styl"
+			],
+			[
+				"arch",
+				"archive/index.html"
+			],
 			[
 				"foot",
 				"_includes/footer.html"
@@ -1676,35 +1650,11 @@
 				"_posts/2014-07-13-creating-an-icon-set-in-2014.md"
 			],
 			[
-				"ico",
-				"_site/webdev/2014/11/09/creating-an-icon-set-in-2014.html"
-			],
-			[
-				"arch",
-				"archive/index.html"
-			],
-			[
-				"inde",
-				"index.html"
-			],
-			[
-				"post",
-				"_layouts/post.html"
-			],
-			[
 				"conf",
 				"_config.yml"
 			],
 			[
 				"hea",
-				"_includes/header.html"
-			],
-			[
-				"confi",
-				"_config.yml"
-			],
-			[
-				"head",
 				"_includes/header.html"
 			],
 			[
@@ -2064,10 +2014,6 @@
 				"src/stylus/media.styl"
 			],
 			[
-				"icon",
-				"src/stylus/icon.styl"
-			],
-			[
 				"ine",
 				"dist/index.html"
 			],
@@ -2142,26 +2088,6 @@
 			[
 				"practise",
 				"app/template/views/practise.jade"
-			],
-			[
-				"thanks",
-				"app/scripts/controllers/modal/Modal_ThanksForCorrection.js"
-			],
-			[
-				"bsexercisec",
-				"app/scripts/directives/widgets/bsExerciseCorrection.js"
-			],
-			[
-				"exercises.jade",
-				"app/template/widgets/exercises.jade"
-			],
-			[
-				"exercisejad",
-				"app/template/learn/exercise.jade"
-			],
-			[
-				"corrections.ja",
-				"app/template/widgets/corrections.jade"
 			]
 		],
 		"width": 0.0
@@ -2713,7 +2639,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 253.0,
 	"status_bar_visible": true,
 	"template_settings":

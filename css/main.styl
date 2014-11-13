@@ -20,7 +20,9 @@ color-4 = #13FD86
 color-5 = #0039FF
 color-6 = #9139FF
 
-color-dark =  #444444
+color-darkest = #333333
+color-darker = #444444
+color-dark = #555555
 color-light = #6E6E6E
 color-xlight = #AAAAAA
 color-white = #FFFFFF
@@ -41,7 +43,8 @@ font-xlight = 200
 
 
 html
-  // 
+  -webkit-text-size-adjust 100%
+
 body
   font 1em/1.5 font-body
   background color-white
@@ -67,10 +70,14 @@ a
   color color-bright
   fill @color
   text-decoration none
-  transition color 200ms ease-out
+  transition-property color, fill, border-color
+  transition-duration 200ms
+  transition-timing-function ease-out
+  border-bottom 1px solid transparent
 a:hover
-  color color-dark
-  fill @color
+  // color color-dark
+  // fill @color
+  border-color color-bright
 
 strong
   font-weight font-heavy
@@ -115,6 +122,7 @@ svg
   .headerDesc
     col(1/1)
 
+// Used on archive
 .postList
   padding-top 1em
 .postList > li
@@ -142,12 +150,13 @@ svg
   .postMeta
     col(1/2)
 
+// Default index view
 .post
   padding-bottom 2em
   margin-bottom 2em
   cf()
 .post-header
-  // col(1/4)
+  // 
 .post-title
   font-weight font-xheavy
   color color-dark
@@ -158,28 +167,45 @@ svg
   margin-bottom 1em
 .post-content
   color color-dark
+  clear both
+.post-content:after
+  content "* * *"
+  position relative
+  margin 3em auto 1em
+  display block
+  text-align center
+.post-content strong
+  font-weight font-light
+  color color-xdark
 .post-content p
   margin-bottom 1em
 .post-content h1
-  // 
-.post-content h2
   margin-bottom 1em
   font-weight font-heavy
-.post-content h2:before
-.post-content h3:before
-  position relative
-  content "—"
-  display block
-  color color-xlight
+  color color-darkest
+  border-bottom 2px solid color-darkest
 .post-content h2
   font-weight font-heavy
-  color color-xlight
+  color color-darker
+  border-bottom 1px solid color-darker
+  margin-bottom 1em
 .post-content h3
-  // 
+  font-weight font-heavy
+  color color-dark
+  border-bottom 1px dashed color-dark
+  margin-bottom 0.5em
+.post-content h4
+  font-weight font-heavy
+  color color-light
+  border-bottom 1px dashed color-light
+  margin-bottom 0.5em
 .post-content img
   span(1/1)
+  margin-bottom 1em
+  box-shadow
 .post-content aside
-  // 
+  margin-bottom 1em
+  font-style italic
 .post-content pre
   max-width 100%
   overflow auto
@@ -190,6 +216,7 @@ svg
     col(1/4)
   .post-content
     col(3/4)
+    // margin-top 6em
   .post-content img
     span(1.33333)
     shift(-0.33333)
@@ -211,10 +238,11 @@ svg
 .footer
   border-top 1px solid color-xlight
   padding-top 2em
+  font-size 1em
 .footer-links
   cf()
   margin-bottom 1em
-  list-style square
+  list-style disc
 .footer-links li
   col(1/2, cycle: 2)
 .footer-links li:before
@@ -226,7 +254,7 @@ svg
 .footer-links li.is-dribbble
   color color-dribbble
 .footer-links li.is-email
-  color color-dark
+  color #333
 .footer-links a
   text-decoration none
 .footer-updated
@@ -240,3 +268,235 @@ svg
     col(1/2)
   .footer-updated
     // col(1/2)
+
+// Night mode
+html.is-night
+  body
+    background color-dark
+    color color-xlight
+  a:hover
+    color color-white
+    fill @color
+  strong
+    color color-white
+  .post-title
+    color color-white
+  .post-content
+    color color-xlight
+
+// Syntax
+.CodeRay
+  background-color: #152638
+  border: 1px solid darken(#152638, 10%);
+  border-radius 5px
+  font-family 'Input Mono', 'Cousine', 'Fira Mono', 'Andale Mono', 'Monaco' monospace
+  color #F6F7EE
+  padding 0.25em
+
+.CodeRay pre
+  margin: 0px;
+
+table.CodeRay
+  border-collapse: collapse;
+  width: 100%;
+  padding: 2px
+table.CodeRay td
+  padding: 1em 0.5em;
+  vertical-align: top;
+
+.CodeRay .line-numbers, .CodeRay .no
+  // 
+
+.CodeRay .line-numbers a
+  color: #858E93;
+
+.CodeRay .line-numbers tt
+  font-weight bold
+.CodeRay .line-numbers .highlighted
+  color red
+.CodeRay .line
+  display block
+  float left
+  width 100%
+.CodeRay span.line-numbers
+  padding 0px 4px
+.CodeRay .code
+  width 100%
+
+ol.CodeRay
+  font-size: 10pt
+ol.CodeRay li
+  white-space: pre
+
+.CodeRay
+  .code pre
+    overflow: auto
+  .debug
+    color:white ! important; background:blue ! important;
+
+  .annotation
+    color:#007
+  .attribute-name
+    color:#3AE729
+  .attribute-value
+    color:#700
+  .binary
+    color:#509; font-weight:bold
+  .comment 
+    color:#998; font-style: italic;
+  .char
+    color:#04D
+  .char .content
+    color:#04D
+  .char .delimiter
+    color:#039
+  .class
+    color:#458; font-weight:bold
+  .complex
+    color:#A08; font-weight:bold
+  .constant
+    color:teal;
+  .color
+    color:#0A0
+  .class-variable
+    color:#369
+  .decorator
+    color:#B0B;
+  .definition
+    color:#099; font-weight:bold
+  .directive
+    color:#088; font-weight:bold
+  .delimiter
+    color:black
+  .doc
+    color:#970
+  .doctype
+    color:#34b
+  .doc-string
+    color:#D42; font-weight:bold
+  .escape 
+    color:#666; font-weight:bold
+  .entity
+    color:#800; font-weight:bold
+  .error
+    color:#F00; background-color:#FAA
+  .exception
+    color:#C00; font-weight:bold
+  .filename
+    color:#099;
+  .function
+    color:#39E029; font-weight:bold
+  .global-variable
+    color:teal; font-weight:bold
+  .hex
+    color:#058; font-weight:bold
+  .integer 
+    color:#A982FF
+  .include
+    color:#B44; font-weight:bold
+  .inline
+    color: black
+  .inline .inline
+    background: #ccc
+  .inline .inline .inline
+    background: #bbb
+  .inline .inline-delimiter
+    color: #D14;
+  .inline-delimiter
+    color: #D14;
+  .important
+    color:#f00;
+  .interpreted
+    color:#B2B; font-weight:bold
+  .instance-variable
+    color:teal
+  .label
+    color:#970; font-weight:bold
+  .local-variable
+    color:#963
+  .octal
+    color:#40E; font-weight:bold
+  .operator
+
+  .predefined-constant
+     font-weight:bold
+  .predefined
+    color:#369; font-weight:bold
+  .preprocessor
+    color:#579;
+  .pseudo-class
+    color:#00C; font-weight:bold
+  .predefined-type
+    color:#074; font-weight:bold
+  .reserved, .keyword 
+    color:#FB4248;
+
+  .key
+    color: #F6F7EE;
+  .key .delimiter
+    color: #606;
+  .key .char
+    color: #80f;
+  .value
+    color: #FB4248;
+
+  .regexp
+    background-color:#fff0ff
+  .regexp .content
+    color:#808
+  .regexp .delimiter
+    color:#404
+  .regexp .modifier
+    color:#C2C
+  .regexp .function 
+    color:#404; font-weight: bold
+
+  .string
+    color: #FDDB5B;
+  .string .content
+    color: #FDDB5B;
+  .string .char
+    color: #D14;
+  .string .delimiter
+    color: #F6F7EE;
+
+  .shell
+    color:#D14
+  .shell .content
+
+  .shell .delimiter
+    color:#D14
+
+  .symbol
+    color:#990073
+  .symbol .content
+    color:#A60
+  .symbol .delimiter
+    color:#630
+
+  .tag
+    color:#FC4349
+  .tag-special
+    color:#D70; font-weight:bold
+  .type
+    color:#339; font-weight:bold
+  .variable 
+    color:#036
+
+  .insert
+    background: #afa;
+  .delete
+    background: #faa;
+  .change
+    color: #aaf; background: #007;
+  .head
+    color: #f8f; background: #505
+
+  .insert .insert
+    color: #080; font-weight:bold
+  .delete .delete
+    color: #800; font-weight:bold
+  .change .change
+    color: #66f;
+  .head .head
+    color: #f4f;
