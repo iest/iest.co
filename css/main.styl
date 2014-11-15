@@ -16,7 +16,7 @@ global-reset()
 color-1 = #FE4A43
 color-2 = #50E3C2
 color-3 = #FDB386
-color-4 = #13FD86
+color-4 = #42E9C4
 color-5 = #0039FF
 color-6 = #9139FF
 
@@ -28,7 +28,7 @@ color-lighter = #AAAAAA
 color-lightest = #D8D8D8
 color-white = #FFFFFF
 
-color-bright = color-1
+color-bright = #543AFC
 
 color-twitter = #55ACEE
 color-github = #F6CBB5
@@ -94,7 +94,8 @@ svg
 
 .header
   cf()
-  border-bottom 1px solid color-lighter
+  background darken(color-white, 5%)
+  // border-bottom 1px solid color-lighter
   padding-bottom 2em
   margin-bottom 2em
 .headerLogo
@@ -259,9 +260,10 @@ svg
   // float right
 
 .footer
-  border-top 1px solid color-lighter
+  background darken(color-white, 5%)
   padding-top 2em
   font-size 1em
+  cf()
 .footer-links
   cf()
   margin-bottom 1em
@@ -282,15 +284,14 @@ svg
   text-decoration none
 .footer-updated
   margin-bottom 1em
-  color color-lighter
+  color color-light
 .footer-copy
   col(1/1)
   text-align center
+  padding 1em
 +above(40em)
   .footer-links
     col(1/2)
-  .footer-updated
-    // col(1/2)
 
 // Night mode
 html.is-night

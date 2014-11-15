@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Icons for the web in 2014"
-date:   2014-11-09 16:46:29
+date:   2014-09-11 16:46:29
 category: webdev
 tags: svg icons
 ---
