@@ -28,13 +28,14 @@ color-lighter = #AAAAAA
 color-lightest = #D8D8D8
 color-white = #FFFFFF
 
-color-bright = #543AFC
+color-bright = #FE6363
 
 color-twitter = #55ACEE
 color-github = #F6CBB5
 color-dribbble = #E9508A
 
-font-body = "jaf-facitweb", "Facit", "Helvetica Neue", "Helvetica", sans-serif
+// font-body = "jaf-facitweb", "San Francisco Text", "Facit", "Verdana", sans-serif
+font-body = "San Francisco Text"
 font-mono = "Input Mono", "Fira Mono", "Menlo", "Inconsolata", monospace
 
 font-xheavy = 700
@@ -60,6 +61,8 @@ body
 .wrapH
   padding-left 2em
   padding-right @padding-left
+  max-width 55em
+  margin 0 auto
 .wrapV
   padding-top 2em
   padding-bottom @padding-top
@@ -95,15 +98,14 @@ svg
 .header
   cf()
   background darken(color-white, 5%)
-  // border-bottom 1px solid color-lighter
   padding-bottom 2em
-  margin-bottom 2em
 .headerLogo
   col(1/4)
 .headerLogo-link
-  height 3em
+  position relative
+  top 1em
+  height 2.5em
   width @height * 1.270833333
-  padding 0.4em
   display block
 
 .headerNav
@@ -132,10 +134,11 @@ svg
 
 // Used on archive
 .postList
+  cf()
   padding-top 1em
 .postList > li
-  cf()
   margin-bottom 3em
+  cf()
 .postLink
   display inline
 .postLink a:hover
@@ -144,14 +147,16 @@ svg
   font-weight font-heavy
   display inline
 .postMeta
-  // 
+  color color-lighter
 .postMeta-date
   display inline-block
   font-weight font-light
-  color color-lighter
+  color color-lightest
 .postMeta-excerpt
   font-weight font-normal
 +above(40em)
+  .postList
+    list-style none
   .postLink
     col(1/2)
     text-align right
@@ -160,6 +165,7 @@ svg
 
 // Default index view
 .post
+  padding-top 2em
   padding-bottom 2em
   margin-bottom 2em
   cf()
@@ -241,9 +247,11 @@ svg
     col(3/4)
   .post-content:after
     content "* * *"
-  .post-content img
-    span(1.33333)
-    shift(-0.33333)
++above(75em)
+  .post-content aside
+    position absolute
+    width 12em
+    left -@width
 
 .pagination
   margin 2em 0
@@ -267,7 +275,7 @@ svg
 .footer-links
   cf()
   margin-bottom 1em
-  list-style disc
+  list-style square
 .footer-links li
   col(1/2, cycle: 2)
 .footer-links li:before
@@ -304,6 +312,10 @@ html.is-night
     border-color @color
   strong
     color color-white
+  .header
+    background lighten(color-dark, 10%)
+  .footer
+    background color-darker
   .post-title
     color color-white
   .post-content
