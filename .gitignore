@@ -1,3 +1,4 @@
 *.sketch
 _site
 .sass-cache
+_drafts
