@@ -19,6 +19,7 @@ color-3 = #FDB386
 color-4 = #42E9C4
 color-5 = #0039FF
 color-6 = #9139FF
+color-7 = #FE6363
 
 color-darkest = #333333
 color-darker = #444444
@@ -28,14 +29,14 @@ color-lighter = #AAAAAA
 color-lightest = #D8D8D8
 color-white = #FFFFFF
 
-color-bright = #FE6363
+color-bright = color-7
 
 color-twitter = #55ACEE
 color-github = #F6CBB5
 color-dribbble = #E9508A
 
-// font-body = "jaf-facitweb", "San Francisco Text", "Facit", "Verdana", sans-serif
-font-body = "San Francisco Text"
+font-body = "jaf-facitweb" "Facit", "San Francisco Text", "Verdana", sans-serif
+// font-body = "San Francisco Text"
 font-mono = "Input Mono", "Fira Mono", "Menlo", "Inconsolata", monospace
 
 font-xheavy = 700
@@ -247,6 +248,8 @@ svg
     col(3/4)
   .post-content:after
     content "* * *"
+    display block
+    text-align left
 +above(75em)
   .post-content aside
     position absolute

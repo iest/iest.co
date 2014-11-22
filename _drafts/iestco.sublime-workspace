@@ -520,13 +520,26 @@
 	"buffers":
 	[
 		{
-			"contents": "---\nlayout: page\ntitle: Hello, I'm Iestyn.\npermalink: /about/\nimage:\n  src: \"/images/mynydd-bach/home.jpg\"\n  alt: \"Home Sweet Home\"\n---\n\n**I’m a designer and engineer working and living in London.**\n\n(It’s pronounced *yes-tin*, and is the Welsh form of *Justin*)\n\nI finally bit the bullet and learn HTML and CSS in the winter of 2011. During my first job in the industry at [Eysys](http://eysys.com) as a UI/UX Designer in June 2012, I learnt all about JavaScript. In March of 2014 I moved to London to join [Busuu](http://busuu.com) as a Front End Engineer. But after a fairly hectic few months, I'm now working with the awesome folks at [Bizzby](http://bizzby.com) building a truly next-generation isomorphic web app.\n\nI've always had a keen euye for \n\nI learnt how to build websites in the spring of 2012, and learnt all about JavaScript over the next year or so. I've always had an eye for design, but never thought I was good enough to call myself a designer. Now, I think the term is a bit too restrictive for what I do each day: *build stuff*.\n\nI'm currently on my 3rd job in the industry, building products and tools with the awesome team at [Bizzby](http://bizzby.com).\n\nIn my spare time I play video games and faff over making coffee. Honestly though, this whole tech thing is my hobby too.\n\n## This site\n\nThe code for this site is all up on [github](https://github.com/iest/iest.co). It's typeset in [JAF Facit](http://justanotherfoundry.com/facit), served from [Typekit](https://typekit.com/fonts/jaf-facitweb). I like working within well-defined constraints; there is only one font size on the whole site.\n\nAfter playing around with building [my own blogging engine](https://github.com/iest/derp) (and having crazy ideas for Dropbox integration...), I caved and now use [Jekyll](http://jekyllrb.com). Because I keep the whole thing in my Dropbox, I can edit my posts from any device (but can only deploy from my Mac). It's all being served from a [Linode](https://www.linode.com) in London somewhere. I used a combination of [Sketch](http://bohemiancoding.com/sketch/) and [Sublime Text 3](http://www.sublimetext.com/3) to design and build the site, over a few evening's work.\n\nIf you have any questions, comments, or other wordly advice, either hit me up on [twitter](http://twitter.com/_iest) or [drop me an email](mailto:hello@iest.co).",
 			"file": "/Users/iest/Dropbox/iest.co/about.md",
-			"file_size": 2323,
-			"file_write_time": 130607337660000000,
 			"settings":
 			{
-				"buffer_size": 2352,
+				"buffer_size": 2547,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "how-not-to-run-a-startup.md",
+			"settings":
+			{
+				"buffer_size": 114,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/iest/Dropbox/iest.co/css/main.styl",
+			"settings":
+			{
+				"buffer_size": 9733,
 				"line_ending": "Unix"
 			}
 		}
@@ -537,6 +550,10 @@
 		"height": 400.0,
 		"selected_items":
 		[
+			[
+				"open",
+				"Finder: Open here"
+			],
 			[
 				"html",
 				"Set Syntax: HTML"
@@ -556,10 +573,6 @@
 			[
 				"instal",
 				"Package Control: Install Package"
-			],
-			[
-				"open",
-				"Finder: Open here"
 			],
 			[
 				"enc",
@@ -950,7 +963,7 @@
 				"Package Control: Remove Package"
 			]
 		],
-		"width": 475.0
+		"width": 583.0
 	},
 	"console":
 	{
@@ -968,12 +981,20 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/Users/iest/Dropbox/iest.co"
-	],
 	"file_history":
 	[
+		"/Users/iest/Dropbox/iest.co/_config.yml",
+		"/Users/iest/Dropbox/iest.co/_includes/head.html",
+		"/Users/iest/Dropbox/iest.co/archive/index.html",
+		"/Users/iest/Dropbox/iest.co/css/main.styl",
+		"/Users/iest/Dropbox/iest.co/_posts/2013-08-04-why-stylus-is-awesome.md",
+		"/Users/iest/Dropbox/iest.co/_site/webdev/2013/08/04/why-stylus-is-awesome.html",
+		"/Users/iest/Dropbox/iest.co/about.md",
+		"/Users/iest/Dropbox/iest.co/_stylus/base.styl",
+		"/Users/iest/Dropbox/iest.co/_layouts/default.html",
+		"/Users/iest/Dropbox/iest.co/404.html",
+		"/Users/iest/Dropbox/iest.co/_layouts/page.html",
+		"/Users/iest/Dropbox/iest.co/package.json",
 		"/Users/iest/Bizzby Projects/project-sky/src/jade/index.jade",
 		"/Users/iest/Bizzby Projects/project-sky/src/stylus/sky-styles.styl",
 		"/Users/iest/Bizzby Projects/project-sky/src/js/initLoad/initLoad.js",
@@ -1089,19 +1110,7 @@
 		"/Users/iestynwilliams/Documents/busuu/LSP/app/scripts/directives/bsSticky.js",
 		"/Users/iestynwilliams/Documents/busuu/LSP/nucleo/stylus/buttons.styl",
 		"/Users/iestynwilliams/Documents/busuu/LSP/app/scripts/directives/bsCorrectionRow.js",
-		"/Users/iestynwilliams/Documents/busuu/LSP/app/template/posts/bsCorrectPost.html",
-		"/Users/iestynwilliams/Documents/busuu/LSP/nucleo/stylus/practise.styl",
-		"/Users/iestynwilliams/Documents/busuu/LSP/nucleo/svg/icons/icon_practise.svg",
-		"/Users/iestynwilliams/Documents/busuu/LSP/app/template/upgradeToPremium.jade",
-		"/Users/iestynwilliams/Documents/busuu/LSP/app/styles/bootstrap-sass/examples/offcanvas/offcanvas.css",
-		"/Users/iestynwilliams/Documents/busuu/LSP/app/template/exercises/trueOrFalse.jade",
-		"/Users/iestynwilliams/Documents/busuu/LSP/app/scripts/controllers/modal/Modal_ReportAbuse.js",
-		"/Users/iestynwilliams/Documents/busuu/LSP/app/scripts/controllers/dashboard/CorrectAllCtrl.js",
-		"/Users/iestynwilliams/Documents/busuu/LSP/app/template/modal/thanks_for_correction.jade",
-		"/Users/iestynwilliams/Documents/busuu/LSP/app/template/modal/thanks_for_correction.html",
-		"/Users/iestynwilliams/Documents/busuu/LSP/app/styles/bootstrap-sass/examples/theme/theme.css",
-		"/Users/iestynwilliams/Documents/busuu/LSP/nucleo/stylus/typography.styl",
-		"/Users/iestynwilliams/Documents/busuu/LSP/app/scripts/controllers/modal/Modal_Goals_test.js"
+		"/Users/iestynwilliams/Documents/busuu/LSP/app/template/posts/bsCorrectPost.html"
 	],
 	"find":
 	{
@@ -1423,7 +1432,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1432,15 +1441,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2352,
+						"buffer_size": 2547,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								753,
-								753
+								1813,
+								1813
 							]
 						],
 						"settings":
@@ -1450,7 +1459,69 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "how-not-to-run-a-startup.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 114,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								114,
+								114
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"color_scheme": "Packages/User/Color Highlighter/themes/Panic Palette (SL).tmTheme",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/iest/Dropbox/iest.co/css/main.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9733,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								517,
+								517
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"color_scheme": "Packages/User/Color Highlighter/themes/Panic Palette (SL).tmTheme",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 175.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1509,6 +1580,46 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"conf",
+				"_config.yml"
+			],
+			[
+				"head",
+				"_includes/head.html"
+			],
+			[
+				"mai",
+				"css/main.styl"
+			],
+			[
+				"abou",
+				"about.md"
+			],
+			[
+				"ma",
+				"css/main.styl"
+			],
+			[
+				"cofi",
+				"_config.yml"
+			],
+			[
+				"arch",
+				"archive/index.html"
+			],
+			[
+				"bas",
+				"_stylus/base.styl"
+			],
+			[
+				"404",
+				"404.html"
+			],
+			[
+				"defa",
+				"_layouts/default.html"
+			],
 			[
 				"about",
 				"about.md"
@@ -1636,10 +1747,6 @@
 			[
 				"parse",
 				"lib/derp/parse-post.js"
-			],
-			[
-				"defa",
-				"lib/derp/defaults.js"
 			],
 			[
 				"defau",
@@ -1984,42 +2091,6 @@
 			[
 				"bslunav",
 				"app/template/bsLuNav.jade"
-			],
-			[
-				"lunav",
-				"app/scripts/directives/learning_units/bsLuNav.js"
-			],
-			[
-				"progressdots",
-				"app/scripts/directives/learning_units/bsLuProgressdots.js"
-			],
-			[
-				"componenta",
-				"app/scripts/services/componentManager.js"
-			],
-			[
-				"ev",
-				"app/scripts/constants/EVENTS.js"
-			],
-			[
-				"exersq",
-				"app/scripts/services/exerciseSequence.js"
-			],
-			[
-				"exeriuse",
-				"app/template/activity/exercise_sequence.jade"
-			],
-			[
-				"symb",
-				"nucleo/svg/svg-symbols.svg"
-			],
-			[
-				"praci",
-				"app/template/views/practise.jade"
-			],
-			[
-				"testmag",
-				"app/scripts/services/testManager.js"
 			]
 		],
 		"width": 0.0
