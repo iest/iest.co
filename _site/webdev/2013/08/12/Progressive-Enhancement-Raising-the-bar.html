@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="tk-jaf-facitweb">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>iest.co | Progressive Enhancement: Raising the bar</title>
+  <meta name="description" content="Progressive enhancement has become a bit of a catch-all term these days (like responsive web design), but it’s original definition was as an alternative to g...">
+
+  <script src="//use.typekit.net/pjs1bqz.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://iest.co/webdev/2013/08/12/Progressive-Enhancement-Raising-the-bar.html">
+  <link rel="alternate" type="application/atom+xml" title="iest.co" href="http://iest.co/feed.xml" />
+
+  <script>
+    (function setNightMode () {
+      // Night mode 9pm to 7am
+      var now = new Date().getHours();
+      if (now >= 21 || now < 7) {
+        document.documentElement.className += ' is-night';
+      }
+    })(window, document);
+  </script>
+
+</head>
+
+
+  <body>
+    <header class="header">
+
+  <div class="wrapH wrapV">
+    <div class="headerLogo">
+      <a class="headerLogo-link" href="/">
+        <svg viewBox="0 0 312 249">
+          <path d="M94.6434059,160.444121 L155.422214,0 L213.596216,160.444121 L275.388004,10.8701979 L312,10.8701979 L212.149101,248.855064 L154.698657,90.2951106 L94.7881173,249 L24.6640316,73.0965992 L60.6712081,73.0965992 L94.6434059,160.444121 Z M36.882373,11.0940594 L0,11.0940594 L12.7567166,43.1435644 L49.3280632,43.1435644 L36.882373,11.0940594 Z" ></path>
+        </svg>
+      </a>
+    </div>
+
+    <nav class="headerNav">
+      <ul>
+      
+        <li><a class="headerNav-link is-active" href="/">Journal</a></li>
+        <li><a class="headerNav-link" href="/archive">Archive</a></li>
+        <li><a class="headerNav-link" href="/about">About</a></li>
+      
+      </ul>
+    </nav>
+
+    <h1 class="headerDesc"><strong>Iestyn Williams</strong> is an engineer, designer, and coffee drinker living and working in London.
+</h1>
+  </div>
+
+</header>
+
+
+    <div class="post wrapH">
+
+    
+      <header class="post-header">
+        <h1 class="post-title">Progressive Enhancement: Raising the bar</h1>
+        <p class="post-meta">August 12, 2013</p>
+        <a class="post-permalink" href="/webdev/2013/08/12/Progressive-Enhancement-Raising-the-bar.html">&#9733;</a>
+      </header>
+
+      <article class="post-content">
+        <h2 id="progressive-enhancement-has-become-a-bit-of-a-catch-all-term-these-days-like-responsive-web-design-but-its-original-definition-was-as-an-alternative-to-graceful-degradation">Progressive enhancement has become a bit of a catch-all term these days (like responsive web design), but it’s original definition was as an alternative to <em>graceful degradation</em>.</h2>
+
+<p>In older days, web builders would focus on building for the most advanced/capable browsers first, allowing web pages to <em>degrade</em> in functionality on older/less capable browsers. However, this often meant that the basic content of a site wasn’t even accessible on those older browsers.</p>
+
+<p>In real terms, <a href="http://en.wikipedia.org/wiki/Progressive_enhancement">progressive enhancement</a> works in the opposite way: start with the content, then build layers of enhancement on top. The end result is that any browser can access the basic content, whilst the more capable browsers have a more enhanced (and probably better) user experience.</p>
+
+<p>In the last few years however, browsers have become more and more powerful. This power has allowed us web builders to create increasingly complex client-side apps that can compete with the user experience of native applications, whilst still being platform-agnostic.</p>
+
+<p>Now, when I think about the best software in the world, I think about native iOS apps like <a href="http://realmacsoftware.com/clear">Clear</a>, <a href="http://tapbots.com/software/tweetbot/">Tweetbot</a>, and <a href="http://www.mailboxapp.com/">Mailbox</a>. The developers of these apps are able to create great user experiences because they <em>know</em> the environment the software will run in. There’s no concept of styles being disabled, or javascript not being available. The apps are already downloaded and installed, ready to go. The minimum barrier to entry is an iOS device from the last 3 years.</p>
+
+<p>There’s no concept of progressive enhancement on these native platforms because the minimum level of functionality required for an app to work is the same for all devices.</p>
+
+<p>On the web, we don’t have that luxury. We can’t assume what environment a web site or app will be accessed. <strong>But that doesn’t mean we don’t have a minimum barrier to entry</strong>. We <em>do</em>, even if it’s usually the ability to render HTML properly.</p>
+
+<p>So, progressive enhancment is all about ensuring that the barrier to entry is as low as possible. But what if you’re building something that just <em>can’t</em> be done with plain old HTML?</p>
+
+<p><strong>You’re going to have to raise that barrier to entry.</strong><br />
+And you know what? That’s <em>fine</em>.</p>
+
+<p>If you’re building a site that can’t perform it’s function without CSS (like Google Web Fonts, or Typekit), that’s fine.</p>
+
+<p>If you’re building an app that can’t function without javascript (like Codepen, or Google Drive), that’s fine too.</p>
+
+<p>If we never raised that bar, then the web would never move forward.</p>
+
+      </article>
+    
+</div>
+
+
+    <footer class="footer">
+  
+  <div class="wrapH">
+
+    <ul class="footer-links">
+      <li class="is-twitter">
+        <a href="https://twitter.com/_iest">Twitter</a>
+      </li>
+      <li class="is-github">
+        <a href="https://github.com/iest">Github</a>
+      </li>
+      <li class="is-dribbble">
+        <a href="https://dribbble.com/iest">Dribbble</a>
+      </li>
+      <li class="is-email">
+        <a href="mailto:hello@iest.co">hello@iest.co</a>
+      </li>
+    </ul>
+
+    <p class="footer-copy">
+      &copy; 2014 Iestyn Williams 
+    </p>
+    <p class="footer-updated">
+      Last update: Saturday November 22, 2014 at 03:03 PM
+    </p>
+
+  </div>
+
+</footer>
+
+    
+  </body>
+
+</html>

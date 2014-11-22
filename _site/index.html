@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html class="tk-jaf-facitweb">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>iest.co</title>
+  <meta name="description" content="<strong>Iestyn Williams</strong> is an engineer, designer, and coffee drinker living and working in London.
+">
+
+  <script src="//use.typekit.net/pjs1bqz.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://iest.co/">
+  <link rel="alternate" type="application/atom+xml" title="iest.co" href="http://iest.co/feed.xml" />
+
+  <script>
+    (function setNightMode () {
+      // Night mode 9pm to 7am
+      var now = new Date().getHours();
+      if (now >= 21 || now < 7) {
+        document.documentElement.className += ' is-night';
+      }
+    })(window, document);
+  </script>
+
+</head>
+
+
+  <body>
+    <header class="header">
+
+  <div class="wrapH wrapV">
+    <div class="headerLogo">
+      <a class="headerLogo-link" href="/">
+        <svg viewBox="0 0 312 249">
+          <path d="M94.6434059,160.444121 L155.422214,0 L213.596216,160.444121 L275.388004,10.8701979 L312,10.8701979 L212.149101,248.855064 L154.698657,90.2951106 L94.7881173,249 L24.6640316,73.0965992 L60.6712081,73.0965992 L94.6434059,160.444121 Z M36.882373,11.0940594 L0,11.0940594 L12.7567166,43.1435644 L49.3280632,43.1435644 L36.882373,11.0940594 Z" ></path>
+        </svg>
+      </a>
+    </div>
+
+    <nav class="headerNav">
+      <ul>
+      
+        <li><a class="headerNav-link is-active" href="/">Journal</a></li>
+        <li><a class="headerNav-link" href="/archive">Archive</a></li>
+        <li><a class="headerNav-link" href="/about">About</a></li>
+      
+      </ul>
+    </nav>
+
+    <h1 class="headerDesc"><strong>Iestyn Williams</strong> is an engineer, designer, and coffee drinker living and working in London.
+</h1>
+  </div>
+
+</header>
+
+
+    
+  <div class="post wrapH">
+
+    
+      <header class="post-header">
+        <h1 class="post-title">Icons for the web in 2014</h1>
+        <p class="post-meta">September 11, 2014</p>
+        <a class="post-permalink" href="/webdev/2014/09/11/creating-an-icon-set-in-2014.html">&#9733;</a>
+      </header>
+      
+      <article class="post-content">
+        <h2 id="going-for-vector-based-icons-on-the-web-is-a-no-brainer-these-days-but-there-are-a-few-different-ways-you-can-implement-them">Going for vector-based icons on the web is a no-brainer these days, but there are a few different ways you can implement them.</h2>
+
+<p>After joining <a href="http://busuu.com">Busuu</a> at the end of March, one of the first things I set about doing was moving the product away from using a PNG-based sprite sheet, and toward a vector-based approach.</p>
+
+<p>Previously, I’ve made heavy use of icon fonts to get the job done (especially the appropriately named <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>), but building your own icon font can be pretty tedious. Most font software is super clunky and complex, and there’s an alternative that’s a lot more flexible for the modern web: <strong>SVG</strong>.</p>
+
+<p>Chris Coyer over at CSS-tricks has written a bunch of <a href="http://css-tricks.com/svg-sprites-use-better-icon-fonts/">awesome</a> <a href="http://css-tricks.com/using-svg/">articles</a> on using SVGs, as well as why they’re a <a href="http://css-tricks.com/icon-fonts-vs-svg/">better alternative</a> than using icon fonts.</p>
+
+<p><strong>tl;dr</strong> — because they’re real elements, you don’t have to worry about font-specific CSS issues (<code>line-height</code> etc); a single icon can have different coloured/styled parts; you don’t get weird anti-aliasing issues… In short, icon fonts feel like a bit of a hack in comparison.</p>
+
+<p>So, now we know SVG is better, what next?</p>
+
+<h3 id="step-1-creating-svgs">Step 1: Creating SVGs</h3>
+
+<p>Any reasonable vector-based graphics package can export as SVG. I’ll show you how to do it with Sketch and Illustrator, just in case.</p>
+
+<h4 id="sketch">Sketch</h4>
+
+<p>Exporting from sketch into usable SVG couldn’t be easier. Draw your shapes, wrap them in an art board, then hit export.  Select SVG, and you’re good to go.</p>
+
+<p><img src="/images/svg-2014/sketchExport.gif" alt="Sketch export" /></p>
+
+<h4 id="illustrator">Illustrator</h4>
+
+<p>Pretty much the same deal as Sketch, except with a little more complication. Draw your icon and create an artboard around the icon, but then you’ll need to either <code>Save As...</code> or <code>Save a Copy</code> — you can’t simply “Export” SVG for some weird reason. Make sure you tick <code>Use Artboards</code> and select SVG. Then make sure the export settings are set to add as little cruft as possible. Finally, you’re good to go.</p>
+
+<aside>Incidentally, a single Illustrator file has a limit of 100 artboards (therefore 100 icons), so bear that in mind when building your icon set.</aside>
+
+<p><img src="/images/svg-2014/aiExport.gif" alt="Illustrator export" /></p>
+
+<h3 id="step-2-getting-your-icons-rendering">Step 2: Getting your icons rendering</h3>
+
+<p>There’s a few different ways to get your icons to render in a browser:</p>
+
+<h4 id="img-tags"><code>img</code> tags</h4>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span><span class="tag">&lt;img</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">path/to/svg.svg</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<p>You can add your SVG to your page via an <code>img</code> tag, setting the <code>src</code> attribute to be your icon’s path. Nice and simple. You get the power of vector (so high-res screen-ready), but you don’t get the real power of SVG yet.</p>
+
+<h4 id="copy-and-paste">Copy and Paste</h4>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span><span class="tag">&lt;svg&gt;</span>
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>  <span class="tag">&lt;rect</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">logo</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">fill</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">#D8D8D8</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">x</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">y</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">width</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">100</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">height</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">100</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/rect&gt;</span>
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span><span class="tag">&lt;/svg&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<p>SVG is just XML — so open an icon with your text editor of choice, and copy-paste the code into your HTML. Now you can style your icon using just CSS:</p>
+
+<p data-height="268" data-theme-id="0" data-slug-hash="IzBGq" data-default-tab="result" class="codepen">See the Pen <a href="http://codepen.io/iest/pen/IzBGq/">IzBGq</a> by Iestyn Williams (<a href="http://codepen.io/iest">@iest</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//codepen.io/assets/embed/ei.js"></script>
+
+<h4 id="symbols">Symbols</h4>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"> <a href="#n1" name="n1">1</a></span><span class="tag">&lt;svg</span> <span class="attribute-name">style</span>=<span class="string"><span class="delimiter">&quot;</span><span class="key">display</span>: <span class="value">none</span>;<span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="line-numbers"> <a href="#n2" name="n2">2</a></span>  <span class="tag">&lt;symbol</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">logo</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="line-numbers"> <a href="#n3" name="n3">3</a></span>    <span class="tag">&lt;rect</span> <span class="attribute-name">fill</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">#D8D8D8</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">x</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">y</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">width</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">100</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">height</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">100</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/rect&gt;</span>
+<span class="line-numbers"> <a href="#n4" name="n4">4</a></span>  <span class="tag">&lt;/symbol&gt;</span>
+<span class="line-numbers"> <a href="#n5" name="n5">5</a></span><span class="tag">&lt;/svg&gt;</span>
+<span class="line-numbers"> <a href="#n6" name="n6">6</a></span>
+<span class="line-numbers"> <a href="#n7" name="n7">7</a></span><span class="tag">&lt;svg&gt;</span> <span class="comment">&lt;!-- anywhere you want, even multiple places --&gt;</span>
+<span class="line-numbers"> <a href="#n8" name="n8">8</a></span>  <span class="tag">&lt;use</span> <span class="attribute-name">xlink:href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">logo</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="line-numbers"> <a href="#n9" name="n9">9</a></span><span class="tag">&lt;/svg&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<p>If you define your icons as symbols inside the SVG, you can reuse them inside your document at any point with a <code>use</code> tag:</p>
+
+<p data-height="268" data-theme-id="0" data-slug-hash="xcGIC" data-default-tab="result" class="codepen">See the Pen <a href="http://codepen.io/iest/pen/xcGIC/">xcGIC</a> by Iestyn Williams (<a href="http://codepen.io/iest">@iest</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//codepen.io/assets/embed/ei.js"></script>
+
+<p><small>There is a very similar method where you place the icons inside a <code>defs</code> tag on the SVG. The main difference is the pesky <code>viewBox</code> attribute, which you have to add to each <code>use</code> element when using with the defs method, which you don’t have to do when using the symbol method.</small></p>
+
+<p>This allows for way more flexibility than pasting long SVG code everywhere. All you have to do is make sure that the main SVG file is included on every page you want the icons to appear.<br />
+<small>Apparently the best place to put them is just after the opening <code>body</code> tag, but it seems to work anywhere in my experience</small>.</p>
+
+<p>If you look at the stylus tab on the second example above, you’ll see that I’ve tried to make one of the icons fill with blue, but because of the <code>fill="red"</code> attribute on the <code>path</code> element of the SVG definition itself, I can’t override it. So, we need to remove those <code>fill</code>s if we want to be able to style our icons using just CSS.</p>
+
+<aside>If you have fancy gradients on your SVGs, you have to insert these inside a <code>defs</code> tag alongside the <code>use</code> tag, otherwise they won't render.</aside>
+
+<p>But stripping these out manually from possibly hundreds of icons is no way to spend your day. Combining a bunch of individual icons into a single SVG symbol sheet is pretty tedious too.</p>
+
+<p>For just a handful of icons this manual editing is manageable, but for larger sets where you’re continually iterating, you really need the power of automation.</p>
+
+<h3 id="step-3-automating-your-workflow">Step 3: automating your workflow</h3>
+
+<p>Both sketch and illustrator allow for the mass-export of artboards, so we’ll use that feature to get all our icons into a folder to get us started.</p>
+
+<p>The next step is to optimise your SVGs, not only stripping out <code>fill</code> tags, but also any extra crap your graphics package has left in there. </p>
+
+<p>The best tool for this job is <a href="https://github.com/svg/svgo">SVGO</a>, an SVG Optimiser. It’s a really great tool, and has multiple interfaces. We use <a href="http://gulpjs.com">gulp</a> as our build system at busuu, so we use a combination of <a href="https://github.com/Hiswe/gulp-svg-symbols">gulp-svg-symbols</a> and <a href="https://github.com/ben-eb/gulp-svgmin">gulp-svgmin</a>, a gulp wrapper for SVGO. There seems to be a slick <a href="https://github.com/svg/svgo-gui">GUI version</a> of SVGO as well — worth checking out if you don’t want to get your hands dirty with javascript.</p>
+<aside>SVGO is smart enough to rip out <code>fill="#000000"</code> from our SVG icons, so is perfect if we make sure all our icons are filled <code>#000000</code> in our graphics package.</aside>
+
+<h4 id="using-with-gulp">Using with gulp</h4>
+
+<p>Using gulp to build your SVG sprite sheet is pretty straightforward. Here’s our gulp task freshly ripped out of our gulpfile:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>gulp.task(<span class="string"><span class="delimiter">'</span><span class="content">sprites</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>  <span class="keyword">return</span> gulp.src(<span class="string"><span class="delimiter">'</span><span class="content">./app/images/icons/icon_*.svg</span><span class="delimiter">'</span></span>)
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>    .pipe(svgmin())
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>    .pipe(svgSymbols())
+<span class="line-numbers"><a href="#n5" name="n5">5</a></span>    .pipe(gulp.dest(<span class="string"><span class="delimiter">&quot;</span><span class="content">./app/images/icons</span><span class="delimiter">&quot;</span></span>));
+<span class="line-numbers"><a href="#n6" name="n6">6</a></span>});
+</pre></div>
+</div>
+</div>
+
+<p>This task will find all the icons with name “icon_<em>something</em>” (which are our art board names in Sketch) inside the icons folder, then pipe them through the <code>svgmin</code> and <code>svgSymbols</code> tasks. <code>svgmin</code> is the SVGO wrapper, so that’ll strip out all the crap and return a pristine SVG for the <code>svgSymbols</code> task, which will compress all the icons into a single SVG file and plonk it back in the icons folder.</p>
+
+<p>Because we also use <a href="http://jade-lang.com">jade</a> at Busuu, we can really easily inject the SVG directly into all our pages on the site, using a simple <code>include</code> statement.</p>
+
+<h3 id="wrapping-up">Wrapping up</h3>
+
+<p>Hopefully I’ve shown you how easy it is to get SVG icons working on the web. They’re easy to export, and perfect for building a reusable set of icons with. Once you get your head around the <code>use</code> syntax and how the symbol method works, they’re super easy to work with.</p>
+
+<p>Browser compatibility is great if you don’t need to support IE8. If you are that unlucky however, there are some great <a href="https://github.com/filamentgroup/grunticon">build tools</a> to create PNG versions of your SVGs. Obviously this does cut down heavily on functionality (and colouring them would be a pain), but if you’re heavily relying on iconography in your project, then it’ll be worth it.</p>
+
+<p>If you have any feedback, questions, or comments, hit me up <a href="http://twitter.com/_iest">on twitter</a>!</p>
+
+      </article>
+    
+</div>
+
+  <div class="post wrapH">
+
+    
+      <header class="post-header">
+        <h1 class="post-title">Progressive Enhancement: Raising the bar</h1>
+        <p class="post-meta">August 12, 2013</p>
+        <a class="post-permalink" href="/webdev/2013/08/12/Progressive-Enhancement-Raising-the-bar.html">&#9733;</a>
+      </header>
+      
+      <article class="post-content">
+        <h2 id="progressive-enhancement-has-become-a-bit-of-a-catch-all-term-these-days-like-responsive-web-design-but-its-original-definition-was-as-an-alternative-to-graceful-degradation">Progressive enhancement has become a bit of a catch-all term these days (like responsive web design), but it’s original definition was as an alternative to <em>graceful degradation</em>.</h2>
+
+<p>In older days, web builders would focus on building for the most advanced/capable browsers first, allowing web pages to <em>degrade</em> in functionality on older/less capable browsers. However, this often meant that the basic content of a site wasn’t even accessible on those older browsers.</p>
+
+<p>In real terms, <a href="http://en.wikipedia.org/wiki/Progressive_enhancement">progressive enhancement</a> works in the opposite way: start with the content, then build layers of enhancement on top. The end result is that any browser can access the basic content, whilst the more capable browsers have a more enhanced (and probably better) user experience.</p>
+
+<p>In the last few years however, browsers have become more and more powerful. This power has allowed us web builders to create increasingly complex client-side apps that can compete with the user experience of native applications, whilst still being platform-agnostic.</p>
+
+<p>Now, when I think about the best software in the world, I think about native iOS apps like <a href="http://realmacsoftware.com/clear">Clear</a>, <a href="http://tapbots.com/software/tweetbot/">Tweetbot</a>, and <a href="http://www.mailboxapp.com/">Mailbox</a>. The developers of these apps are able to create great user experiences because they <em>know</em> the environment the software will run in. There’s no concept of styles being disabled, or javascript not being available. The apps are already downloaded and installed, ready to go. The minimum barrier to entry is an iOS device from the last 3 years.</p>
+
+<p>There’s no concept of progressive enhancement on these native platforms because the minimum level of functionality required for an app to work is the same for all devices.</p>
+
+<p>On the web, we don’t have that luxury. We can’t assume what environment a web site or app will be accessed. <strong>But that doesn’t mean we don’t have a minimum barrier to entry</strong>. We <em>do</em>, even if it’s usually the ability to render HTML properly.</p>
+
+<p>So, progressive enhancment is all about ensuring that the barrier to entry is as low as possible. But what if you’re building something that just <em>can’t</em> be done with plain old HTML?</p>
+
+<p><strong>You’re going to have to raise that barrier to entry.</strong><br />
+And you know what? That’s <em>fine</em>.</p>
+
+<p>If you’re building a site that can’t perform it’s function without CSS (like Google Web Fonts, or Typekit), that’s fine.</p>
+
+<p>If you’re building an app that can’t function without javascript (like Codepen, or Google Drive), that’s fine too.</p>
+
+<p>If we never raised that bar, then the web would never move forward.</p>
+
+      </article>
+    
+</div>
+
+  <div class="post wrapH">
+
+    
+      <header class="post-header">
+        <h1 class="post-title">Why Stylus is my favourite CSS preprocessor</h1>
+        <p class="post-meta">August 4, 2013</p>
+        <a class="post-permalink" href="/webdev/2013/08/04/why-stylus-is-awesome.html">&#9733;</a>
+      </header>
+      
+      <article class="post-content">
+        <h2 id="the-first-css-preprocessor-i-used-was-lesshttplesscssorg-it-was-drier-than-sasshttpsass-langcom-and-once-they-had-in-line-media-query-support-i-didnt-think--it-could-get-much-better">The first CSS preprocessor I used was <a href="http://lesscss.org">Less</a>. It was drier than <a href="http://sass-lang.com">sass</a>, and once they had in-line <code>@media</code> query support, I didn’t think  it could get much better.</h2>
+
+<p>Then I found <a href="http://learnboost.github.com/stylus/">stylus</a>. Imagine all the best bits out of less &amp; sass (mixins, variables,  colour manipulation), but now with a touch of javascript (functions, conditionals, interpolation, iteration…). What you have is an incredibly flexible language to write better, cleaner outputted CSS, and be able to write it faster.</p>
+
+<p>Another awesome thing about stylus is that because it’s indentation based, it doesn’t care if you use colons and semi colons. In a recent project I wrote every line as dry as possible, i.e.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>.header__nav
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>    position relative
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>    float right
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>    overflow hidden
+</pre></div>
+</div>
+</div>
+
+<h3 id="vendor-prefixes">Vendor prefixes</h3>
+
+<p>One of the biggest pain points of writing CSS is getting the vendor prefixes right. Even though we just recently <a href="http://my.opera.com/ODIN/blog/300-million-users-and-move-to-webkit">lost a rendering engine</a>, if you want any hope of browser backwards-compatibility, you gotta have prefixes. Here’s a stylus function to output vendor prefixes easily:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>vendors = o, moz, webkit, official
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>vendor(property, value)
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>  for vendor in vendors
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>    if vendor == official
+<span class="line-numbers"><a href="#n5" name="n5">5</a></span>      {property} value
+<span class="line-numbers"><a href="#n6" name="n6">6</a></span>    else
+<span class="line-numbers"><a href="#n7" name="n7">7</a></span>      -{vendor}- {property} value
+</pre></div>
+</div>
+</div>
+
+<p>Now, in more detail…</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>vendors = o, moz, webkit, official
+</pre></div>
+</div>
+</div>
+
+<p>Here I’m defining <code>vendors</code> as an array, with all the vendors in it.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>vendor(property, value)
+</pre></div>
+</div>
+</div>
+
+<p>Here we’re just defining a function called <code>vendor</code>, and we’re passing it the property we want to vendor-ify, <code>property</code>, and the value we want it set to, <code>value</code>.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>for vendor in vendors
+</pre></div>
+</div>
+</div>
+
+<p><code>vendors</code> is the above array. This line iterates through the vendors.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span> if vendor == official
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>      {property} value
+</pre></div>
+</div>
+</div>
+
+<p>Inside the <code>for</code> loop, check if the vendor is <em>official</em>, if it is, we don’t want any browser prefixes, so we just want the <code>property</code> and <code>value</code>.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>else
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>    -{vendor}- {property} value
+</pre></div>
+</div>
+</div>
+
+<p>If the vendor we get is not official, add dashes each side of the <code>vendor</code> variable, then the <code>property</code> and <code>value</code>.</p>
+
+<p>Now, if we want some vendor prefixes, we can simply call:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>vendor(border-radius, 4px)
+</pre></div>
+</div>
+</div>
+
+<p>Outputting:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span><span class="tag">-o-border-radius</span>: <span class="float">4px</span>;
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span><span class="tag">-moz-border-radius</span>: <span class="float">4px</span>;
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span><span class="tag">-ms-border-radius</span>: <span class="float">4px</span>;
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span><span class="tag">-webkit-border-radius</span>: <span class="float">4px</span>;
+<span class="line-numbers"><a href="#n5" name="n5">5</a></span><span class="tag">border-radius</span>: <span class="float">4px</span>;
+</pre></div>
+</div>
+</div>
+
+<p>Pretty sweet.</p>
+
+<h3 id="transparent-mixins">Transparent mixins</h3>
+
+<p>Transparent mixins allow you to <em>redefine a CSS property as a function</em>. </p>
+
+<p>Read that last bit again.</p>
+
+<p>Now let me show you a real-world example.</p>
+
+<p><code>border-radius</code> is one of the properties we typically want to add vendor prefixes to. What we can do is redefine it to use our <code>vendor</code> function from earlier…</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>border-radius()
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>    vendor(border-radius, arguments)
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>// Use `arguments` like you can in javascript to get the arguments given to the function.
+</pre></div>
+</div>
+</div>
+
+<p>Then whenever you want to use border radius in your stylesheet, it’s pretty simple:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>border-radius: 5px
+</pre></div>
+</div>
+</div>
+
+<p>Just like using the specc’d syntax.</p>
+
+<p>This outputs:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>-moz-border-radius: 5px;
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>-webkit-border-radius: 5px;
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>-o-border-radius: 5px;
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>-ms-border-radius: 5px;
+<span class="line-numbers"><a href="#n5" name="n5">5</a></span>border-radius: 5px;
+</pre></div>
+</div>
+</div>
+
+<p>Just like you’d expect!</p>
+
+<h3 id="convinced-yet">Convinced yet?</h3>
+
+<p>You should be!</p>
+
+<p>Just imagine the possibilities of transparent mixins. You can check if a <code>background-color</code> or <code>colour</code> you’ve set has an alpha channel, and if it does, output a solid-colour fallback for older browsers:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>background-color()
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>    if arguments == transparent
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>       background-color transparent
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>    else if alpha(arguments) != 1
+<span class="line-numbers"><a href="#n5" name="n5">5</a></span>        background-color rgb(arguments)
+<span class="line-numbers"><a href="#n6" name="n6">6</a></span>        background-color rgba(arguments)  
+<span class="line-numbers"><a href="#n7" name="n7">7</a></span>    else
+<span class="line-numbers"><a href="#n8" name="n8">8</a></span>        background-color arguments
+</pre></div>
+</div>
+</div>
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>color()
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>    if arguments == transparent
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>       color transparent
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>    else if alpha(arguments) != 1
+<span class="line-numbers"><a href="#n5" name="n5">5</a></span>        color rgb(arguments)
+<span class="line-numbers"><a href="#n6" name="n6">6</a></span>        color rgba(arguments)
+<span class="line-numbers"><a href="#n7" name="n7">7</a></span>    else
+<span class="line-numbers"><a href="#n8" name="n8">8</a></span>        color arguments
+</pre></div>
+</div>
+</div>
+
+<p>Easily perform transforms and transitions with full vendor-prefix action:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>transform()
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>  vendor(transform, arguments)
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>transition(what = all, duration = 200ms, timing = ease)
+<span class="line-numbers"><a href="#n5" name="n5">5</a></span>    vendor(transition, what duration ease)
+</pre></div>
+</div>
+</div>
+
+<p>Seriously, go and <a href="http://learnboost.github.com/stylus/try.html">give stylus a try online</a>.</p>
+
+<p>This artcile been useful? Reasonable? Crap? Let me know what you think of this article <a href="https://twitter.com/iestynw">on twitter</a>.</p>
+
+      </article>
+    
+</div>
+
+
+<div class="pagination">
+  
+  <span class="pagination-number ">1 of 1</span>
+  
+</div>
+
+<!-- <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p> -->
+
+
+    <footer class="footer">
+  
+  <div class="wrapH">
+
+    <ul class="footer-links">
+      <li class="is-twitter">
+        <a href="https://twitter.com/_iest">Twitter</a>
+      </li>
+      <li class="is-github">
+        <a href="https://github.com/iest">Github</a>
+      </li>
+      <li class="is-dribbble">
+        <a href="https://dribbble.com/iest">Dribbble</a>
+      </li>
+      <li class="is-email">
+        <a href="mailto:hello@iest.co">hello@iest.co</a>
+      </li>
+    </ul>
+
+    <p class="footer-copy">
+      &copy; 2014 Iestyn Williams 
+    </p>
+    <p class="footer-updated">
+      Last update: Saturday November 22, 2014 at 03:03 PM
+    </p>
+
+  </div>
+
+</footer>
+
+    
+  </body>
+
+</html>

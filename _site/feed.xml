@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iest.co</title>
+    <description>&lt;strong&gt;Iestyn Williams&lt;/strong&gt; is an engineer, designer, and coffee drinker living and working in London.
+</description>
+    <link>http://iest.co/</link>
+    <atom:link href="http://iest.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 22 Nov 2014 15:03:55 +0000</pubDate>
+    <lastBuildDate>Sat, 22 Nov 2014 15:03:55 +0000</lastBuildDate>
+    <generator>Jekyll v2.5.0</generator>
+    
+      <item>
+        <title>Icons for the web in 2014</title>
+        <description>&lt;h2 id=&quot;going-for-vector-based-icons-on-the-web-is-a-no-brainer-these-days-but-there-are-a-few-different-ways-you-can-implement-them&quot;&gt;Going for vector-based icons on the web is a no-brainer these days, but there are a few different ways you can implement them.&lt;/h2&gt;
+
+&lt;p&gt;After joining &lt;a href=&quot;http://busuu.com&quot;&gt;Busuu&lt;/a&gt; at the end of March, one of the first things I set about doing was moving the product away from using a PNG-based sprite sheet, and toward a vector-based approach.&lt;/p&gt;
+
+&lt;p&gt;Previously, I’ve made heavy use of icon fonts to get the job done (especially the appropriately named &lt;a href=&quot;http://fortawesome.github.io/Font-Awesome/&quot;&gt;Font Awesome&lt;/a&gt;), but building your own icon font can be pretty tedious. Most font software is super clunky and complex, and there’s an alternative that’s a lot more flexible for the modern web: &lt;strong&gt;SVG&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Chris Coyer over at CSS-tricks has written a bunch of &lt;a href=&quot;http://css-tricks.com/svg-sprites-use-better-icon-fonts/&quot;&gt;awesome&lt;/a&gt; &lt;a href=&quot;http://css-tricks.com/using-svg/&quot;&gt;articles&lt;/a&gt; on using SVGs, as well as why they’re a &lt;a href=&quot;http://css-tricks.com/icon-fonts-vs-svg/&quot;&gt;better alternative&lt;/a&gt; than using icon fonts.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;tl;dr&lt;/strong&gt; — because they’re real elements, you don’t have to worry about font-specific CSS issues (&lt;code&gt;line-height&lt;/code&gt; etc); a single icon can have different coloured/styled parts; you don’t get weird anti-aliasing issues… In short, icon fonts feel like a bit of a hack in comparison.&lt;/p&gt;
+
+&lt;p&gt;So, now we know SVG is better, what next?&lt;/p&gt;
+
+&lt;h3 id=&quot;step-1-creating-svgs&quot;&gt;Step 1: Creating SVGs&lt;/h3&gt;
+
+&lt;p&gt;Any reasonable vector-based graphics package can export as SVG. I’ll show you how to do it with Sketch and Illustrator, just in case.&lt;/p&gt;
+
+&lt;h4 id=&quot;sketch&quot;&gt;Sketch&lt;/h4&gt;
+
+&lt;p&gt;Exporting from sketch into usable SVG couldn’t be easier. Draw your shapes, wrap them in an art board, then hit export.  Select SVG, and you’re good to go.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/svg-2014/sketchExport.gif&quot; alt=&quot;Sketch export&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;illustrator&quot;&gt;Illustrator&lt;/h4&gt;
+
+&lt;p&gt;Pretty much the same deal as Sketch, except with a little more complication. Draw your icon and create an artboard around the icon, but then you’ll need to either &lt;code&gt;Save As...&lt;/code&gt; or &lt;code&gt;Save a Copy&lt;/code&gt; — you can’t simply “Export” SVG for some weird reason. Make sure you tick &lt;code&gt;Use Artboards&lt;/code&gt; and select SVG. Then make sure the export settings are set to add as little cruft as possible. Finally, you’re good to go.&lt;/p&gt;
+
+&lt;aside&gt;Incidentally, a single Illustrator file has a limit of 100 artboards (therefore 100 icons), so bear that in mind when building your icon set.&lt;/aside&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/svg-2014/aiExport.gif&quot; alt=&quot;Illustrator export&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2-getting-your-icons-rendering&quot;&gt;Step 2: Getting your icons rendering&lt;/h3&gt;
+
+&lt;p&gt;There’s a few different ways to get your icons to render in a browser:&lt;/p&gt;
+
+&lt;h4 id=&quot;img-tags&quot;&gt;&lt;code&gt;img&lt;/code&gt; tags&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;path/to/svg.svg&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can add your SVG to your page via an &lt;code&gt;img&lt;/code&gt; tag, setting the &lt;code&gt;src&lt;/code&gt; attribute to be your icon’s path. Nice and simple. You get the power of vector (so high-res screen-ready), but you don’t get the real power of SVG yet.&lt;/p&gt;
+
+&lt;h4 id=&quot;copy-and-paste&quot;&gt;Copy and Paste&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;svg&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;rect&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;logo&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;fill&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;#D8D8D8&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;x&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;y&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;width&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;height&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/rect&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;SVG is just XML — so open an icon with your text editor of choice, and copy-paste the code into your HTML. Now you can style your icon using just CSS:&lt;/p&gt;
+
+&lt;p data-height=&quot;268&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;IzBGq&quot; data-default-tab=&quot;result&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/iest/pen/IzBGq/&quot;&gt;IzBGq&lt;/a&gt; by Iestyn Williams (&lt;a href=&quot;http://codepen.io/iest&quot;&gt;@iest&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;h4 id=&quot;symbols&quot;&gt;Symbols&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;style&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;key&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;value&quot;&gt;none&lt;/span&gt;;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;symbol&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;logo&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;rect&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;fill&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;#D8D8D8&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;x&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;y&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;width&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;height&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/rect&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/symbol&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n7&quot; name=&quot;n7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;svg&amp;gt;&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- anywhere you want, even multiple places --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n8&quot; name=&quot;n8&quot;&gt;8&lt;/a&gt;&lt;/span&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;use&lt;/span&gt; &lt;span class=&quot;attribute-name&quot;&gt;xlink:href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;logo&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n9&quot; name=&quot;n9&quot;&gt;9&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you define your icons as symbols inside the SVG, you can reuse them inside your document at any point with a &lt;code&gt;use&lt;/code&gt; tag:&lt;/p&gt;
+
+&lt;p data-height=&quot;268&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;xcGIC&quot; data-default-tab=&quot;result&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/iest/pen/xcGIC/&quot;&gt;xcGIC&lt;/a&gt; by Iestyn Williams (&lt;a href=&quot;http://codepen.io/iest&quot;&gt;@iest&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;small&gt;There is a very similar method where you place the icons inside a &lt;code&gt;defs&lt;/code&gt; tag on the SVG. The main difference is the pesky &lt;code&gt;viewBox&lt;/code&gt; attribute, which you have to add to each &lt;code&gt;use&lt;/code&gt; element when using with the defs method, which you don’t have to do when using the symbol method.&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;This allows for way more flexibility than pasting long SVG code everywhere. All you have to do is make sure that the main SVG file is included on every page you want the icons to appear.&lt;br /&gt;
+&lt;small&gt;Apparently the best place to put them is just after the opening &lt;code&gt;body&lt;/code&gt; tag, but it seems to work anywhere in my experience&lt;/small&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you look at the stylus tab on the second example above, you’ll see that I’ve tried to make one of the icons fill with blue, but because of the &lt;code&gt;fill=&quot;red&quot;&lt;/code&gt; attribute on the &lt;code&gt;path&lt;/code&gt; element of the SVG definition itself, I can’t override it. So, we need to remove those &lt;code&gt;fill&lt;/code&gt;s if we want to be able to style our icons using just CSS.&lt;/p&gt;
+
+&lt;aside&gt;If you have fancy gradients on your SVGs, you have to insert these inside a &lt;code&gt;defs&lt;/code&gt; tag alongside the &lt;code&gt;use&lt;/code&gt; tag, otherwise they won&#39;t render.&lt;/aside&gt;
+
+&lt;p&gt;But stripping these out manually from possibly hundreds of icons is no way to spend your day. Combining a bunch of individual icons into a single SVG symbol sheet is pretty tedious too.&lt;/p&gt;
+
+&lt;p&gt;For just a handful of icons this manual editing is manageable, but for larger sets where you’re continually iterating, you really need the power of automation.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-3-automating-your-workflow&quot;&gt;Step 3: automating your workflow&lt;/h3&gt;
+
+&lt;p&gt;Both sketch and illustrator allow for the mass-export of artboards, so we’ll use that feature to get all our icons into a folder to get us started.&lt;/p&gt;
+
+&lt;p&gt;The next step is to optimise your SVGs, not only stripping out &lt;code&gt;fill&lt;/code&gt; tags, but also any extra crap your graphics package has left in there. &lt;/p&gt;
+
+&lt;p&gt;The best tool for this job is &lt;a href=&quot;https://github.com/svg/svgo&quot;&gt;SVGO&lt;/a&gt;, an SVG Optimiser. It’s a really great tool, and has multiple interfaces. We use &lt;a href=&quot;http://gulpjs.com&quot;&gt;gulp&lt;/a&gt; as our build system at busuu, so we use a combination of &lt;a href=&quot;https://github.com/Hiswe/gulp-svg-symbols&quot;&gt;gulp-svg-symbols&lt;/a&gt; and &lt;a href=&quot;https://github.com/ben-eb/gulp-svgmin&quot;&gt;gulp-svgmin&lt;/a&gt;, a gulp wrapper for SVGO. There seems to be a slick &lt;a href=&quot;https://github.com/svg/svgo-gui&quot;&gt;GUI version&lt;/a&gt; of SVGO as well — worth checking out if you don’t want to get your hands dirty with javascript.&lt;/p&gt;
+&lt;aside&gt;SVGO is smart enough to rip out &lt;code&gt;fill=&quot;#000000&quot;&lt;/code&gt; from our SVG icons, so is perfect if we make sure all our icons are filled &lt;code&gt;#000000&lt;/code&gt; in our graphics package.&lt;/aside&gt;
+
+&lt;h4 id=&quot;using-with-gulp&quot;&gt;Using with gulp&lt;/h4&gt;
+
+&lt;p&gt;Using gulp to build your SVG sprite sheet is pretty straightforward. Here’s our gulp task freshly ripped out of our gulpfile:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;gulp.task(&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;sprites&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&#39;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;() {
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; gulp.src(&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;./app/images/icons/icon_*.svg&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&#39;&lt;/span&gt;&lt;/span&gt;)
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;    .pipe(svgmin())
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;    .pipe(svgSymbols())
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;    .pipe(gulp.dest(&lt;span class=&quot;string&quot;&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;content&quot;&gt;./app/images/icons&lt;/span&gt;&lt;span class=&quot;delimiter&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;));
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;});
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This task will find all the icons with name “icon_&lt;em&gt;something&lt;/em&gt;” (which are our art board names in Sketch) inside the icons folder, then pipe them through the &lt;code&gt;svgmin&lt;/code&gt; and &lt;code&gt;svgSymbols&lt;/code&gt; tasks. &lt;code&gt;svgmin&lt;/code&gt; is the SVGO wrapper, so that’ll strip out all the crap and return a pristine SVG for the &lt;code&gt;svgSymbols&lt;/code&gt; task, which will compress all the icons into a single SVG file and plonk it back in the icons folder.&lt;/p&gt;
+
+&lt;p&gt;Because we also use &lt;a href=&quot;http://jade-lang.com&quot;&gt;jade&lt;/a&gt; at Busuu, we can really easily inject the SVG directly into all our pages on the site, using a simple &lt;code&gt;include&lt;/code&gt; statement.&lt;/p&gt;
+
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h3&gt;
+
+&lt;p&gt;Hopefully I’ve shown you how easy it is to get SVG icons working on the web. They’re easy to export, and perfect for building a reusable set of icons with. Once you get your head around the &lt;code&gt;use&lt;/code&gt; syntax and how the symbol method works, they’re super easy to work with.&lt;/p&gt;
+
+&lt;p&gt;Browser compatibility is great if you don’t need to support IE8. If you are that unlucky however, there are some great &lt;a href=&quot;https://github.com/filamentgroup/grunticon&quot;&gt;build tools&lt;/a&gt; to create PNG versions of your SVGs. Obviously this does cut down heavily on functionality (and colouring them would be a pain), but if you’re heavily relying on iconography in your project, then it’ll be worth it.&lt;/p&gt;
+
+&lt;p&gt;If you have any feedback, questions, or comments, hit me up &lt;a href=&quot;http://twitter.com/_iest&quot;&gt;on twitter&lt;/a&gt;!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 11 Sep 2014 17:46:29 +0100</pubDate>
+        <link>http://iest.co/webdev/2014/09/11/creating-an-icon-set-in-2014.html</link>
+        <guid isPermaLink="true">http://iest.co/webdev/2014/09/11/creating-an-icon-set-in-2014.html</guid>
+        
+        <category>svg</category>
+        
+        <category>icons</category>
+        
+        
+        <category>webdev</category>
+        
+      </item>
+    
+      <item>
+        <title>Progressive Enhancement: Raising the bar</title>
+        <description>&lt;h2 id=&quot;progressive-enhancement-has-become-a-bit-of-a-catch-all-term-these-days-like-responsive-web-design-but-its-original-definition-was-as-an-alternative-to-graceful-degradation&quot;&gt;Progressive enhancement has become a bit of a catch-all term these days (like responsive web design), but it’s original definition was as an alternative to &lt;em&gt;graceful degradation&lt;/em&gt;.&lt;/h2&gt;
+
+&lt;p&gt;In older days, web builders would focus on building for the most advanced/capable browsers first, allowing web pages to &lt;em&gt;degrade&lt;/em&gt; in functionality on older/less capable browsers. However, this often meant that the basic content of a site wasn’t even accessible on those older browsers.&lt;/p&gt;
+
+&lt;p&gt;In real terms, &lt;a href=&quot;http://en.wikipedia.org/wiki/Progressive_enhancement&quot;&gt;progressive enhancement&lt;/a&gt; works in the opposite way: start with the content, then build layers of enhancement on top. The end result is that any browser can access the basic content, whilst the more capable browsers have a more enhanced (and probably better) user experience.&lt;/p&gt;
+
+&lt;p&gt;In the last few years however, browsers have become more and more powerful. This power has allowed us web builders to create increasingly complex client-side apps that can compete with the user experience of native applications, whilst still being platform-agnostic.&lt;/p&gt;
+
+&lt;p&gt;Now, when I think about the best software in the world, I think about native iOS apps like &lt;a href=&quot;http://realmacsoftware.com/clear&quot;&gt;Clear&lt;/a&gt;, &lt;a href=&quot;http://tapbots.com/software/tweetbot/&quot;&gt;Tweetbot&lt;/a&gt;, and &lt;a href=&quot;http://www.mailboxapp.com/&quot;&gt;Mailbox&lt;/a&gt;. The developers of these apps are able to create great user experiences because they &lt;em&gt;know&lt;/em&gt; the environment the software will run in. There’s no concept of styles being disabled, or javascript not being available. The apps are already downloaded and installed, ready to go. The minimum barrier to entry is an iOS device from the last 3 years.&lt;/p&gt;
+
+&lt;p&gt;There’s no concept of progressive enhancement on these native platforms because the minimum level of functionality required for an app to work is the same for all devices.&lt;/p&gt;
+
+&lt;p&gt;On the web, we don’t have that luxury. We can’t assume what environment a web site or app will be accessed. &lt;strong&gt;But that doesn’t mean we don’t have a minimum barrier to entry&lt;/strong&gt;. We &lt;em&gt;do&lt;/em&gt;, even if it’s usually the ability to render HTML properly.&lt;/p&gt;
+
+&lt;p&gt;So, progressive enhancment is all about ensuring that the barrier to entry is as low as possible. But what if you’re building something that just &lt;em&gt;can’t&lt;/em&gt; be done with plain old HTML?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;You’re going to have to raise that barrier to entry.&lt;/strong&gt;&lt;br /&gt;
+And you know what? That’s &lt;em&gt;fine&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you’re building a site that can’t perform it’s function without CSS (like Google Web Fonts, or Typekit), that’s fine.&lt;/p&gt;
+
+&lt;p&gt;If you’re building an app that can’t function without javascript (like Codepen, or Google Drive), that’s fine too.&lt;/p&gt;
+
+&lt;p&gt;If we never raised that bar, then the web would never move forward.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 12 Aug 2013 17:46:29 +0100</pubDate>
+        <link>http://iest.co/webdev/2013/08/12/Progressive-Enhancement-Raising-the-bar.html</link>
+        <guid isPermaLink="true">http://iest.co/webdev/2013/08/12/Progressive-Enhancement-Raising-the-bar.html</guid>
+        
+        <category>progressive-enhancement</category>
+        
+        
+        <category>webdev</category>
+        
+      </item>
+    
+      <item>
+        <title>Why Stylus is my favourite CSS preprocessor</title>
+        <description>&lt;h2 id=&quot;the-first-css-preprocessor-i-used-was-lesshttplesscssorg-it-was-drier-than-sasshttpsass-langcom-and-once-they-had-in-line-media-query-support-i-didnt-think--it-could-get-much-better&quot;&gt;The first CSS preprocessor I used was &lt;a href=&quot;http://lesscss.org&quot;&gt;Less&lt;/a&gt;. It was drier than &lt;a href=&quot;http://sass-lang.com&quot;&gt;sass&lt;/a&gt;, and once they had in-line &lt;code&gt;@media&lt;/code&gt; query support, I didn’t think  it could get much better.&lt;/h2&gt;
+
+&lt;p&gt;Then I found &lt;a href=&quot;http://learnboost.github.com/stylus/&quot;&gt;stylus&lt;/a&gt;. Imagine all the best bits out of less &amp;amp; sass (mixins, variables,  colour manipulation), but now with a touch of javascript (functions, conditionals, interpolation, iteration…). What you have is an incredibly flexible language to write better, cleaner outputted CSS, and be able to write it faster.&lt;/p&gt;
+
+&lt;p&gt;Another awesome thing about stylus is that because it’s indentation based, it doesn’t care if you use colons and semi colons. In a recent project I wrote every line as dry as possible, i.e.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;.header__nav
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;    position relative
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;    float right
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;    overflow hidden
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;vendor-prefixes&quot;&gt;Vendor prefixes&lt;/h3&gt;
+
+&lt;p&gt;One of the biggest pain points of writing CSS is getting the vendor prefixes right. Even though we just recently &lt;a href=&quot;http://my.opera.com/ODIN/blog/300-million-users-and-move-to-webkit&quot;&gt;lost a rendering engine&lt;/a&gt;, if you want any hope of browser backwards-compatibility, you gotta have prefixes. Here’s a stylus function to output vendor prefixes easily:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;vendors = o, moz, webkit, official
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;vendor(property, value)
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;  for vendor in vendors
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;    if vendor == official
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;      {property} value
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;    else
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n7&quot; name=&quot;n7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;      -{vendor}- {property} value
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now, in more detail…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;vendors = o, moz, webkit, official
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here I’m defining &lt;code&gt;vendors&lt;/code&gt; as an array, with all the vendors in it.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;vendor(property, value)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here we’re just defining a function called &lt;code&gt;vendor&lt;/code&gt;, and we’re passing it the property we want to vendor-ify, &lt;code&gt;property&lt;/code&gt;, and the value we want it set to, &lt;code&gt;value&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;for vendor in vendors
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;vendors&lt;/code&gt; is the above array. This line iterates through the vendors.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt; if vendor == official
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;      {property} value
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Inside the &lt;code&gt;for&lt;/code&gt; loop, check if the vendor is &lt;em&gt;official&lt;/em&gt;, if it is, we don’t want any browser prefixes, so we just want the &lt;code&gt;property&lt;/code&gt; and &lt;code&gt;value&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;else
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;    -{vendor}- {property} value
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If the vendor we get is not official, add dashes each side of the &lt;code&gt;vendor&lt;/code&gt; variable, then the &lt;code&gt;property&lt;/code&gt; and &lt;code&gt;value&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, if we want some vendor prefixes, we can simply call:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;vendor(border-radius, 4px)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Outputting:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;-o-border-radius&lt;/span&gt;: &lt;span class=&quot;float&quot;&gt;4px&lt;/span&gt;;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;-moz-border-radius&lt;/span&gt;: &lt;span class=&quot;float&quot;&gt;4px&lt;/span&gt;;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;-ms-border-radius&lt;/span&gt;: &lt;span class=&quot;float&quot;&gt;4px&lt;/span&gt;;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;-webkit-border-radius&lt;/span&gt;: &lt;span class=&quot;float&quot;&gt;4px&lt;/span&gt;;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;border-radius&lt;/span&gt;: &lt;span class=&quot;float&quot;&gt;4px&lt;/span&gt;;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Pretty sweet.&lt;/p&gt;
+
+&lt;h3 id=&quot;transparent-mixins&quot;&gt;Transparent mixins&lt;/h3&gt;
+
+&lt;p&gt;Transparent mixins allow you to &lt;em&gt;redefine a CSS property as a function&lt;/em&gt;. &lt;/p&gt;
+
+&lt;p&gt;Read that last bit again.&lt;/p&gt;
+
+&lt;p&gt;Now let me show you a real-world example.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;border-radius&lt;/code&gt; is one of the properties we typically want to add vendor prefixes to. What we can do is redefine it to use our &lt;code&gt;vendor&lt;/code&gt; function from earlier…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;border-radius()
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;    vendor(border-radius, arguments)
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;// Use `arguments` like you can in javascript to get the arguments given to the function.
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then whenever you want to use border radius in your stylesheet, it’s pretty simple:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;border-radius: 5px
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Just like using the specc’d syntax.&lt;/p&gt;
+
+&lt;p&gt;This outputs:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;-moz-border-radius: 5px;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;-webkit-border-radius: 5px;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;-o-border-radius: 5px;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;-ms-border-radius: 5px;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;border-radius: 5px;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Just like you’d expect!&lt;/p&gt;
+
+&lt;h3 id=&quot;convinced-yet&quot;&gt;Convinced yet?&lt;/h3&gt;
+
+&lt;p&gt;You should be!&lt;/p&gt;
+
+&lt;p&gt;Just imagine the possibilities of transparent mixins. You can check if a &lt;code&gt;background-color&lt;/code&gt; or &lt;code&gt;colour&lt;/code&gt; you’ve set has an alpha channel, and if it does, output a solid-colour fallback for older browsers:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;background-color()
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;    if arguments == transparent
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;       background-color transparent
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;    else if alpha(arguments) != 1
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;        background-color rgb(arguments)
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;        background-color rgba(arguments)  
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n7&quot; name=&quot;n7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;    else
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n8&quot; name=&quot;n8&quot;&gt;8&lt;/a&gt;&lt;/span&gt;        background-color arguments
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;color()
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;    if arguments == transparent
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;       color transparent
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;    else if alpha(arguments) != 1
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;        color rgb(arguments)
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;        color rgba(arguments)
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n7&quot; name=&quot;n7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;    else
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n8&quot; name=&quot;n8&quot;&gt;8&lt;/a&gt;&lt;/span&gt;        color arguments
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Easily perform transforms and transitions with full vendor-prefix action:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-coderay&quot;&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;transform()
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;  vendor(transform, arguments)
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;transition(what = all, duration = 200ms, timing = ease)
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;    vendor(transition, what duration ease)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Seriously, go and &lt;a href=&quot;http://learnboost.github.com/stylus/try.html&quot;&gt;give stylus a try online&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This artcile been useful? Reasonable? Crap? Let me know what you think of this article &lt;a href=&quot;https://twitter.com/iestynw&quot;&gt;on twitter&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 04 Aug 2013 16:00:00 +0100</pubDate>
+        <link>http://iest.co/webdev/2013/08/04/why-stylus-is-awesome.html</link>
+        <guid isPermaLink="true">http://iest.co/webdev/2013/08/04/why-stylus-is-awesome.html</guid>
+        
+        <category>css</category>
+        
+        <category>stylus</category>
+        
+        
+        <category>webdev</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="tk-jaf-facitweb">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>iest.co | Why Stylus is my favourite CSS preprocessor</title>
+  <meta name="description" content="The first CSS preprocessor I used was Less. It was drier than sass, and once they had in-line @media query support, I didn’t think  it could get much better.">
+
+  <script src="//use.typekit.net/pjs1bqz.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://iest.co/webdev/2013/08/04/why-stylus-is-awesome.html">
+  <link rel="alternate" type="application/atom+xml" title="iest.co" href="http://iest.co/feed.xml" />
+
+  <script>
+    (function setNightMode () {
+      // Night mode 9pm to 7am
+      var now = new Date().getHours();
+      if (now >= 21 || now < 7) {
+        document.documentElement.className += ' is-night';
+      }
+    })(window, document);
+  </script>
+
+</head>
+
+
+  <body>
+    <header class="header">
+
+  <div class="wrapH wrapV">
+    <div class="headerLogo">
+      <a class="headerLogo-link" href="/">
+        <svg viewBox="0 0 312 249">
+          <path d="M94.6434059,160.444121 L155.422214,0 L213.596216,160.444121 L275.388004,10.8701979 L312,10.8701979 L212.149101,248.855064 L154.698657,90.2951106 L94.7881173,249 L24.6640316,73.0965992 L60.6712081,73.0965992 L94.6434059,160.444121 Z M36.882373,11.0940594 L0,11.0940594 L12.7567166,43.1435644 L49.3280632,43.1435644 L36.882373,11.0940594 Z" ></path>
+        </svg>
+      </a>
+    </div>
+
+    <nav class="headerNav">
+      <ul>
+      
+        <li><a class="headerNav-link is-active" href="/">Journal</a></li>
+        <li><a class="headerNav-link" href="/archive">Archive</a></li>
+        <li><a class="headerNav-link" href="/about">About</a></li>
+      
+      </ul>
+    </nav>
+
+    <h1 class="headerDesc"><strong>Iestyn Williams</strong> is an engineer, designer, and coffee drinker living and working in London.
+</h1>
+  </div>
+
+</header>
+
+
+    <div class="post wrapH">
+
+    
+      <header class="post-header">
+        <h1 class="post-title">Why Stylus is my favourite CSS preprocessor</h1>
+        <p class="post-meta">August 4, 2013</p>
+        <a class="post-permalink" href="/webdev/2013/08/04/why-stylus-is-awesome.html">&#9733;</a>
+      </header>
+
+      <article class="post-content">
+        <h2 id="the-first-css-preprocessor-i-used-was-lesshttplesscssorg-it-was-drier-than-sasshttpsass-langcom-and-once-they-had-in-line-media-query-support-i-didnt-think--it-could-get-much-better">The first CSS preprocessor I used was <a href="http://lesscss.org">Less</a>. It was drier than <a href="http://sass-lang.com">sass</a>, and once they had in-line <code>@media</code> query support, I didn’t think  it could get much better.</h2>
+
+<p>Then I found <a href="http://learnboost.github.com/stylus/">stylus</a>. Imagine all the best bits out of less &amp; sass (mixins, variables,  colour manipulation), but now with a touch of javascript (functions, conditionals, interpolation, iteration…). What you have is an incredibly flexible language to write better, cleaner outputted CSS, and be able to write it faster.</p>
+
+<p>Another awesome thing about stylus is that because it’s indentation based, it doesn’t care if you use colons and semi colons. In a recent project I wrote every line as dry as possible, i.e.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>.header__nav
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>    position relative
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>    float right
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>    overflow hidden
+</pre></div>
+</div>
+</div>
+
+<h3 id="vendor-prefixes">Vendor prefixes</h3>
+
+<p>One of the biggest pain points of writing CSS is getting the vendor prefixes right. Even though we just recently <a href="http://my.opera.com/ODIN/blog/300-million-users-and-move-to-webkit">lost a rendering engine</a>, if you want any hope of browser backwards-compatibility, you gotta have prefixes. Here’s a stylus function to output vendor prefixes easily:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>vendors = o, moz, webkit, official
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>vendor(property, value)
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>  for vendor in vendors
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>    if vendor == official
+<span class="line-numbers"><a href="#n5" name="n5">5</a></span>      {property} value
+<span class="line-numbers"><a href="#n6" name="n6">6</a></span>    else
+<span class="line-numbers"><a href="#n7" name="n7">7</a></span>      -{vendor}- {property} value
+</pre></div>
+</div>
+</div>
+
+<p>Now, in more detail…</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>vendors = o, moz, webkit, official
+</pre></div>
+</div>
+</div>
+
+<p>Here I’m defining <code>vendors</code> as an array, with all the vendors in it.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>vendor(property, value)
+</pre></div>
+</div>
+</div>
+
+<p>Here we’re just defining a function called <code>vendor</code>, and we’re passing it the property we want to vendor-ify, <code>property</code>, and the value we want it set to, <code>value</code>.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>for vendor in vendors
+</pre></div>
+</div>
+</div>
+
+<p><code>vendors</code> is the above array. This line iterates through the vendors.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span> if vendor == official
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>      {property} value
+</pre></div>
+</div>
+</div>
+
+<p>Inside the <code>for</code> loop, check if the vendor is <em>official</em>, if it is, we don’t want any browser prefixes, so we just want the <code>property</code> and <code>value</code>.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>else
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>    -{vendor}- {property} value
+</pre></div>
+</div>
+</div>
+
+<p>If the vendor we get is not official, add dashes each side of the <code>vendor</code> variable, then the <code>property</code> and <code>value</code>.</p>
+
+<p>Now, if we want some vendor prefixes, we can simply call:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>vendor(border-radius, 4px)
+</pre></div>
+</div>
+</div>
+
+<p>Outputting:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span><span class="tag">-o-border-radius</span>: <span class="float">4px</span>;
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span><span class="tag">-moz-border-radius</span>: <span class="float">4px</span>;
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span><span class="tag">-ms-border-radius</span>: <span class="float">4px</span>;
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span><span class="tag">-webkit-border-radius</span>: <span class="float">4px</span>;
+<span class="line-numbers"><a href="#n5" name="n5">5</a></span><span class="tag">border-radius</span>: <span class="float">4px</span>;
+</pre></div>
+</div>
+</div>
+
+<p>Pretty sweet.</p>
+
+<h3 id="transparent-mixins">Transparent mixins</h3>
+
+<p>Transparent mixins allow you to <em>redefine a CSS property as a function</em>. </p>
+
+<p>Read that last bit again.</p>
+
+<p>Now let me show you a real-world example.</p>
+
+<p><code>border-radius</code> is one of the properties we typically want to add vendor prefixes to. What we can do is redefine it to use our <code>vendor</code> function from earlier…</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>border-radius()
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>    vendor(border-radius, arguments)
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>// Use `arguments` like you can in javascript to get the arguments given to the function.
+</pre></div>
+</div>
+</div>
+
+<p>Then whenever you want to use border radius in your stylesheet, it’s pretty simple:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>border-radius: 5px
+</pre></div>
+</div>
+</div>
+
+<p>Just like using the specc’d syntax.</p>
+
+<p>This outputs:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>-moz-border-radius: 5px;
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>-webkit-border-radius: 5px;
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>-o-border-radius: 5px;
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>-ms-border-radius: 5px;
+<span class="line-numbers"><a href="#n5" name="n5">5</a></span>border-radius: 5px;
+</pre></div>
+</div>
+</div>
+
+<p>Just like you’d expect!</p>
+
+<h3 id="convinced-yet">Convinced yet?</h3>
+
+<p>You should be!</p>
+
+<p>Just imagine the possibilities of transparent mixins. You can check if a <code>background-color</code> or <code>colour</code> you’ve set has an alpha channel, and if it does, output a solid-colour fallback for older browsers:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>background-color()
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>    if arguments == transparent
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>       background-color transparent
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>    else if alpha(arguments) != 1
+<span class="line-numbers"><a href="#n5" name="n5">5</a></span>        background-color rgb(arguments)
+<span class="line-numbers"><a href="#n6" name="n6">6</a></span>        background-color rgba(arguments)  
+<span class="line-numbers"><a href="#n7" name="n7">7</a></span>    else
+<span class="line-numbers"><a href="#n8" name="n8">8</a></span>        background-color arguments
+</pre></div>
+</div>
+</div>
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>color()
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>    if arguments == transparent
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>       color transparent
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>    else if alpha(arguments) != 1
+<span class="line-numbers"><a href="#n5" name="n5">5</a></span>        color rgb(arguments)
+<span class="line-numbers"><a href="#n6" name="n6">6</a></span>        color rgba(arguments)
+<span class="line-numbers"><a href="#n7" name="n7">7</a></span>    else
+<span class="line-numbers"><a href="#n8" name="n8">8</a></span>        color arguments
+</pre></div>
+</div>
+</div>
+
+<p>Easily perform transforms and transitions with full vendor-prefix action:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>transform()
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span>  vendor(transform, arguments)
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span>
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>transition(what = all, duration = 200ms, timing = ease)
+<span class="line-numbers"><a href="#n5" name="n5">5</a></span>    vendor(transition, what duration ease)
+</pre></div>
+</div>
+</div>
+
+<p>Seriously, go and <a href="http://learnboost.github.com/stylus/try.html">give stylus a try online</a>.</p>
+
+<p>This artcile been useful? Reasonable? Crap? Let me know what you think of this article <a href="https://twitter.com/iestynw">on twitter</a>.</p>
+
+      </article>
+    
+</div>
+
+
+    <footer class="footer">
+  
+  <div class="wrapH">
+
+    <ul class="footer-links">
+      <li class="is-twitter">
+        <a href="https://twitter.com/_iest">Twitter</a>
+      </li>
+      <li class="is-github">
+        <a href="https://github.com/iest">Github</a>
+      </li>
+      <li class="is-dribbble">
+        <a href="https://dribbble.com/iest">Dribbble</a>
+      </li>
+      <li class="is-email">
+        <a href="mailto:hello@iest.co">hello@iest.co</a>
+      </li>
+    </ul>
+
+    <p class="footer-copy">
+      &copy; 2014 Iestyn Williams 
+    </p>
+    <p class="footer-updated">
+      Last update: Saturday November 22, 2014 at 03:03 PM
+    </p>
+
+  </div>
+
+</footer>
+
+    
+  </body>
+
+</html>
