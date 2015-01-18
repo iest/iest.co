@@ -144,23 +144,25 @@ svg
   display inline
 .postLink a:hover
   border-color color-white
+  border-bottom 1px solid color-bright
 .postTitle
-  font-weight font-heavy
+  font-weight font-normal
   display inline
+  font-size
 .postMeta
-  color color-lighter
+  color color-light
 .postMeta-date
   display inline-block
   font-weight font-light
-  color color-lightest
+  color color-lighter
 .postMeta-excerpt
   font-weight font-normal
 +above(40em)
   .postList
     list-style none
   .postLink
-    col(1/2)
-    text-align right
+    col(1/4, offset: 1/4)
+    text-align left
   .postMeta
     col(1/2)
 
@@ -171,16 +173,18 @@ svg
   margin-bottom 2em
   cf()
 .post-header
-  // 
+  padding-bottom 0.5em
+  margin-bottom 1.5em
+  text-align center
 .post-title
   font-weight font-xheavy
   color color-dark
-  margin-bottom 1em
+  margin-bottom 0.5em
+  font-size 1.25rem
 .post-meta
   color color-lighter
 .post-permalink
   display inline-block
-  margin-bottom 1em
 .post-content
   color color-dark
   clear both
@@ -244,6 +248,8 @@ svg
     cf()
   .post-header
     col(1/4)
+    text-align left
+    border 0
   .post-content
     col(3/4)
   .post-content:after

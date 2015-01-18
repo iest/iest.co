@@ -4,6 +4,7 @@ title:  "Icons for the web in 2014"
 date:   2014-09-11 16:46:29
 category: webdev
 tags: svg icons
+
 ---
 
 ## Going for vector-based icons on the web is a no-brainer these days, but there are a few different ways you can implement them.
