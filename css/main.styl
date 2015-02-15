@@ -100,6 +100,7 @@ sup
   position relative
   top -0.5em
   font-weight bold
+  margin-left 0.15em
 
 svg
   width 100%
@@ -333,8 +334,42 @@ svg
   .footer-links
     col(1/2)
 
+// Graphs
+.graph
+  font-family font-mono
+  font-size 75%
+  background rgba(color-lighter, 0.2)
+  margin-bottom 1em
+.graph .label
+  font-weight font-heavy
+  fill color-dark
+.bar rect
+  fill color-bright
+  shape-rendering crispEdges
+.bar-alt rect
+  fill color-dark
+  shape-rendering crispEdges
+.bar text
+  fill color-dark
+.bar .bar-label
+  fill color-bright
+.axis path
+.axis line
+  fill none
+  stroke color-lighter
+  shape-rendering crispEdges
+.tick text
+  fill color-dark
+
 // Night mode
 html.is-night
+  .graph
+    .label
+      fill color-lighter
+    .bar text
+      fill color-white
+    .tick text
+      fill color-lightest
   body
     background color-dark
     color color-lightest
@@ -362,31 +397,6 @@ html.is-night
     color color-white
   .postMeta-excerpt
     color color-lighter
-
-// Graphs
-.graph
-  font-family font-mono
-  font-size 75%
-  background rgba(color-lighter, 0.2)
-  margin-bottom 1em
-.graph label
-  font-weight font-heavy
-.bar rect
-  fill color-bright
-  shape-rendering geometricPrecision
-.bar text
-  fill color-dark
-// .bar .bar-hover
-//   display none
-// .bar:hover .bar-hover
-//   display block
-.axis path
-.axis line
-  fill none
-  stroke color-lighter
-  shape-rendering crispEdges
-.tick text
-  fill color-dark
 
 // Syntax
 .CodeRay

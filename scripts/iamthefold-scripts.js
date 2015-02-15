@@ -1,13 +1,3 @@
-/**
- * TODO:
- * - Total folds
- * - Uniques
- * - Mean
- * - Median
- * - Histogram of totals/uniques
- * - Histogram of in range of most common
- */
-
 // Helpers
 function setText(elm, text) {
   elm.innerText = text;
@@ -48,28 +38,30 @@ function drawHistogram(elm, dataArr, withLabels) {
   d3.select(elm).select('svg').remove();
 
   var values = dataArr;
+  var mean = d3.mean(values);
   var min = d3.min(values);
   var max = d3.max(values);
-  var formatCount = d3.format(",.0f");
+  var stdDev = d3.deviation(values);
+
   var margin = {
-    top: 10,
+    top: withLabels ? 30 : 10,
     right: 30,
     bottom: 50,
-    left: 60
+    left: withLabels ? 30 : 60
   };
   var width = elm.offsetWidth - margin.left - margin.right;
   var height = 400 - margin.top - margin.bottom;
 
   var x = d3.scale.linear()
-    .domain([min, max])
+    .domain(withLabels ? [mean - stdDev, mean + stdDev] : [min, max])
     .range([0, width]);
 
   // Generate a histogram
   var data = d3.layout.histogram()
-    .bins(x.ticks(700))
+    .range(withLabels ? [mean - stdDev, mean + stdDev] : [0, max])
+    .bins(x.ticks(400))
     (values);
 
-  // Y axis
   var y = d3.scale.linear()
     .domain([0, d3.max(data, function(d) {
       return d.y;
@@ -80,11 +72,18 @@ function drawHistogram(elm, dataArr, withLabels) {
   var xAxis = d3.svg.axis()
     .ticks(5)
     .scale(x)
-    .orient("bottom");
+    .orient("bottom")
+    .tickFormat(function(d) {
+      return d / 1000 + "k";
+    });
 
+  // Y axis
   var yAxis = d3.svg.axis()
     .scale(y)
-    .orient("left");
+    .orient("left")
+    .tickFormat(function(d) {
+      return d / 100;
+    });
 
   // Create the svg
   var svg = d3.select(elm).append("svg")
@@ -97,7 +96,9 @@ function drawHistogram(elm, dataArr, withLabels) {
   var bar = svg.selectAll(".bar")
     .data(data)
     .enter().append("g")
-    .attr("class", "bar")
+    .attr("class", function(d, i) {
+      return d.y < 300 && withLabels ? "bar-alt" : "bar";
+    })
     .attr("transform", function(d) {
       return "translate(" + x(d.x) + "," + y(d.y) + ")";
     });
@@ -113,13 +114,16 @@ function drawHistogram(elm, dataArr, withLabels) {
   // Add bar labels
   if (withLabels) {
     bar.append("text")
-      .attr("class", "bar-hover")
-      .attr("dy", ".75em")
-      .attr("y", 6)
+      .attr("class", "bar-label")
+      .attr("style", function(d) {
+        return d.y > 300 && withLabels ? "" : "display:none;visibility:hidden;";
+      })
+      .attr("y", 0)
+      .attr("dy", "-0.5em")
       .attr("x", ((x.range()[1] - x.range()[0]) / data.length) / 2)
       .attr("text-anchor", "middle")
-      .text(function(d,i) {
-        return d[i];
+      .text(function(d, i) {
+        return d.x;
       });
   }
 
@@ -134,43 +138,58 @@ function drawHistogram(elm, dataArr, withLabels) {
     .attr("text-anchor", "middle")
     .attr("class", "label")
     .attr("x", width / 2)
-    .attr("y", height + margin.top + margin.bottom - 20)
-    .text("Fold height");
+    .attr("y", height + margin.bottom - 10)
+    .text("Fold height(px)");
 
   // Draw the yAxis
-  svg.append("g")
-    .attr("class", "y axis")
-    .call(yAxis);
+  if (!withLabels) {
+    svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
+    // yAxis label
+    svg.append("text")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("dx", -250)
+      .attr("dy", -30)
+      .attr("transform", "rotate(-90)")
+      .attr("text-anchor", "start")
+      .attr("class", "label")
+      .text("Count x100");
+  }
 }
 
-// Download the file and let rip
-d3.text('/scripts/folds.txt', function(err, str) {
-  if (err) {
-    throw new Error('Failed to fetch fold data');
-  }
+function init() {
+  d3.text('/scripts/folds.txt', function(err, str) {
+    if (err) {
+      throw new Error('Failed to fetch fold data');
+    }
 
-  var data = window.test = sanitiseData(str);
+    var data = window.test = sanitiseData(str);
 
-  // Set all the static numbers
-  setText(_('#total'), data.length);
-  setText(_('#unique'), data.filter(function(val, i, arr) {
-    return arr.indexOf(val) === i;
-  }).length);
+    // Set all the static numbers
+    setText(_('#total'), data.length);
+    setText(_('#unique'), data.filter(function(val, i, arr) {
+      return arr.indexOf(val) === i;
+    }).length);
 
-  var mean = d3.mean(data);
-  setText(_('#mean'), mean.toFixed(0) + 'px');
-  setText(_('#median'), d3.median(data) + 'px');
+    var mean = d3.mean(data);
+    setText(_('#mean'), mean.toFixed(0) + 'px');
+    setText(_('#median'), d3.median(data) + 'px');
 
-  var deviation = d3.deviation(data);
-  setText(_('#deviation'), deviation.toFixed(0) + 'px');
+    var deviation = d3.deviation(data);
+    setText(_('#deviation'), deviation.toFixed(0) + 'px');
 
-  function drawAllGraphs(){
-    drawHistogram(_(".histogram-all"), data);
-    drawHistogram(_(".histogram-3"), getUniques(data, 3));
-    drawHistogram(_(".histogram-300"), getUniques(data, 300), true);
-  }
+    function drawAllGraphs() {
+      drawHistogram(_(".histogram-all"), data);
+      drawHistogram(_(".histogram-3"), getUniques(data, 3));
+      drawHistogram(_(".histogram-300"), getUniques(data, 3), true);
+    }
 
-  drawAllGraphs();
+    drawAllGraphs();
 
-  window.addEventListener('resize', drawAllGraphs);
-});
+    window.addEventListener('resize', drawAllGraphs);
+  });
+}
+
+init();
