@@ -37,7 +37,7 @@ color-dribbble = #E9508A
 
 font-body = "jaf-facitweb" "Facit", "San Francisco Text", "Verdana", sans-serif
 // font-body = "San Francisco Text"
-font-mono = "Input Mono", "Fira Mono", "Menlo", "Inconsolata", monospace
+font-mono = "Input Mono", "Cousine", "Fira Mono", "Andale Mono", "Monaco" monospace
 
 font-xheavy = 700
 font-heavy = 600
@@ -49,7 +49,7 @@ html
   -webkit-text-size-adjust 100%
 
 body
-  font 1em/1.5 font-body
+  font 1.15em/1.5 font-body
   background color-white
   color color-light
   +retina()
@@ -91,6 +91,15 @@ em
 strong
   font-weight font-heavy
   color color-dark
+strong code
+  font-weight bold
+
+sup
+  font-size 75%
+  line-height 0
+  position relative
+  top -0.5em
+  font-weight bold
 
 svg
   width 100%
@@ -157,7 +166,7 @@ svg
   color color-lighter
 .postMeta-excerpt
   font-weight font-normal
-+above(40em)
++above(45em)
   .postList
     list-style none
   .postLink
@@ -180,7 +189,7 @@ svg
   font-weight font-xheavy
   color color-dark
   margin-bottom 0.5em
-  font-size 1.25rem
+  font-size 1.25em
 .post-meta
   color color-lighter
 .post-permalink
@@ -188,6 +197,7 @@ svg
 .post-content
   color color-dark
   clear both
+  line-height 1.7
 .post-content:after
   content "* * *"
   position relative
@@ -200,9 +210,11 @@ svg
   font-weight font-normal
   color color-darker
 .post-content p
+.post-content ul
+.post-content ol
   margin-bottom 1em
 .post-content code
-  font-family 'Input Mono', 'Cousine', 'Fira Mono', 'Andale Mono', 'Monaco' monospace
+  font-family font-mono
   font-size 0.875em
   padding 0.125em 0.2em
   background rgba(color-lighter, 0.2)
@@ -243,7 +255,10 @@ svg
 .post-content pre
   max-width 100%
   overflow auto
-+above(38em)
+.post-content ul
+  list-style square
+
++above(42em)
   .post
     cf()
   .post-header
@@ -256,11 +271,19 @@ svg
     content "* * *"
     display block
     text-align left
-+above(75em)
++above(80em)
   .post-content aside
     position absolute
     width 12em
     left -@width
+
+.footnotes
+  margin-top 2em
+.footnotes ol
+  list-style decimal
+.footnotes li
+  opacity 0.8
+  font-size 75%
 
 .pagination
   margin 2em 0
@@ -314,7 +337,7 @@ svg
 html.is-night
   body
     background color-dark
-    color color-lighter
+    color color-lightest
   a:hover
     color color-white
     fill @color
@@ -328,13 +351,42 @@ html.is-night
   .post-title
     color color-white
   .post-content
-    color color-lighter
+    color color-lightest
   .post-content h1
   .post-content h2
   .post-content h3
   .post-content h4
     color color-lightest
     border-color color-lightest
+  .postMeta-date
+    color color-white
+  .postMeta-excerpt
+    color color-lighter
+
+// Graphs
+.graph
+  font-family font-mono
+  font-size 75%
+  background rgba(color-lighter, 0.2)
+  margin-bottom 1em
+.graph label
+  font-weight font-heavy
+.bar rect
+  fill color-bright
+  shape-rendering geometricPrecision
+.bar text
+  fill color-dark
+// .bar .bar-hover
+//   display none
+// .bar:hover .bar-hover
+//   display block
+.axis path
+.axis line
+  fill none
+  stroke color-lighter
+  shape-rendering crispEdges
+.tick text
+  fill color-dark
 
 // Syntax
 .CodeRay

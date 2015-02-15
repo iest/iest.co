@@ -3,3 +3,5 @@ _site
 .sass-cache
 _drafts
 *.sublime-workspace
+
+*.sublime-project
