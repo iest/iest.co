@@ -66,7 +66,9 @@ However, this experiment has made it abundantly clear that there is no _single_ 
 
 The data used for this post is available [here](/scripts/folds.txt). Feel free to do what you want with it (but if you build something cool with it, let me know!).
 
-I’ll be updating it from time-to-time from data on [iamthefold](http://iamthefold.com).
+I’ll be updating it from time-to-time with data from [iamthefold](http://iamthefold.com).
+
+Issues viewing this post? Questions comments? Hit me up on [twitter](https://twitter.com/_iest) or open a PR [on github](https://github.com/iest/iest.co)
 
 
 [^1]: The morning after the first match of the 2015 Rugby Six Nations: Wales vs. England
