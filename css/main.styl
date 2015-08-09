@@ -29,13 +29,13 @@ color-lighter = #AAAAAA
 color-lightest = #D8D8D8
 color-white = #FFFFFF
 
-color-bright = color-7
+color-bright = #1e57ee
 
 color-twitter = #55ACEE
 color-github = #F6CBB5
 color-dribbble = #E9508A
 
-font-body = "jaf-facitweb" "Facit", "San Francisco Text", "Verdana", sans-serif
+font-body = "jaf-facitweb" "Facit", -apple-system, "San Francisco Text", "Verdana", sans-serif
 // font-body = "San Francisco Text"
 font-mono = "Input Mono", "Cousine", "Fira Mono", "Andale Mono", "Monaco" monospace
 
@@ -221,30 +221,30 @@ svg
   background rgba(color-lighter, 0.2)
   border 1px solid rgba(color-lighter, 0.3)
   border-radius 4px
+
 .post-content h1
+  margin-top 1em
   margin-bottom 1em
   padding-bottom 0.25em
-  font-weight font-heavy
+  font-weight font-xheavy
   color color-darkest
-  border-bottom 2px solid color-darkest
 .post-content h2
   font-weight font-heavy
-  padding-bottom 0.25em
+  padding-bottom 0.1em
+  margin-top 0.75em
+  margin-bottom 0.75em
   color color-darker
-  border-bottom 1px solid color-darker
-  margin-bottom 1em
 .post-content h3
   font-weight font-heavy
   padding-bottom 0.25em
   color color-dark
-  border-bottom 1px dashed color-dark
   margin-bottom 1em
 .post-content h4
   font-weight font-heavy
   padding-bottom 0.25em
   color color-light
-  border-bottom 1px dashed color-light
   margin-bottom 1em
+
 .post-content img
   span(1/1)
   margin-bottom 1em
@@ -258,6 +258,13 @@ svg
   overflow auto
 .post-content ul
   list-style square
+
+img.profileImage
+  float none
+  width 12em
+  display block
+  margin 0 auto
+  border-radius 1em
 
 +above(42em)
   .post
@@ -333,70 +340,6 @@ svg
 +above(40em)
   .footer-links
     col(1/2)
-
-// Graphs
-.graph
-  font-family font-mono
-  font-size 75%
-  background rgba(color-lighter, 0.2)
-  margin-bottom 1em
-.graph .label
-  font-weight font-heavy
-  fill color-dark
-.bar rect
-  fill color-bright
-  shape-rendering crispEdges
-.bar-alt rect
-  fill color-dark
-  shape-rendering crispEdges
-.bar text
-  fill color-dark
-.bar .bar-label
-  fill color-bright
-.axis path
-.axis line
-  fill none
-  stroke color-lighter
-  shape-rendering crispEdges
-.tick text
-  fill color-dark
-
-// Night mode
-html.is-night
-  .graph
-    .label
-      fill color-lighter
-    .bar text
-      fill color-white
-    .tick text
-      fill color-lightest
-  body
-    background color-dark
-    color color-lightest
-  a:hover
-    color color-white
-    fill @color
-    border-color @color
-  strong
-    color color-white
-  .header
-    background lighten(color-dark, 10%)
-  .footer
-    background color-darker
-  .post-title
-    color color-white
-  .post-content
-    color color-lightest
-  .post-content h1
-  .post-content h2
-  .post-content h3
-  .post-content h4
-    color color-lightest
-    border-color color-lightest
-  .postMeta-date
-    color color-white
-  .postMeta-excerpt
-    color color-lighter
 
 // Syntax
 .CodeRay
