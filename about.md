@@ -7,20 +7,29 @@ image:
   alt: "Home Sweet Home"
 ---
 
+
 **It's pronounced `yes-tin`, and is the Welsh form of *Justin*, in case you were wondering.**
 
 
-### About me
+About me
+--------
 
-I'm a Senior Front-end Developer working with an awesome team at [Bizzby](http://www.bizzby.com). In my spare time I like to mix a cocktail and read a book.
+I build super cool things at [Pact Coffee](http://pactcoffee.com). In my spare time I like to mix a cocktail, read a book, and play video games.
 
-I grew up on a hill farm in Wales (pictured above).
+I grew up on a mountain farm in Wales (pictured above). Yes, there are sheep. We also have wind turbines.
 
 
-### About this site
+About this site
+---------------
 
 The code for this site is all up on [github](https://github.com/iest/iest.co). It's typeset in [JAF Facit](http://justanotherfoundry.com/facit), served from [Typekit](https://typekit.com/fonts/jaf-facitweb).
 
-After playing around with building [my own blogging engine](https://github.com/iest/derp), I caved and now use [Jekyll](http://jekyllrb.com). It's all being served from a [Linode](https://www.linode.com) in London somewhere. I used a combination of [Sketch](http://bohemiancoding.com/sketch/) and [Sublime](http://www.sublimetext.com/3) to design and build the site.
+After playing around with building [my own blogging engine](https://github.com/iest/derp)(a terrible idea, btw), I now use [Jekyll](http://jekyllrb.com). Pretty sure I'll be moving over to some kind of webpack/react thingy pretty soon.
 
-If you have any questions, comments, or other wordly advice, either hit me up on [twitter](http://twitter.com/_iest) or [drop me an email](mailto:hello@iest.co).
+It's all being served from a [Linode](https://www.linode.com) in London somewhere. I used a combination of [Sketch](http://bohemiancoding.com/sketch/) and [Sublime](http://www.sublimetext.com/3) to design and build the site.
+
+If you have any questions, or comments, or you want to hurl some abuse; hit me up on [twitter](http://twitter.com/_iest) or [drop me an email](mailto:hello@iest.co).
+
+
+
+<img class="profileImage" src="/images/me/moi.jpg" alt="Moi">
