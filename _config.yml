@@ -27,3 +27,5 @@ highlighting: pygments
 stylus:
   compress: true
   path: css/main.styl
+
+gems: [jekyll-paginate]
