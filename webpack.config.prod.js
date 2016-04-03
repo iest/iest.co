@@ -1,8 +1,14 @@
 const path = require('path');
 const webpack = require('webpack');
 const makeVarMap = require('webpack-postcss-tools').makeVarMap;
+const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 const variables = makeVarMap('src/index.css').vars;
+
+const paths = [
+  '/hello/',
+  '/world/'
+];
 
 module.exports = {
   resolve: {
@@ -10,22 +16,20 @@ module.exports = {
     extensions: ['', '.js', '.json', '.jsx'],
     modulesDirectories: ['node_modules', 'src'],
   },
-  // or devtool: 'eval' to debug issues with compiled output:
-  devtool: 'cheap-module-eval-source-map',
-  entry: [
-    'webpack-hot-middleware/client',
-    './index',
-  ],
-  output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/dist/',
+
+  entry: {
+    'main': './index.js'
   },
-  plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-  ],
+
+  output: {
+    filename: 'bundle.js',
+    path: 'dist',
+    /* IMPORTANT!
+     * You must compile to UMD or CommonJS
+     * so it can be required in a Node context: */
+    libraryTarget: 'umd'
+  },
+
   module: {
     loaders: [
       {
@@ -38,11 +42,6 @@ module.exports = {
         exclude: [/node_modules/],
         query: {
           presets: ['react', 'es2015', 'stage-1'],
-          env: {
-            development: {
-              presets: ['react-hmre'],
-            },
-          },
         },
       }, {
         test: /\.(jpe?g|png|gif)$/,
@@ -62,6 +61,7 @@ module.exports = {
       },
     ],
   },
+
   svgoConfig: {
     plugins: [{
       removeAttrs: {
@@ -73,6 +73,7 @@ module.exports = {
       cleanupIDs: false,
     }],
   },
+
   postcss() {
     return [
       require('autoprefixer')({
@@ -86,4 +87,13 @@ module.exports = {
       require('lost'),
     ];
   },
+
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+
+    new StaticSiteGeneratorPlugin('main', paths),
+  ],
+
 };

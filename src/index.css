@@ -1,3 +1,13 @@
 :root {
-  
+  --black:   rgb(38, 50, 56);
+  --white:   rgb(255, 255, 255);
+  --green:   rgb(111, 239, 176);
+  --cyan:    rgb(108, 251, 218);
+  --blue:    rgb(72, 197, 252);
+  --magenta: rgb(252, 68, 130);
+  --red:     rgb(252, 84, 87);
+  --yellow:  rgb(254, 214, 80);
+
+  --bg: var(--black);
+  --fg: var(--white);
 }

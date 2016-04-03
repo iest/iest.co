@@ -58,6 +58,8 @@
   },
   "devDependencies": {
     "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "jade-loader": "^0.8.0",
     "static-site-generator-webpack-plugin": "^2.0.1"
   }
 }
