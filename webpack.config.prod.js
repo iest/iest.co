@@ -7,7 +7,6 @@ const variables = makeVarMap('src/index.css').vars;
 
 const paths = [
   '/hello/',
-  '/world/'
 ];
 
 module.exports = {
