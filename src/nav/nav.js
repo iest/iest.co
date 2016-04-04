@@ -13,16 +13,19 @@ export default class Nav extends Component {
           <li>
             <Link activeClassName={css.active} to="about">
               <Icn name="about"/>
+              <span className={css.label}>About</span>
             </Link>
           </li>
           <li>
             <Link activeClassName={css.active} to="projects">
               <Icn name="projects"/>
+              <span className={css.label}>Projects</span>
             </Link>
           </li>
           <li>
             <Link activeClassName={css.active} to="blog">
               <Icn name="blog"/>
+              <span className={css.label}>Blog</span>
             </Link>
           </li>
         </ul>

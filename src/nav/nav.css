@@ -7,12 +7,8 @@
 }
 
 .logo {
-  color: var(--magenta);
-}
-
-.logo,
-.nav a {
   padding: 0.75rem 0;
+  color: var(--magenta);
 }
 
 .nav {
@@ -30,8 +26,22 @@
   display: block;
   text-align: center;
   color: currentColor;
+  text-decoration: none;
+  padding: 0.75rem 0.75rem;
 }
 .nav a.active {
   color: var(--magenta);
   box-shadow: inset 0 4px 0 0 var(--magenta);
+}
+
+.label {
+  font-size: 1rem;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+@media (max-width: 29rem) {
+  .label {
+    display: none;
+  }
 }
