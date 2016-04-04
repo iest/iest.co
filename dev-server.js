@@ -1,10 +1,14 @@
-var path = require('path');
-var express = require('express');
-var webpack = require('webpack');
-var config = require('./webpack.config.dev');
+const path = require('path');
+const express = require('express');
+const webpack = require('webpack');
+const config = require('./webpack.config.dev');
 
-var app = express();
-var compiler = webpack(config);
+const template = require('jade').renderFile('src/template.jade', {
+  assets: []
+});
+
+const app = express();
+const compiler = webpack(config);
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
@@ -16,19 +20,7 @@ app.use(require('webpack-hot-middleware')(compiler));
 app.use('/public', express.static('public'));
 
 app.get('*', function(req, res) {
-  res.send(
-  `<!doctype html>
-  <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>iest.co</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="/dist/bundle.js"></script>
-  </body>
-  </html>
-  `);
+  res.send(template);
 });
 
 app.listen(3000, function(err) {

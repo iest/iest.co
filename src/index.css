@@ -10,4 +10,7 @@
 
   --bg: var(--black);
   --fg: var(--white);
+
+  --a: 2.0625rem;
+  --b: 1.75rem;
 }

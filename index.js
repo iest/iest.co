@@ -21,6 +21,7 @@ export default (locals, callback) => {
   const location = history.createLocation(locals.path);
 
   match({ routes, location }, (error, redirectLocation, renderProps) => {
+    console.log(locals.assets);
     callback(null, template({
       html: ReactDOMServer.renderToString(<RouterContext {...renderProps} />),
       assets: locals.assets,

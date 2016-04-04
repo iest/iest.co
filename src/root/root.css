@@ -1,0 +1,7 @@
+@import 'normalize.css/normalize.css';
+
+.body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "jaf-facitweb";
+}
