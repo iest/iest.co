@@ -1,0 +1,30 @@
+.body {
+  padding-bottom: 6.5625em; /* Height of the footer */
+}
+.root {
+  background: color(var(--bg) l(-5%));
+  color: var(--blue);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.root ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  lost-utility: clearfix;
+  text-align: center;
+  lost-center: 320px;
+}
+.root li {
+  display: inline-block;
+  lost-column: 1/4;
+}
+.root a {
+  text-decoration: none;
+  color: var(--cyan);
+  text-align: center;
+  font-size: 2em;
+  display: block;
+}

@@ -1,14 +1,19 @@
+:root {
+  --highlight: var(--blue);
+}
+
 .root {
-  background: linear-gradient(150deg, var(--green) 0%, var(--yellow) 100%);
+  background: linear-gradient(150deg, var(--green) 0%, var(--cyan) 100%);
   lost-utility: clearfix;
   color: var(--black);
   font-size: 1.8em;
-  padding: 0 var(--a);
+  padding: 0 var(--x);
 }
 
 .logo {
+  color: var(--blue);
   padding: 0.75rem 0;
-  color: var(--magenta);
+  display: inline-block;
 }
 
 .nav {
@@ -30,8 +35,8 @@
   padding: 0.75rem 0.75rem;
 }
 .nav a.active {
-  color: var(--magenta);
-  box-shadow: inset 0 4px 0 0 var(--magenta);
+  color: var(--highlight);
+  box-shadow: inset 0 4px 0 0 var(--highlight);
 }
 
 .label {

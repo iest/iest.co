@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
-import {Route, IndexRedirect} from 'react-router';
+import {Route, IndexRoute} from 'react-router';
 
 import Root from 'root/root';
-import About from 'about/about';
+import About from 'pages/about';
+import Projects from 'pages/projects';
+import Blog from 'pages/blog';
 
 export default (
   <Route path="/" component={Root}>
-    <IndexRedirect to="about"/>
-    <Route path="about" component={About}/>
-    <Route path="projects" component={About} />
-    <Route path="blog" component={About} />
+    <IndexRoute component={About}/>
+    <Route path="projects" component={Projects} />
+    <Route path="blog" component={Blog} />
   </Route>
 );

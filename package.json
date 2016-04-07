@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build:webpack": "env NODE_ENV=production webpack --config webpack.config.prod.js",
-    "build": "npm run clean && npm run build:webpack",
+    "build": "env NODE_ENV=production webpack --config webpack.config.prod.js",
     "start": "node dev-server.js",
     "lint": "eslint src"
   },
@@ -47,6 +46,7 @@
     "react-body-classname": "^1.0.1",
     "react-dom": "^0.14.7",
     "react-motion": "^0.4.2",
+    "react-remarkable": "^1.1.1",
     "react-router": "^2.0.1",
     "rimraf": "^2.4.3",
     "style-loader": "^0.13.0",

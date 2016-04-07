@@ -26,4 +26,12 @@ export default {
   blog: cleanupSvg(require('./blog.svg')),
   logo: cleanupSvg(require('./logo.svg')),
   projects: cleanupSvg(require('./projects.svg')),
+  tool: cleanupSvg(require('./tool.svg')),
+  eye: cleanupSvg(require('./eye.svg')),
+  cap: cleanupSvg(require('./cap.svg')),
+  experiment: cleanupSvg(require('./experiment.svg')),
+  dribbble: cleanupSvg(require('./dribbble.svg')),
+  instagram: cleanupSvg(require('./instagram.svg')),
+  twitter: cleanupSvg(require('./twitter.svg')),
+  github: cleanupSvg(require('./github.svg')),
 }

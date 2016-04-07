@@ -5,3 +5,6 @@
   color: var(--fg);
   font-family: "jaf-facitweb";
 }
+:global * {
+  box-sizing: border-box;
+}

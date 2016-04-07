@@ -8,14 +8,10 @@ export default class Nav extends Component {
   render() {
     return (
       <div className={css.root}>
-        <Icn name="logo" className={css.logo}/>
+        <Link className={css.logo} to="/">
+          <Icn name="logo"/>
+        </Link>
         <ul className={css.nav}>
-          <li>
-            <Link activeClassName={css.active} to="about">
-              <Icn name="about"/>
-              <span className={css.label}>About</span>
-            </Link>
-          </li>
           <li>
             <Link activeClassName={css.active} to="projects">
               <Icn name="projects"/>
