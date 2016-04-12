@@ -7,31 +7,34 @@ import css from './footer.css'
 export default class Footer extends Component {
   render() {
     return (
-      <BodyClassname className={css.footer}>
-        <div className={css.root}>
+      <BodyClassname className={css.body}>
+        <footer className={css.root}>
           <ul>
             <li>
-              <a href="https://github.com/iest">
+              <a className={css.github} href="https://github.com/iest">
                 <Icn name="github"/>
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/_iest">
+              <a className={css.twitter} href="https://twitter.com/_iest">
                 <Icn name="twitter"/>
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/iest/">
+              <a className={css.instagram} href="https://www.instagram.com/iest/">
                 <Icn name="instagram"/>
               </a>
               </li>
             <li>
-              <a href="https://dribbble.com/iest">
+              <a className={css.dribbble} href="https://dribbble.com/iest">
                 <Icn name="dribbble"/>
               </a>
             </li>
           </ul>
-        </div>
+          <span className={css.colophon}>
+            &copy; Iestyn Williams {new Date().getFullYear()}
+          </span>
+        </footer>
       </BodyClassname>
     )
   }

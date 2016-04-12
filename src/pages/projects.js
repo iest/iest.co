@@ -2,14 +2,17 @@ import React, {Component} from 'react';
 import Markdown from 'react-remarkable';
 
 import Icn from 'icn/icn';
+import Hero from 'hero/hero';
 import t from 'type.css';
 
 export default class Projects extends Component {
   render() {
     return (
       <div>
+        <Hero>
+          <h1 className={t.h1}>Stuff I've built</h1>
+        </Hero>
         <div className={t.article}>
-          <h1>Stuff I've built</h1>
 
           <p>
             I'm a keen proponent of open-source, working on side projects and tools when I have spare time. Here's some of my better projects:

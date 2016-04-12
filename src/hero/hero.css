@@ -1,0 +1,6 @@
+.root {
+  text-align: center;
+  background:
+    linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0;
+  background-size: 100px 100px;
+}

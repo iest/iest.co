@@ -4,6 +4,7 @@
   font-size: 1em;
 }
 
+.h1,
 .article h1 {
   font-weight: lighter;
   font-size: 2.618em;
@@ -12,6 +13,7 @@
   line-height: 1.2;
   margin: calc(var(--y) * 4) auto;
 }
+.h1:after,
 .article h1:after {
   content: '';
   position: absolute;
@@ -22,6 +24,7 @@
   background: linear-gradient(150deg, var(--green) 0%, var(--blue) 100%);
   border-radius: 2px;
 }
+.h2,
 .article h2 {
   font-weight: lighter;
   font-size: 1.618em;
@@ -29,6 +32,7 @@
   display: inline-block;
   margin: calc(var(--y) * 2 auto var(--y));
 }
+.h2:after,
 .article h2:after {
   content: '';
   position: absolute;
