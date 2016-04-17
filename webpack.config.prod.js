@@ -1,12 +1,15 @@
 const path = require('path');
 const webpack = require('webpack');
 const makeVarMap = require('webpack-postcss-tools').makeVarMap;
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 const variables = makeVarMap('src/index.css').vars;
 
 const paths = [
-  '/hello/',
+  '/',
+  '/projects',
+  '/blog',
 ];
 
 module.exports = {
@@ -21,7 +24,7 @@ module.exports = {
   },
 
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.[hash].js',
     path: 'dist',
     /* IMPORTANT!
      * You must compile to UMD or CommonJS
@@ -31,10 +34,6 @@ module.exports = {
 
   module: {
     loaders: [
-      {
-        test: /\.jade$/,
-        loader: 'jade',
-      },
       {
         test: /\.jsx?$/,
         loader: 'babel',
@@ -56,7 +55,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]!postcss-loader',
+        loader: ExtractTextPlugin.extract('css-loader?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]!postcss-loader'),
       },
     ],
   },
@@ -91,6 +90,10 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
+
+    new ExtractTextPlugin('bundle.[hash].css', {
+        allChunks: true,
+      }),
 
     new StaticSiteGeneratorPlugin('main', paths),
   ],

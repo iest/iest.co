@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const makeVarMap = require('webpack-postcss-tools').makeVarMap;
-
 const variables = makeVarMap('src/index.css').vars;
 
 module.exports = {

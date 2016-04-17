@@ -13,13 +13,13 @@ export default class Nav extends Component {
         </Link>
         <ul className={css.nav}>
           <li>
-            <Link activeClassName={css.active} to="projects">
+            <Link activeClassName={css.active} to="/projects">
               <Icn name="projects"/>
               <span className={css.label}>Projects</span>
             </Link>
           </li>
           <li>
-            <Link activeClassName={css.active} to="blog">
+            <Link activeClassName={css.active} to="/blog">
               <Icn name="blog"/>
               <span className={css.label}>Blog</span>
             </Link>

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "env NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build": "rimraf dist; env NODE_ENV=production webpack --config webpack.config.prod.js",
     "start": "node dev-server.js",
     "lint": "eslint src"
   },
@@ -33,6 +33,7 @@
     "eslint": "^2.5.1",
     "eslint-plugin-babel": "^3.1.0",
     "eslint-plugin-react": "^4.2.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "lodash": "^4.7.0",
     "lost": "^6.7.2",
     "normalize.css": "^3.0.3",
