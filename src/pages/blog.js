@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Markdown from 'react-remarkable';
+import Helmet from 'react-helmet';
 
 import t from 'type.css';
 
@@ -22,6 +23,7 @@ export default class Blog extends Component {
   render() {
     return (
       <div>
+        <Helmet title="Blog"/>
         <div className={t.article}>
           <Markdown source={this.md}/>
         </div>

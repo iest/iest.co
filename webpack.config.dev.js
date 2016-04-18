@@ -13,7 +13,7 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
-    './index',
+    './entry',
   ],
   output: {
     path: path.join(__dirname, 'dist'),

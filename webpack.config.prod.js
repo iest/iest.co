@@ -20,7 +20,7 @@ module.exports = {
   },
 
   entry: {
-    'main': './index.js'
+    'main': './entry.js'
   },
 
   output: {

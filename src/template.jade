@@ -1,8 +1,8 @@
 doctype html
 html(lang="en")
   head
-    meta( name="viewport" content="width=device-width, initial-scale=1")
-    title iest.co
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= head.title
     
     script.
       (function(d) {
@@ -14,8 +14,9 @@ html(lang="en")
         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
       })(document);
     
-    each asset in assets
-     !=asset
+    each href in assets.style
+      link(href=href rel="stylesheet")
   body
     #root!= html
-    script(src="/dist/bundle.js")
+    each src in assets.script
+      script(src=src async defer)

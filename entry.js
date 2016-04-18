@@ -1,13 +1,14 @@
+import jade from 'jade';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {renderToString, renderToStaticMarkup} from 'react-dom/server';
+import Helmet from 'react-helmet';
 import BodyClassName from 'react-body-classname';
-import jade from 'jade';
-import { createHistory, createMemoryHistory } from 'history';
-import { Router, RouterContext, match, useRouterHistory } from 'react-router';
+import {createHistory, createMemoryHistory} from 'history';
+import {renderToString, renderToStaticMarkup} from 'react-dom/server';
+import {Router, RouterContext, match, useRouterHistory} from 'react-router';
 
+import template from './src/template.jade';
 import getAssets from 'lib/get-assets';
-import Template from './src/template';
 import routes from './src/routes';
 
 // Client render
@@ -25,12 +26,9 @@ export default (locals, callback) => {
 
   const assets = getAssets(locals.webpackStats, '/');
   match({ routes, location }, (error, redirectLocation, renderProps) => {
+    let head = Helmet.rewind();
     const bodyClassNames = BodyClassName.rewind();
-    console.log(bodyClassNames);
-    callback(null, renderToStaticMarkup(
-      <Template bodyClassNames={bodyClassNames} assets={assets}>
-        <RouterContext {...renderProps} />
-      </Template>
-    ));
+    const html = renderToString(<RouterContext {...renderProps} />);
+    callback(null, template({head, html, assets}));
   });
 };

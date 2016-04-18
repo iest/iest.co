@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react'
 import BodyClassname from 'react-body-classname';
+import Helmet from 'react-helmet';
 
 import css from './root.css'
 import Nav from 'nav/nav'
@@ -13,6 +14,7 @@ export default class Root extends Component {
     return (
       <BodyClassname className={css.body}>
         <div>
+        <Helmet titleTemplate="%s | iest.co"/>
           <Nav/>
           {this.props.children}
           <Footer/>
