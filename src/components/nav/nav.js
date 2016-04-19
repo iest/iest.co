@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 
-import Icn from 'icn/icn';
+import Icn from 'components/icn/icn';
 import css from './nav.css';
 
 export default class Nav extends Component {

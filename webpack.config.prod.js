@@ -4,7 +4,7 @@ const makeVarMap = require('webpack-postcss-tools').makeVarMap;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
-const variables = makeVarMap('src/index.css').vars;
+const variables = makeVarMap('src/components/index.css').vars;
 
 const paths = [
   '/',

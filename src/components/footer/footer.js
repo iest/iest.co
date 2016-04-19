@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import BodyClassname from 'react-body-classname';
 
-import Icn from 'icn/icn';
+import Icn from 'components/icn/icn';
 import css from './footer.css'
 
 export default class Footer extends Component {

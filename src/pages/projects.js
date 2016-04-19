@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import Markdown from 'react-remarkable';
 import Helmet from 'react-helmet';
 
-import Icn from 'icn/icn';
-import Hero from 'hero/hero';
-import t from 'type.css';
+import Icn from 'components/icn/icn';
+import Hero from 'components/hero/hero';
+import t from 'components/type.css';
 
 export default class Projects extends Component {
   render() {

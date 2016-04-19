@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const Template = ({bodyClassNames, assets, children}) =>
+const Template = ({bodyClassNames, assets, html}) =>
   <html lang="en">
     <head>
       <meta charSet="utf-8"/>
@@ -22,9 +22,7 @@ const Template = ({bodyClassNames, assets, children}) =>
       )}
     </head>
     <body className={bodyClassNames}>
-      <div id="root">
-        {children}
-      </div>
+      <div id="root" dangerouslySetInnerHTML={{__html: html}}/>
       {assets.script.map((src, i) =>
         <script key={i} async defer src={src}/>
       )}
@@ -34,7 +32,7 @@ const Template = ({bodyClassNames, assets, children}) =>
 Template.propTypes = {
   bodyClassNames: PropTypes.string,
   assets: PropTypes.object,
-  children: PropTypes.any,
+  html: PropTypes.string,
 }
 
 export default Template;

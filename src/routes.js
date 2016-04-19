@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Route, IndexRoute} from 'react-router';
 
-import Root from 'root/root';
-import About from 'pages/about';
+import Root from 'components/root/root';
 import Projects from 'pages/projects';
+import About from 'pages/about';
 import Blog from 'pages/blog';
 
 export default (
