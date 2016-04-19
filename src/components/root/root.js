@@ -14,7 +14,14 @@ export default class Root extends Component {
     return (
       <BodyClassname className={css.body}>
         <div>
-        <Helmet titleTemplate="%s | iest.co"/>
+        <Helmet
+          titleTemplate="%s | iest.co"
+           htmlAttributes={{'lang': 'en'}}
+           meta={[
+              {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+              {name: 'charset', content: 'utf-8'},
+          ]}
+        />
           <Nav/>
           {this.props.children}
           <Footer/>

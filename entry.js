@@ -1,20 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {renderToString, renderToStaticMarkup} from 'react-dom/server';
+import {render} from 'react-dom';
+import Helmet from 'react-helmet';
 import BodyClassName from 'react-body-classname';
 import {createHistory, createMemoryHistory} from 'history';
+import {renderToString, renderToStaticMarkup} from 'react-dom/server';
 import {Router, RouterContext, match, useRouterHistory} from 'react-router';
 
 import getAssets from 'lib/get-assets';
-import Template from 'template';
+import template from 'template';
 import routes from 'routes';
 
 // Client render
 if (typeof document !== 'undefined') {
   const history = useRouterHistory(createHistory)();
-  const outlet = document.getElementById('root');
+  const OUTLET = document.getElementById('root');
 
-  ReactDOM.render(<Router history={history}>{routes}</Router>, outlet);
+  render(<Router history={history}>{routes}</Router>, OUTLET);
 }
 
 // Exported static site renderer:
@@ -26,17 +27,17 @@ export default (locals, callback) => {
   match({ routes, location }, (error, redirectLocation, renderProps) => {
     if (error) throw error;
 
-    const inner = renderToString(<RouterContext {...renderProps} />);
-
+    const html = renderToString(<RouterContext {...renderProps} />);
     const bodyClassNames = BodyClassName.rewind();
-    const html = renderToString(
-      <Template
-        bodyClassNames={bodyClassNames}
-        assets={assets}
-        html={html}
-      />
-    );
+    const head = Helmet.rewind();
 
-    callback(null, '<!DOCTYPE html>' + html);
+    const rendered = template({
+      bodyClassNames,
+      assets,
+      html,
+      head,
+    });
+
+    callback(null, rendered);
   });
 };
