@@ -9,7 +9,6 @@ module.exports = {
     extensions: ['', '.js', '.json', '.jsx'],
     modulesDirectories: ['node_modules', 'src'],
   },
-  // or devtool: 'eval' to debug issues with compiled output:
   devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
@@ -82,7 +81,6 @@ module.exports = {
       require('postcss-custom-media')(),
       require('postcss-calc'),
       require('postcss-color-function')(),
-      require('lost'),
     ];
   },
 };

@@ -26,9 +26,6 @@ module.exports = {
   output: {
     filename: 'bundle.[hash].js',
     path: 'dist',
-    /* IMPORTANT!
-     * You must compile to UMD or CommonJS
-     * so it can be required in a Node context: */
     libraryTarget: 'umd'
   },
 
@@ -82,7 +79,6 @@ module.exports = {
       require('postcss-custom-media')(),
       require('postcss-calc'),
       require('postcss-color-function')(),
-      require('lost'),
     ];
   },
 
