@@ -1,11 +1,17 @@
-export default ({bodyClassNames, assets, html, head}) =>
-  `
+module.exports = function Template(opts) {
+  const bodyClassNames = opts.bodyClassNames;
+  const assets = opts.assets;
+  const html = opts.html;
+  const head = opts.head;
+  return `
   <!doctype html>
   <html lang="en">
     <head>
 
       ${head.title.toString()}
-      ${head.meta.toString()}
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="charset" content="utf-8">
 
       <script>
         (function(d) {
@@ -29,9 +35,10 @@ export default ({bodyClassNames, assets, html, head}) =>
       <div id="root">${html}</div>
 
       ${assets.script.map((src) =>
-        `<script async defer src="${src}"/>`
+        `<script async defer src="${src}"></script>`
       )}
     </body>
 
   </html>
   `
+}
