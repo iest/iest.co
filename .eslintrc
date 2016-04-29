@@ -1,15 +1,18 @@
 {
   "extends": "eslint-config-airbnb",
+  "parser": "babel-eslint",
   "rules": {
-    "indent": [2, 2, {"SwitchCase": 1}],
+    "strict": 0,
+    "max-len": 0,
     "no-console": [0],
     "func-names": [0],
-    "space-before-function-paren": [2, "always"],
     "no-else-return": [0],
     "space-infix-ops": [0],
-    "react/prefer-es6-class": [0],
-    "react/prefer-stateless-function": [0],
+    "object-curly-spacing": 0,
     "import/no-unresolved": [0],
+    "react/prefer-es6-class": [0],
+    "space-before-function-paren": 0,
+    "react/prefer-stateless-function": [0],
   },
   "globals": {
     "__PREFIX_LINKS__": true,

@@ -1,21 +1,20 @@
 import React from 'react';
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 
-import { prefixLink } from 'gatsby-helpers';
 import { TypographyStyle } from 'utils/typography';
 
 module.exports = React.createClass({
-  propTypes () {
+  propTypes() {
     return {
       title: React.PropTypes.string,
     };
   },
-  render () {
-    const title = DocumentTitle.rewind();
+  render() {
+    const {title} = Helmet.rewind();
 
     let cssLink;
     if (process.env.NODE_ENV === 'production') {
-      cssLink = <link rel="stylesheet" href={prefixLink('/styles.css')} />;
+      cssLink = <link rel="stylesheet" href="/styles.css" />;
     }
 
     return (
@@ -26,7 +25,7 @@ module.exports = React.createClass({
             name="viewport"
             content="width=device-width, initial-scale=1.0 maximum-scale=1.0"
           />
-          <title>{title}</title>
+          {title.toComponent()}
           <link rel="shortcut icon" href={this.props.favicon} />
           <script src="https://use.typekit.net/pjs1bqz.js"></script>
           <script
@@ -42,7 +41,7 @@ module.exports = React.createClass({
             id="react-mount"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
-          <script src={prefixLink('/bundle.js')} />
+          <script src="/bundle.js" />
         </body>
       </html>
     );

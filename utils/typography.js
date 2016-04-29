@@ -8,6 +8,8 @@ const options = {
   bodyWeight: 400,
   headerWeight: 200,
   boldWeight: 700,
+  headerGray: 95,
+  bodyGray: 95,
   modularScales: [
     'golden',
   ],
