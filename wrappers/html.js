@@ -1,4 +1,5 @@
 import React from 'react';
+import 'css/globals.css';
 
 module.exports = React.createClass({
   propTypes () {

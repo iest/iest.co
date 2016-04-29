@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
-import Lnk from 'components/Lnk';
+import Lnk from 'components/lnk';
 
 export default class Projects extends Component {
   render () {

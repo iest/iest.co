@@ -1,8 +1,8 @@
 import React, { PropTypes, Component } from 'react';
 import Helmet from 'react-helmet';
-import {Block} from 'jsxstyle';
 
-import {bg, fg} from 'utils/theme';
+import Nav from 'components/nav';
+import Footer from 'components/footer';
 
 export default class Root extends Component {
   static propTypes = {
@@ -14,12 +14,9 @@ export default class Root extends Component {
         <Helmet
           titleTemplate="%s | iest.co"
         />
-        <Block
-          background={bg}
-          color={fg}
-        >
-          {this.props.children}
-        </Block>
+        <Nav />
+        {this.props.children}
+        <Footer />
       </div>
     );
   }

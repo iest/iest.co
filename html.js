@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import { TypographyStyle } from 'utils/typography';
+import {bg, fg} from 'utils/theme';
 
 module.exports = React.createClass({
   propTypes() {
@@ -18,7 +19,13 @@ module.exports = React.createClass({
     }
 
     return (
-      <html lang="en">
+      <html
+        style={{
+          background: bg,
+          color: fg,
+        }}
+        lang="en"
+      >
         <head>
           <meta charSet="utf-8" />
           <meta

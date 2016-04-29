@@ -34,8 +34,10 @@
     "markdown-it-footnote": "^2.0.0",
     "markdown-it-sub": "^1.0.0",
     "object-assign": "^4.0.1",
+    "raw-loader": "^0.5.1",
     "react-helmet": "^3.1.0",
     "react-router": "^2.2.4",
+    "svgo-loader": "^1.1.0",
     "toml-js": "0.0.8",
     "typography": "^0.7.0"
   },

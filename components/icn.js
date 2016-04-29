@@ -6,13 +6,20 @@ export default class Icn extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     className: PropTypes.string,
+    style: PropTypes.string,
   }
   render() {
     const {name} = this.props;
     return (
       <span
-        dangerouslySetInnerHTML={{__html: icons[name]}}
         {...this.props}
+        style={Object.assign({
+          display: 'inline-block',
+          verticalAlign: 'middle',
+          width: '1.5em',
+          height: '1.5em',
+        }, this.props.style)}
+        dangerouslySetInnerHTML={{__html: icons[name]}}
       />
     );
   }
