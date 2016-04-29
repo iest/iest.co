@@ -6,7 +6,7 @@ export default class Icn extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     className: PropTypes.string,
-    style: PropTypes.string,
+    style: PropTypes.object,
   }
   render() {
     const {name} = this.props;

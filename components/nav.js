@@ -1,21 +1,26 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
-import {InlineBlock, Flex} from 'jsxstyle';
+import {InlineBlock, Block, Flex, Col} from 'jsxstyle';
 
 import {primary, bg, secondary} from 'utils/theme';
 import Icn from 'components/icn';
+import Btn from 'components/btn';
 
 export default class Nav extends Component {
+  state = {
+    open: false,
+  }
+  toggleOpen = () => this.setState({open: !this.state.open})
   render() {
+    const {open} = this.state;
     return (
       <nav>
         <Flex
-          display="flex"
-          width="100%"
           justifyContent="space-between"
+          background={primary}
+          padding="1em"
         >
           <InlineBlock
-            background={primary}
             color={bg}
             fontSize="2em"
           >
@@ -23,16 +28,26 @@ export default class Nav extends Component {
               <Icn style={{color: secondary}} name="logo" />
             </Link>
           </InlineBlock>
-          <InlineBlock
-            background={primary}
+
+          <Btn
+            tagName="button"
             color={bg}
             fontSize="2em"
+            padding="0em"
+            props={{onClick: this.toggleOpen}}
           >
-            <Link to="/">
-              <Icn style={{color: secondary}} name="logo" />
-            </Link>
-          </InlineBlock>
+            <Col
+              width="1em"
+              height="0.75em"
+              justifyContent="space-between"
+            >
+              <Block height="1px" background={secondary} />
+              <Block height="1px" background={secondary} />
+              <Block height="1px" background={secondary} />
+            </Col>
+          </Btn>
         </Flex>
+        {open ? 'O' : 'I'}
       </nav>
     );
   }
