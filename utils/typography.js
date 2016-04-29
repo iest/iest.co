@@ -6,7 +6,7 @@ const options = {
   headerFontFamily: '"jaf-facitweb", sans-serif',
   bodyFontFamily: 'jaf-facitweb, serif',
   bodyWeight: 400,
-  headerWeight: 600,
+  headerWeight: 200,
   boldWeight: 700,
   modularScales: [
     'golden',
