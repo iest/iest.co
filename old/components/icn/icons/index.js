@@ -13,7 +13,7 @@ const cleanups = {
   sketchMSLayerGroup: / +sketch:type=\"MSLayerGroup\"/gi,
 };
 
-function cleanupSvg(svg) {
+function cleanupSvg (svg) {
   return Object.keys(cleanups)
     .reduce((acc, key) => {
       return acc.replace(cleanups[key], '');
@@ -34,4 +34,4 @@ export default {
   instagram: cleanupSvg(require('./instagram.svg')),
   twitter: cleanupSvg(require('./twitter.svg')),
   github: cleanupSvg(require('./github.svg')),
-}
+};

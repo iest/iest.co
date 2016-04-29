@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Markdown from 'react-remarkable';
 import Helmet from 'react-helmet';
 
@@ -7,10 +7,10 @@ import Hero from 'components/hero/hero';
 import t from 'components/type.css';
 
 export default class Projects extends Component {
-  render() {
+  render () {
     return (
       <div>
-        <Helmet title="Projects"/>
+        <Helmet title="Projects" />
         <Hero>
           <h1 className={t.h1}>Stuff I've built</h1>
         </Hero>

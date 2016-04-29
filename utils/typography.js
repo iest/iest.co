@@ -1,25 +1,23 @@
-import Typography from 'typography'
+import Typography from 'typography';
 
 const options = {
-  baseFontSize: '18px',
-  baseLineHeight: '27px',
-  headerFontFamily: '"Avenir Next", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif',
-  bodyFontFamily: 'georgia, serif',
-  bodyWeight: 300,
+  baseFontSize: '16px',
+  baseLineHeight: '28.5px',
+  headerFontFamily: '"jaf-facitweb", sans-serif',
+  bodyFontFamily: 'jaf-facitweb, serif',
+  bodyWeight: 400,
   headerWeight: 600,
-  boldWeight: 600,
+  boldWeight: 700,
   modularScales: [
-    {
-      scale: 'minor third',
-    },
+    'golden',
   ],
-}
+};
 
-const typography = new Typography(options)
+const typography = new Typography(options);
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {
-  typography.injectStyles()
+  typography.injectStyles();
 }
 
-export default typography
+export default typography;

@@ -1,4 +1,4 @@
-module.exports = function Template(opts) {
+module.exports = function Template (opts) {
   const bodyClassNames = opts.bodyClassNames;
   const assets = opts.assets;
   const html = opts.html;
@@ -29,5 +29,5 @@ module.exports = function Template(opts) {
     </body>
 
   </html>
-  `
-}
+  `;
+};

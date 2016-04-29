@@ -1,11 +1,11 @@
 import path from 'path';
 
-export default function(webpackStats, publicPath) {
+export default function (webpackStats, publicPath) {
   const json = webpackStats.toJson();
   const hash = json.hash;
 
   // get chunks by name and extensions
-  function getChunks(name, ext = /.js$/) {
+  function getChunks (name, ext = /.js$/) {
     let chunks = json.assetsByChunkName[name];
 
     // a chunk could be a string or an array, so make sure it is an array

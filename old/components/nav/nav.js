@@ -1,26 +1,26 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router';
+import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 import Icn from 'components/icn/icn';
 import css from './nav.css';
 
 export default class Nav extends Component {
-  render() {
+  render () {
     return (
       <div className={css.root}>
         <Link className={css.logo} to="/">
-          <Icn name="logo"/>
+          <Icn name="logo" />
         </Link>
         <ul className={css.nav}>
           <li>
             <Link activeClassName={css.active} to="/projects">
-              <Icn name="projects"/>
+              <Icn name="projects" />
               <span className={css.label}>Projects</span>
             </Link>
           </li>
           <li>
             <Link activeClassName={css.active} to="/blog">
-              <Icn name="blog"/>
+              <Icn name="blog" />
               <span className={css.label}>Blog</span>
             </Link>
           </li>
