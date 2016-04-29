@@ -2,6 +2,7 @@
   "extends": "eslint-config-airbnb",
   "parser": "babel-eslint",
   "rules": {
+    "global-require": 0,
     "strict": 0,
     "max-len": 0,
     "no-console": [0],

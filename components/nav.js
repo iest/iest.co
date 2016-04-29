@@ -50,7 +50,7 @@ export default class Nav extends Component {
               style={{
                 r1: spring(open ? 225 : 0, immediate),
                 r2: spring(open ? 135 : 0, immediate),
-                y: spring(open ? 0.34 : 0, fast),
+                y: spring(open ? 0.35 : 0, fast),
                 o: spring(open ? 0 : 1, immediate),
               }}
             >
@@ -63,18 +63,18 @@ export default class Nav extends Component {
                 >
                   <Block
                     transform={`translateY(${y}em) rotate(${r1}deg)`}
-                    height="0.0625em"
+                    height="1px"
                     background={secondary}
                   />
                   <Block
                     opacity={o}
                     transform={`rotate(${r2}deg)`}
-                    height="0.0625em"
+                    height="1px"
                     background={secondary}
                   />
                   <Block
                     transform={`translateY(${-y}em) rotate(${r2}deg)`}
-                    height="0.0625em"
+                    height="1px"
                     background={secondary}
                   />
                 </Col>
@@ -82,6 +82,46 @@ export default class Nav extends Component {
             </Motion>
           </Btn>
         </Flex>
+        <Col width="100%" textAlign="center">
+          <Block
+            component={Link}
+            background={primary}
+            props={{
+              to: '/',
+              activeStyle: {
+                background: 'red',
+              },
+            }}
+          >
+            <Icn name="blog" /> Home
+          </Block>
+
+          <Block
+            component={Link}
+            background={primary}
+            props={{
+              to: '/projects/',
+              activeStyle: {
+                background: 'red',
+              },
+            }}
+          >
+            <Icn name="projects" /> Projects
+          </Block>
+
+          <Block
+            component={Link}
+            background={primary}
+            props={{
+              to: '/about/',
+              activeStyle: {
+                background: 'red',
+              },
+            }}
+          >
+            <Icn name="about" /> About
+          </Block>
+        </Col>
       </nav>
     );
   }
