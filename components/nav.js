@@ -19,10 +19,6 @@ const fast = {
 const NavLink = ({to, y, children}) =>
   <Block
     transform={`translateY(${y}em)`}
-    position="absolute"
-    top={0}
-    left={0}
-    width="100%"
     background={primary}
     color={bg}
     textDecoration="none"
@@ -30,14 +26,15 @@ const NavLink = ({to, y, children}) =>
     borderTop={`1px solid ${bgFaded}`}
     fontWeight="bold"
     textTransform="uppercase"
+    component={Link}
+    props={{
+      to,
+      activeStyle: {
+        boxShadow: `inset 0.5em 0 0 ${bg}`,
+      },
+    }}
   >
-    <Link
-      to={to}
-      style={{textDecoration: 'none'}}
-      activeStyle={{boxShadow: `inset 0.5em 0 0 ${bg}`}}
-    >
-      {children}
-    </Link>
+    {children}
   </Block>;
 NavLink.propTypes = {
   to: PropTypes.string.isRequired,
