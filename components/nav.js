@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import {Motion, spring} from 'react-motion';
+import React, {PropTypes, Component} from 'react';
+import {Motion, StaggeredMotion, spring} from 'react-motion';
 import {Link} from 'react-router';
 import {InlineBlock, Block, Flex, Col} from 'jsxstyle';
 
-import {primary, bg, secondary} from 'utils/theme';
+import {primary, bg, secondary, bgFaded} from 'utils/theme';
 import Icn from 'components/icn';
 import Btn from 'components/btn';
 
@@ -14,6 +14,35 @@ const immediate = {
 const fast = {
   stiffness: 270,
   damping: 22,
+};
+
+const NavLink = ({to, y, children}) =>
+  <Block
+    transform={`translateY(${y}em)`}
+    position="absolute"
+    top={0}
+    left={0}
+    width="100%"
+    background={primary}
+    color={bg}
+    textDecoration="none"
+    padding="1.25em 1.5em"
+    borderTop={`1px solid ${bgFaded}`}
+    fontWeight="bold"
+    textTransform="uppercase"
+  >
+    <Link
+      to={to}
+      style={{textDecoration: 'none'}}
+      activeStyle={{boxShadow: `inset 0.5em 0 0 ${bg}`}}
+    >
+      {children}
+    </Link>
+  </Block>;
+NavLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  y: PropTypes.number,
+  children: PropTypes.any,
 };
 
 export default class Nav extends Component {
@@ -82,46 +111,30 @@ export default class Nav extends Component {
             </Motion>
           </Btn>
         </Flex>
-        <Col width="100%" textAlign="center">
-          <Block
-            component={Link}
-            background={primary}
-            props={{
-              to: '/',
-              activeStyle: {
-                background: 'red',
-              },
-            }}
-          >
-            <Icn name="blog" /> Home
-          </Block>
+        <StaggeredMotion
+          defaultStyles={[{y: 0}, {y: 0}, {y: 0}]}
+          styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) =>
+            i === 0
+              ? {y: spring(open ? 0 : -4.5 * i+1)}
+              : {y: spring(open ? 0 : prevInterpolatedStyles[i - 1].y)}
+          )}
+        >
+          {styles =>
+            <Col width="100%" position="absolute">
+              <NavLink to="/" y={styles[0].y}>
+                <Icn name="blog" /> Home
+              </NavLink>
 
-          <Block
-            component={Link}
-            background={primary}
-            props={{
-              to: '/projects/',
-              activeStyle: {
-                background: 'red',
-              },
-            }}
-          >
-            <Icn name="projects" /> Projects
-          </Block>
+              <NavLink to="/projects/" y={styles[1].y}>
+                <Icn name="projects" /> Projects
+              </NavLink>
 
-          <Block
-            component={Link}
-            background={primary}
-            props={{
-              to: '/about/',
-              activeStyle: {
-                background: 'red',
-              },
-            }}
-          >
-            <Icn name="about" /> About
-          </Block>
-        </Col>
+              <NavLink to="/about/" y={styles[2].y}>
+                <Icn name="about" /> About
+              </NavLink>
+            </Col>
+          }
+        </StaggeredMotion>
       </nav>
     );
   }
