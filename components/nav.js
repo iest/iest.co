@@ -1,17 +1,18 @@
 import React, {PropTypes, Component} from 'react';
-import {Motion, StaggeredMotion, spring} from 'react-motion';
+import {Motion, spring} from 'react-motion';
 import {Link} from 'react-router';
 import {InlineBlock, Block, Flex, Col} from 'jsxstyle';
 
 import {primary, bg, secondary, bgFaded} from 'utils/theme';
+import z from 'utils/zindex';
 import Icn from 'components/icn';
 import Btn from 'components/btn';
 
-const immediate = {
-  stiffness: 180,
-  damping: 18,
+const bars = {
+  stiffness: 200,
+  damping: 21,
 };
-const fast = {
+const items = {
   stiffness: 270,
   damping: 22,
 };
@@ -23,14 +24,14 @@ const NavLink = ({to, y, children}) =>
     color={bg}
     textDecoration="none"
     padding="1.25em 1.5em"
-    borderTop={`1px solid ${bgFaded}`}
+    borderBottom={`1px solid ${bgFaded}`}
     fontWeight="bold"
     textTransform="uppercase"
     component={Link}
     props={{
       to,
       activeStyle: {
-        boxShadow: `inset 0.5em 0 0 ${bg}`,
+        boxShadow: `inset -0.5em 0 0 ${bg}`,
       },
     }}
   >
@@ -55,6 +56,9 @@ export default class Nav extends Component {
           justifyContent="space-between"
           background={primary}
           padding="1em"
+          zIndex={z.navBar}
+          position="relative"
+          borderBottom={`1px solid ${bgFaded}`}
         >
           <InlineBlock
             color={bg}
@@ -74,10 +78,10 @@ export default class Nav extends Component {
           >
             <Motion
               style={{
-                r1: spring(open ? 225 : 0, immediate),
-                r2: spring(open ? 135 : 0, immediate),
-                y: spring(open ? 0.35 : 0, fast),
-                o: spring(open ? 0 : 1, immediate),
+                r1: spring(open ? 225 : 0, bars),
+                r2: spring(open ? 135 : 0, bars),
+                y: spring(open ? 0.35 : 0, bars),
+                o: spring(open ? 0 : 1, bars),
               }}
             >
               {({r1, r2, y, o}) =>
@@ -94,7 +98,7 @@ export default class Nav extends Component {
                   />
                   <Block
                     opacity={o}
-                    transform={`rotate(${r2}deg)`}
+                    transform={`rotate(${r2}deg) scale(${o})`}
                     height="1px"
                     background={secondary}
                   />
@@ -108,30 +112,38 @@ export default class Nav extends Component {
             </Motion>
           </Btn>
         </Flex>
-        <StaggeredMotion
-          defaultStyles={[{y: 0}, {y: 0}, {y: 0}]}
-          styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) =>
-            i === 0
-              ? {y: spring(open ? 0 : -4.5 * i+1)}
-              : {y: spring(open ? 0 : prevInterpolatedStyles[i - 1].y)}
-          )}
+        <Motion
+          style={{
+            o: spring(open ? 1 : 0, bars),
+            s: spring(open ? 1 : 0.25, bars),
+            y: spring(open ? 0 : -100, bars),
+          }}
         >
-          {styles =>
-            <Col width="100%" position="absolute">
-              <NavLink to="/" y={styles[0].y}>
+          {({y, s, o}) =>
+            <Col
+              width="100%"
+              maxWidth="10em"
+              transformOrigin="right top"
+              opacity={o}
+              transform={`translateY(${y}%) scale(${s})`}
+              position="absolute"
+              right={0}
+              zIndex={z.navItems}
+            >
+              <NavLink to="/">
                 <Icn name="blog" /> Home
               </NavLink>
 
-              <NavLink to="/projects/" y={styles[1].y}>
+              <NavLink to="/projects/">
                 <Icn name="projects" /> Projects
               </NavLink>
 
-              <NavLink to="/about/" y={styles[2].y}>
+              <NavLink to="/about/">
                 <Icn name="about" /> About
               </NavLink>
             </Col>
           }
-        </StaggeredMotion>
+        </Motion>
       </nav>
     );
   }
