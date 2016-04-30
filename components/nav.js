@@ -3,23 +3,18 @@ import {Motion, spring} from 'react-motion';
 import {Link} from 'react-router';
 import {InlineBlock, Block, Flex, Col} from 'jsxstyle';
 
-import {primary, bg, secondary, bgFaded} from 'utils/theme';
+import {primary, fg, bg, secondary, bgFaded} from 'utils/theme';
 import z from 'utils/zindex';
 import Icn from 'components/icn';
 import Btn from 'components/btn';
 
-const bars = {
+const PHYSICS = {
   stiffness: 200,
-  damping: 21,
-};
-const items = {
-  stiffness: 270,
-  damping: 22,
+  damping: 10,
 };
 
-const NavLink = ({to, y, children}) =>
+const NavLink = ({to, children}) =>
   <Block
-    transform={`translateY(${y}em)`}
     background={primary}
     color={bg}
     textDecoration="none"
@@ -31,7 +26,9 @@ const NavLink = ({to, y, children}) =>
     props={{
       to,
       activeStyle: {
-        boxShadow: `inset -0.5em 0 0 ${bg}`,
+        // boxShadow: `inset -0.5em 0 0 ${bg}`,
+        background: secondary,
+        color: fg,
       },
     }}
   >
@@ -78,10 +75,10 @@ export default class Nav extends Component {
           >
             <Motion
               style={{
-                r1: spring(open ? 225 : 0, bars),
-                r2: spring(open ? 135 : 0, bars),
-                y: spring(open ? 0.35 : 0, bars),
-                o: spring(open ? 0 : 1, bars),
+                r1: spring(open ? 225 : 0, PHYSICS),
+                r2: spring(open ? 135 : 0, PHYSICS),
+                y: spring(open ? 0.35 : 0, PHYSICS),
+                o: spring(open ? 0 : 1, PHYSICS),
               }}
             >
               {({r1, r2, y, o}) =>
@@ -114,20 +111,17 @@ export default class Nav extends Component {
         </Flex>
         <Motion
           style={{
-            o: spring(open ? 1 : 0, bars),
-            s: spring(open ? 1 : 0.25, bars),
-            y: spring(open ? 0 : -100, bars),
+            x: spring(open ? 0 : 100, PHYSICS),
           }}
         >
-          {({y, s, o}) =>
+          {({x}) =>
             <Col
               width="100%"
-              maxWidth="10em"
+              maxWidth="15em"
               transformOrigin="right top"
-              opacity={o}
-              transform={`translateY(${y}%) scale(${s})`}
+              transform={`translateX(${x}%)`}
               position="absolute"
-              right={0}
+              right="-5em"
               zIndex={z.navItems}
             >
               <NavLink to="/">
