@@ -1,13 +1,25 @@
-html {
+:root {
+  --fg:        rgb(238, 240, 240);
+  --primary:   rgb(108, 251, 218);
+  --secondary: rgb(92, 115, 197);
+
+  --bg:      rgb(38, 50, 56);
+  --bgDark:  rgb(26, 35, 39);
+  --bgFaded: rgba(38, 50, 56, 0.12)l;
+
+}
+
+:global html {
+  background: var(--bg);
+  color: var(--fg);
   position: relative;
   min-height: 100%;
-  box-sizing: border-box;
 }
 
-body {
-  min-height: 100%;
-}
-
-svg {
+:global(svg) {
   fill: currentColor;
+}
+
+:global(a) {
+  color: var(--secondary);
 }

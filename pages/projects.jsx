@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
-import Lnk from 'components/lnk';
-
 export default class Projects extends Component {
   render () {
     return (
@@ -19,43 +17,43 @@ export default class Projects extends Component {
           <ul>
 
             <li>
-              <h3><Lnk>loggins</Lnk><em>2016</em></h3>
+              <h3><a>loggins</a><em>2016</em></h3>
               <p>Pact Coffee's styleguide and component library.</p>
             </li>
 
             <li>
-              <Lnk href="#">
+              <a>
                 <h3>iamthefold <em>2015</em></h3>
                 <p>An experiment to show how desiging for <em>The Fold</em> can be treacharous.</p>
-              </Lnk>
+              </a>
             </li>
 
             <li>
-              <Lnk href="#">
+              <a>
                 <h3>sliderrr <em>2015</em></h3>
                 <p>A collaborative Dribbble slideshow viewer, and an excuse to try out React with web sockets.</p>
-              </Lnk>
+              </a>
             </li>
 
             <li>
-              <Lnk href="#">
+              <a>
                 <h3>buttery-scroll <em>2015</em></h3>
                 <p>A super-simple smooth-scrolling microlib.</p>
-              </Lnk>
+              </a>
             </li>
 
             <li>
-              <Lnk href="#">
+              <a>
                 <h3>themes4alfred <em>2014</em></h3>
                 <p>Some themes for the awesome Mac app, Alfred.</p>
-              </Lnk>
+              </a>
             </li>
 
             <li>
-              <Lnk href="#">
+              <a>
                 <h3>emRuler <em>2014</em></h3>
                 <p>Really simple em-based ruler for your browser, in bookmarklet-form.</p>
-              </Lnk>
+              </a>
             </li>
 
           </ul>

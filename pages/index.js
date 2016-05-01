@@ -1,7 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-
-import Lnk from 'components/lnk';
+import {Link} from 'react-router';
 
 export default class Index extends React.Component {
   render () {
@@ -9,7 +8,7 @@ export default class Index extends React.Component {
       <div>
         <Helmet title="" />
         Hello!
-        <Lnk to="/projects/">Projects</Lnk>
+        <Link to="/projects/">Projects</Link>
       </div>
     );
   }

@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
-import {Block} from 'jsxstyle';
+import BodyClassName from 'react-body-classname';
 
-import {primary, bg} from 'utils/theme';
 import Icn from 'components/icn';
+import s from './footer.css';
 
 export default class Footer extends Component {
   render() {
     return (
-      <footer>
-        <Block background={primary} color={bg}>
+      <BodyClassName className={s.body}>
+        <footer className={s.footer}>
           <Icn name="instagram" />
-        </Block>
-      </footer>
+        </footer>
+      </BodyClassName>
     );
   }
 }

@@ -1,8 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import BodyClassName from 'react-body-classname';
 
-import { TypographyStyle } from 'utils/typography';
-import {bg, fg} from 'utils/theme';
+import {TypographyStyle} from 'utils/typography';
+
+const BUSTER = new Date().getTime();
 
 module.exports = React.createClass({
   propTypes() {
@@ -12,20 +14,15 @@ module.exports = React.createClass({
   },
   render() {
     const {title} = Helmet.rewind();
+    const bodyClassNames = BodyClassName.rewind();
 
     let cssLink;
     if (process.env.NODE_ENV === 'production') {
-      cssLink = <link rel="stylesheet" href="/styles.css" />;
+      cssLink = <link rel="stylesheet" href={`/styles.css?t=${BUSTER}`} />;
     }
 
     return (
-      <html
-        style={{
-          background: bg,
-          color: fg,
-        }}
-        lang="en"
-      >
+      <html lang="en">
         <head>
           <meta charSet="utf-8" />
           <meta
@@ -43,12 +40,12 @@ module.exports = React.createClass({
           <TypographyStyle />
           {cssLink}
         </head>
-        <body>
+        <body style={bodyClassNames}>
           <div
             id="react-mount"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
-          <script src="/bundle.js" />
+          <script src={`/bundle.js?t=${BUSTER}`} />
         </body>
       </html>
     );

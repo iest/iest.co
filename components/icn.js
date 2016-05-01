@@ -1,24 +1,26 @@
 import React, {PropTypes, Component} from 'react';
-import {InlineBlock} from 'jsxstyle';
 
 import icons from './icons';
 
 export default class Icn extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
+    className: PropTypes.string,
     style: PropTypes.object,
   }
   render() {
-    const {name, style} = this.props;
+    const {name, style, className} = this.props;
     return (
-      <InlineBlock
-        verticalAlign="-0.4em"
-        width="1.5em"
-        height="1.5em"
-        style={style}
-        props={{
-          dangerouslySetInnerHTML: {__html: icons[name]},
+      <span
+        style={{
+          display: 'inline-block',
+          verticalAlign: '-0.4em',
+          width: '1.5em',
+          height: '1.5em',
+          ...style,
         }}
+        className={className}
+        dangerouslySetInnerHTML={{__html: icons[name]}}
       />
     );
   }

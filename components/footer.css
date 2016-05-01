@@ -1,0 +1,18 @@
+@import '../css/globals.css';
+:root {
+  --height: 3rem;
+}
+
+.body {
+  padding-bottom: var(--height);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--height);
+  background: var(--bgDark);
+  color: var(--secondary);
+}

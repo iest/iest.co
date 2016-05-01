@@ -1,0 +1,61 @@
+@import '../css/globals.css';
+@import '../css/zindex.css';
+
+.body {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.nav {
+  display: flex;
+  justify_content: space-between;
+  background: var(--primary);
+  padding: 1em;
+  z_index: var(--z-navBar);
+  position: relative;
+  border-bottom: 1px solid var(--bgFaded);
+}
+
+.logo {
+  color: var(--secondary);
+  font-size: 2em;
+}
+
+.toggle {
+  composes: button from 'css/resets.css';
+  color: var(--bg);
+  font-size: 2em;
+}
+.toggleInner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 1em;
+  height: 0.75em;
+}
+.toggleBar {
+  height: 1px;
+  background: var(--bg);
+}
+
+.items {
+  width: 100%;
+  max-width: 15em;
+  transform-origin: right top;
+  position: absolute;
+  right: -5em;
+  z-index: var(--z-navItems);
+}
+.item {
+  background: var(--primary);
+  color: var(--bg);
+  text-decoration: none;
+  padding: 1.25em 1.5em;
+  border-bottom: `1px solid var(--bgFaded);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.itemActive {
+  background: var(--secondary);
+  color: var(--fg);
+}
