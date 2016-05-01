@@ -17,7 +17,7 @@
 }
 
 .logo {
-  color: var(--secondary);
+  color: var(--bg);
   display: inline-block;
   font-size: 2em;
 }
@@ -27,9 +27,13 @@
   background: none;
   border: none;
   line-height: 0;
-  padding: 0;
+  padding: 0.25em;
   margin: 0;
   font-size: 2em;
+}
+.toggle:focus {
+  outline: none;
+  background: color(var(--primary) l(-10%))
 }
 .toggleInner {
   position: relative;
