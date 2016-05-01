@@ -5,6 +5,7 @@ import {Link} from 'react-router';
 
 import Icn from 'components/icn';
 import s from './nav.css';
+console.log(s);
 
 const PHYSICS = {
   stiffness: 120,

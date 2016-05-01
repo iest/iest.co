@@ -40,7 +40,7 @@ module.exports = React.createClass({
           <TypographyStyle />
           {cssLink}
         </head>
-        <body style={bodyClassNames}>
+        <body className={bodyClassNames}>
           <div
             id="react-mount"
             dangerouslySetInnerHTML={{ __html: this.props.body }}

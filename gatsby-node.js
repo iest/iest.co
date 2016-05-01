@@ -1,7 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const CSSConfig = '-autoprefixer&modules&localIdentName=[hash:base64:5]!postcss';
-
 
 function addSVG(config) {
   config.loader('svg', cfg => {
@@ -18,7 +16,7 @@ function addCSSModulesDev(config) {
   config.loader('css', cfg => {
     Object.assign(cfg, {
       test: /\.css$/,
-      loader: `style!css?${CSSConfig}`,
+      loader: 'style!css?modules&localIdentName=[name]-[local]!postcss',
     });
     return cfg;
   });
@@ -30,7 +28,7 @@ function addCSSModulesProd(config) {
   config.loader('css', cfg => {
     Object.assign(cfg, {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract(`css?${CSSConfig}`),
+      loader: ExtractTextPlugin.extract('css?modules&localIdentName=[hash:base64:4]!postcss'),
     });
     return cfg;
   });
@@ -47,11 +45,11 @@ exports.modifyWebpackConfig = function(config, env) {
 
   config.merge({
     postcss: () => [
-      require('postcss-import'),
-      require('autoprefixer')(),
+      require('postcss-import')(),
+      require('autoprefixer')({browsers: ['last 2 versions']}),
       require('postcss-custom-properties')(),
       require('postcss-custom-media')(),
-      require('postcss-calc'),
+      require('postcss-calc')(),
       require('postcss-color-function')(),
     ],
   });
