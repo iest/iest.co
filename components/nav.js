@@ -5,7 +5,6 @@ import {Link} from 'react-router';
 
 import Icn from 'components/icn';
 import s from './nav.css';
-console.log(s);
 
 const PHYSICS = {
   stiffness: 120,
@@ -34,46 +33,47 @@ export default class Nav extends Component {
     const {open} = this.state;
     return (
       <BodyClassName className={s.body}>
-        <nav className={s.nav}>
-          <Link to="/" className={s.logo}>
-            <Icn name="logo" />
-          </Link>
+        <nav>
+          <div className={s.nav}>
+            <Link to="/" className={s.logo}>
+              <Icn name="logo" />
+            </Link>
 
-          <button className={s.toggle} onClick={this.toggleOpen}>
-            <Motion
-              style={{
-                r1: spring(open ? 225 : 0, PHYSICS),
-                r2: spring(open ? 135 : 0, PHYSICS),
-                y: spring(open ? 0.35 : 0, PHYSICS),
-                o: spring(open ? 0 : 1, PHYSICS),
-              }}
-            >
-              {({r1, r2, y, o}) =>
-                <div className={s.toggleInner}>
-                  <div
-                    className={s.toggleBar}
-                    style={{
-                      transform: `translateY(${y}em) rotate(${r1}deg)`,
-                    }}
-                  />
-                  <div
-                    className={s.toggleBar}
-                    style={{
-                      transform: `rotate(${r2}deg) scale(${o})`,
-                      opacity: o,
-                    }}
-                  />
-                  <div
-                    className={s.toggleBar}
-                    style={{
-                      transform: `translateY(${-y}em) rotate(${r2}deg)`,
-                    }}
-                  />
-                </div>
-              }
-            </Motion>
-          </button>
-
+            <button className={s.toggle} onClick={this.toggleOpen}>
+              <Motion
+                style={{
+                  r1: spring(open ? 225 : 0, PHYSICS),
+                  r2: spring(open ? 135 : 0, PHYSICS),
+                  y: spring(open ? 0.35 : 0, PHYSICS),
+                  o: spring(open ? 0 : 1, PHYSICS),
+                }}
+              >
+                {({r1, r2, y, o}) =>
+                  <div className={s.toggleInner}>
+                    <div
+                      className={s.toggleBar}
+                      style={{
+                        transform: `translateY(${y}em) rotate(${r1}deg)`,
+                      }}
+                    />
+                    <div
+                      className={s.toggleBar}
+                      style={{
+                        transform: `rotate(${r2}deg) scale(${o})`,
+                        opacity: o,
+                      }}
+                    />
+                    <div
+                      className={s.toggleBar}
+                      style={{
+                        transform: `translateY(${-y}em) rotate(${r2}deg)`,
+                      }}
+                    />
+                  </div>
+                }
+              </Motion>
+            </button>
+          </div>
           <Motion
             style={{
               x: spring(open ? 0 : 100, PHYSICS),

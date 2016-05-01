@@ -2,22 +2,23 @@
 @import '../css/zindex.css';
 
 .body {
-  min-height: 100%;
+  min-height: 30em;
   overflow: hidden;
 }
 
 .nav {
-  display: flex;
-  justify_content: space-between;
   background: var(--primary);
   padding: 1em;
-  z_index: var(--z-navBar);
+  z-index: var(--z-navBar);
   position: relative;
   border-bottom: 1px solid var(--bgFaded);
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo {
   color: var(--secondary);
+  display: inline-block;
   font-size: 2em;
 }
 
@@ -28,12 +29,12 @@
   line-height: 0;
   padding: 0;
   margin: 0;
-  color: var(--bg);
   font-size: 2em;
 }
 .toggleInner {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 1em;
   height: 0.75em;
@@ -44,6 +45,8 @@
 }
 
 .items {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 15em;
   transform-origin: right top;
@@ -52,11 +55,12 @@
   z-index: var(--z-navItems);
 }
 .item {
+  display: block;
   background: var(--primary);
   color: var(--bg);
   text-decoration: none;
   padding: 1.25em 1.5em;
-  border-bottom: `1px solid var(--bgFaded);
+  border-bottom: 1px solid var(--bgFaded);
   font-weight: bold;
   text-transform: uppercase;
 }
