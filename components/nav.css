@@ -1,10 +1,6 @@
 @import '../css/globals.css';
 @import '../css/zindex.css';
 
-.body {
-
-}
-
 .nav {
   position: relative;
 }
@@ -24,7 +20,6 @@
   display: inline-block;
   font-size: 2.2em;
 }
-
 
 .toggle {
   appearance: none;
@@ -57,7 +52,7 @@
   transform-origin: right top;
   max-width: 10em;
   position: absolute;
-  right: 2.1em;
+  right: 1.9em;
   top: 5.1em;
   width: 100%;
   z-index: var(--z-navItems);

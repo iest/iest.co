@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "iamthefold: The Data"
 date: 2015-2-15 14:42
 category: webdev
@@ -19,7 +18,7 @@ Although I will go into averages, uniques and some other numbers that might seem
 
 # On the accuracy of the data
 
-The values were obtained by grabbing the visitor's `window.innerHeight` (the browser's viewport height, excluding toolbars, window chrome etc). This does not take into account the zoom of the browser or any other extraneous variables. Each fold value (the line drawn) was recorded once per visitor[^2]. 
+The values were obtained by grabbing the visitor's `window.innerHeight` (the browser's viewport height, excluding toolbars, window chrome etc). This does not take into account the zoom of the browser or any other extraneous variables. Each fold value (the line drawn) was recorded once per visitor[^2].
 
 ### The basics
 

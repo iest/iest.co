@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Icons for the web in 2014"
 date:   2014-09-11 16:46:29
 category: webdev
@@ -98,7 +97,7 @@ For just a handful of icons this manual editing is manageable, but for larger se
 
 Both sketch and illustrator allow for the mass-export of artboards, so we’ll use that feature to get all our icons into a folder to get us started.
 
-The next step is to optimise your SVGs, not only stripping out `fill` tags, but also any extra crap your graphics package has left in there. 
+The next step is to optimise your SVGs, not only stripping out `fill` tags, but also any extra crap your graphics package has left in there.
 
 The best tool for this job is [SVGO](https://github.com/svg/svgo), an SVG Optimiser. It's a really great tool, and has multiple interfaces. We use [gulp](http://gulpjs.com) as our build system at busuu, so we use a combination of [gulp-svg-symbols](https://github.com/Hiswe/gulp-svg-symbols) and [gulp-svgmin](https://github.com/ben-eb/gulp-svgmin), a gulp wrapper for SVGO. There seems to be a slick [GUI version](https://github.com/svg/svgo-gui) of SVGO as well — worth checking out if you don't want to get your hands dirty with javascript.
 <aside>SVGO is smart enough to rip out <code>fill="#000000"</code> from our SVG icons, so is perfect if we make sure all our icons are filled <code>#000000</code> in our graphics package.</aside>

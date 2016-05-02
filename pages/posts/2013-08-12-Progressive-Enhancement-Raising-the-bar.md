@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Progressive Enhancement: Raising the bar"
 date:   2013-8-12 16:46:29
 category: webdev

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Why Stylus is my favourite CSS preprocessor"
 date:   2013-8-4 15:00:00
 category: webdev
@@ -87,7 +86,7 @@ Pretty sweet.
 
 ### Transparent mixins
 
-Transparent mixins allow you to *redefine a CSS property as a function*. 
+Transparent mixins allow you to *redefine a CSS property as a function*.
 
 Read that last bit again.
 

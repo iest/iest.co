@@ -27,6 +27,7 @@ export default {
   blog: cleanupSvg(require('./blog.svg')),
   logo: cleanupSvg(require('./logo.svg')),
   projects: cleanupSvg(require('./projects.svg')),
+  repo: cleanupSvg(require('./repo.svg')),
   tool: cleanupSvg(require('./tool.svg')),
   eye: cleanupSvg(require('./eye.svg')),
   cap: cleanupSvg(require('./cap.svg')),

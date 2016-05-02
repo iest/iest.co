@@ -14,16 +14,37 @@
 }
 
 :global html {
-  background: var(--bg);
+  background: var(--bgDark);
   color: var(--fg);
   position: relative;
   min-height: 100%;
+  padding: 0.25em;
 }
 
-:global(svg) {
+:global body {
+  background: var(--bg);
+}
+
+:global svg {
   fill: currentColor;
 }
 
-:global(a) {
-  color: var(--secondary);
+:global a {
+  color: var(--primary);
+}
+
+:global h1 {
+  font-weight: 100;
+}
+:global h2 {
+  font-weight: 300;
+}
+:global h3 {
+  font-weight: 600;
+}
+
+:global hr {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  height: 0.15em;
+  border-radius: 2px;
 }

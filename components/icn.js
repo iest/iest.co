@@ -14,9 +14,9 @@ export default class Icn extends Component {
       <span
         style={{
           display: 'inline-block',
-          verticalAlign: '-0.4em',
-          width: '1.5em',
-          height: '1.5em',
+          verticalAlign: '-0.5em',
+          width: '1.65em',
+          height: '1.65em',
           ...style,
         }}
         className={className}

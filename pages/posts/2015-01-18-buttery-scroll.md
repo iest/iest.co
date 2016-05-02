@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Buttery Scroll
 date: 2015-1-18 13:51
 category: webdev
@@ -15,4 +14,3 @@ I couldn't find a simple JavaScript library for smoothly scrolling up and down o
 It's 814 bytes unminified.
 
 Source code [here](https://github.com/iest/buttery-scroll) or grab it from npm: `npm install buttery-scroll`.
-
