@@ -2,25 +2,29 @@
 @import '../css/zindex.css';
 
 .body {
-  min-height: 30em;
-  overflow: hidden;
+
 }
 
 .nav {
-  background: var(--primary);
-  padding: 1em;
+  position: relative;
+}
+.inner {
+  padding: 1.8em 2.1em;
   z-index: var(--z-navBar);
   position: relative;
-  border-bottom: 1px solid var(--bgFaded);
   display: flex;
   justify-content: space-between;
 }
+.open {
+
+}
 
 .logo {
-  color: var(--bg);
+  color: var(--primary);
   display: inline-block;
-  font-size: 2em;
+  font-size: 2.2em;
 }
+
 
 .toggle {
   appearance: none;
@@ -33,33 +37,32 @@
 }
 .toggle:focus {
   outline: none;
-  background: color(var(--primary) l(-10%))
 }
 .toggleInner {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 1em;
-  height: 0.75em;
+  width: 1.25em;
+  height: 1em;
 }
-.toggleBar {
-  height: 1px;
-  background: var(--bg);
+.open .toggle {
+  background: var(--primary);
 }
 
 .items {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 15em;
+  align-content: center;
   transform-origin: right top;
+  max-width: 10em;
   position: absolute;
-  right: -5em;
+  right: 2.1em;
+  top: 5.1em;
+  width: 100%;
   z-index: var(--z-navItems);
 }
 .item {
-  display: block;
   background: var(--primary);
   color: var(--bg);
   text-decoration: none;

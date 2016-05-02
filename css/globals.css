@@ -1,12 +1,16 @@
+@value fg: rgb(238, 240, 240);
+@value bg: rgb(38, 50, 56);
+@value primary: rgb(90, 251, 213);
+@value secondary: rgb(92, 115, 197);
+
 :root {
   --fg:        rgb(238, 240, 240);
-  --primary:   rgb(108, 251, 218);
+  --primary:   rgb(90, 251, 213);
   --secondary: rgb(92, 115, 197);
 
   --bg:      rgb(38, 50, 56);
-  --bgDark:  rgb(26, 35, 39);
-  --bgFaded: rgba(38, 50, 56, 0.12);
-
+  --bgDark:  color(var(--bg) l(-10%));
+  --bgFaded: color(var(--bg) a(0.12));
 }
 
 :global html {

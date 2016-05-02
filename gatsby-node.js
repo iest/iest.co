@@ -47,6 +47,7 @@ exports.modifyWebpackConfig = function(config, env) {
     postcss: () => [
       require('postcss-import')(),
       require('autoprefixer')({browsers: ['last 2 versions']}),
+      require('postcss-modules-values'),
       require('postcss-custom-properties')(),
       require('postcss-custom-media')(),
       require('postcss-calc')(),

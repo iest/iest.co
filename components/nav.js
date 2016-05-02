@@ -4,11 +4,12 @@ import {Motion, spring} from 'react-motion';
 import {Link} from 'react-router';
 
 import Icn from 'components/icn';
+import {bg} from 'css/globals.css';
 import s from './nav.css';
 
 const PHYSICS = {
-  stiffness: 120,
-  damping: 12,
+  stiffness: 140,
+  damping: 17,
 };
 
 const NavLink = ({to, children}) =>
@@ -33,8 +34,8 @@ export default class Nav extends Component {
     const {open} = this.state;
     return (
       <BodyClassName className={s.body}>
-        <nav>
-          <div className={s.nav}>
+        <nav className={s.nav}>
+          <div className={[s.inner, open && s.open].join(' ')}>
             <Link to="/" className={s.logo}>
               <Icn name="logo" />
             </Link>
@@ -44,29 +45,32 @@ export default class Nav extends Component {
                 style={{
                   r1: spring(open ? 225 : 0, PHYSICS),
                   r2: spring(open ? 135 : 0, PHYSICS),
-                  y: spring(open ? 0.35 : 0, PHYSICS),
+                  y: spring(open ? 0.48 : 0, PHYSICS),
                   o: spring(open ? 0 : 1, PHYSICS),
                 }}
               >
                 {({r1, r2, y, o}) =>
                   <div className={s.toggleInner}>
                     <div
-                      className={s.toggleBar}
                       style={{
+                        height: '1px',
                         transform: `translateY(${y}em) rotate(${r1}deg)`,
+                        background: open ? bg : 'white',
                       }}
                     />
                     <div
-                      className={s.toggleBar}
                       style={{
+                        height: '1px',
                         transform: `rotate(${r2}deg) scale(${o})`,
                         opacity: o,
+                        background: open ? bg : '#FC4482',
                       }}
                     />
                     <div
-                      className={s.toggleBar}
                       style={{
+                        height: '1px',
                         transform: `translateY(${-y}em) rotate(${r2}deg)`,
+                        background: open ? bg : '#6FEFB0',
                       }}
                     />
                   </div>
@@ -76,26 +80,33 @@ export default class Nav extends Component {
           </div>
           <Motion
             style={{
-              x: spring(open ? 0 : 100, PHYSICS),
+              y: spring(open ? 0 : -20, PHYSICS),
+              o: spring(open ? 1 : 0, PHYSICS),
+              z: spring(open ? 1 : 0, PHYSICS),
             }}
           >
-            {({x}) =>
+            {({y, o, z}) =>
               <div
                 className={s.items}
                 style={{
-                  transform: `translateX(${x}%)`,
+                  transform: `translate3d(0,${y}%, 0) scale(${z})`,
+                  opacity: o,
                 }}
               >
                 <NavLink to="/">
                   <Icn name="blog" /> Home
                 </NavLink>
 
-                <NavLink to="/projects/">
-                  <Icn name="projects" /> Projects
-                </NavLink>
-
                 <NavLink to="/about/">
                   <Icn name="about" /> About
+                </NavLink>
+
+                <NavLink to="/work/">
+                  <Icn name="projects" /> Work
+                </NavLink>
+
+                <NavLink to="/projects/">
+                  <Icn name="experiment" /> Projects
                 </NavLink>
               </div>
             }
