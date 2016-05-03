@@ -9,19 +9,23 @@
 
 }
 
-.year h3 {}
+.year h3 {
+  color: var(--bgDark);
+}
 .year a {
   display: flex;
   text-decoration: none;
   justify-content: space-between;
   align-items: center;
 }
+.year a:hover {
+  color: var(--secondary);
+}
 .year time {
   display: inline-block;
-  color: var(--secondary);
-  text-transform: uppercase;
+  color: var(--alpha);
   font-weight: bold;
-  margin-left: 1em;
+  margin-left: 0.5em;
   text-align: right;
   min-width: 4em;
 }

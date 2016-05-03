@@ -29,14 +29,20 @@ const PostList = ({pages}) =>
       >
         <h3>{k}</h3>
         {sortBy(pagesToYears(pages)[k], 'date').map(({path, data: {title, date}}, i) =>
-          <li key={i} style={{marginBottom: rhythm(1/2)}}>
+          <li
+            key={i}
+            style={{
+              fontSize: rhythm(2/3),
+              marginBottom: rhythm(1/2),
+            }}
+          >
             <Link to={path}>
               {title}
               <time
                 dateTime={date}
                 style={{fontSize: rhythm(1/2)}}
               >
-                {moment(date).format('D MMM')}
+                {moment(date).format('MMM')}
               </time>
             </Link>
           </li>

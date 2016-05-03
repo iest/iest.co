@@ -4,7 +4,7 @@ import {Link} from 'react-router';
 
 import Icn from 'components/icn';
 import Pad from 'components/pad';
-import {bg} from 'css/globals.css';
+import {bg, alpha, beta} from 'css/globals.css';
 import s from './nav.css';
 
 const PHYSICS = {
@@ -63,14 +63,14 @@ export default class Nav extends Component {
                         height: '1px',
                         transform: `rotate(${r2}deg) scale(${o})`,
                         opacity: o,
-                        background: open ? bg : '#FC4482',
+                        background: open ? bg : alpha,
                       }}
                     />
                     <div
                       style={{
                         height: '1px',
                         transform: `translateY(${-y}em) rotate(${r2}deg)`,
-                        background: open ? bg : '#6FEFB0',
+                        background: open ? bg : beta,
                       }}
                     />
                   </div>

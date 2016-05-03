@@ -2,11 +2,15 @@
 @value bg: rgb(38, 50, 56);
 @value primary: rgb(90, 251, 213);
 @value secondary: rgb(92, 115, 197);
+@value alpha: rgb(252, 68, 130);
+@value beta: rgb(111, 239, 176);
 
 :root {
   --fg:        rgb(238, 240, 240);
   --primary:   rgb(90, 251, 213);
   --secondary: rgb(92, 115, 197);
+  --alpha:     rgb(252, 68, 130);
+  --beta:      rgb(111, 239, 176);
 
   --bg:      rgb(38, 50, 56);
   --bgDark:  color(var(--bg) l(-10%));
