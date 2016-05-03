@@ -5,7 +5,6 @@
   position: relative;
 }
 .inner {
-  padding: 1.8em 2.1em;
   z-index: var(--z-navBar);
   position: relative;
   display: flex;

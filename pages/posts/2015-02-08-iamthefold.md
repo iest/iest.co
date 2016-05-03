@@ -1,6 +1,6 @@
 ---
 title: "iamthefold: How it’s made"
-date: 2015-2-8 14:42
+date: 2015-2-8 14:42:00
 category: webdev
 tags: webdev
 
