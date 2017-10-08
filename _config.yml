@@ -28,4 +28,4 @@ stylus:
   compress: true
   path: css/main.styl
 
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
