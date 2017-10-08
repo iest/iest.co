@@ -1,0 +1,21 @@
+{
+  "name": "iest.co",
+  "version": "7.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:iest/iest.co.git",
+    "type": "git"
+  },
+  "author": "Iestyn Williams <iest@me.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "NODE_ENV=production next start"
+  },
+  "dependencies": {
+    "next": "beta",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}

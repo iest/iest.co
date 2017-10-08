@@ -1,8 +1,2 @@
-*.sketch
-_site
-.sass-cache
-_drafts
-*.sublime-workspace
-
-*.sublime-project
+.next
 node_modules
