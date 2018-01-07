@@ -14,8 +14,11 @@
     "start": "NODE_ENV=production next start"
   },
   "dependencies": {
-    "next": "beta",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "babel-plugin-module-resolver": "^3.0.0",
+    "babel-preset-env": "^1.6.1",
+    "next": "^4.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "rebass": "^1.0.4"
   }
 }
