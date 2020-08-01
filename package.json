@@ -14,11 +14,9 @@
     "start": "NODE_ENV=production next start"
   },
   "dependencies": {
-    "babel-plugin-module-resolver": "^3.0.0",
-    "babel-preset-env": "^1.6.1",
-    "next": "^4.2.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "rebass": "^1.0.4"
+    "next": "^9.5.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rebass": "^4.0.7"
   }
 }
